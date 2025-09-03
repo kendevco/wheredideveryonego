@@ -118,7 +118,7 @@ export async function GET(request: NextRequest) {
         layout: [
           {
             blockType: 'content',
-            content: {
+            richText: {
               root: {
                 type: 'root',
                 children: [
@@ -200,7 +200,7 @@ export async function GET(request: NextRequest) {
             layout: [
               {
                 blockType: 'content',
-                content: {
+                richText: {
                   root: {
                     type: 'root',
                     children: [
