@@ -14,36 +14,63 @@ import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 
 export async function generateStaticParams() {
-  const payload = await getPayload({ config: configPromise })
-  const locales = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'] as const
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const locales = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'] as const
 
-  const params = []
+    const params = []
 
-  for (const locale of locales) {
-    const pages = await payload.find({
-      collection: 'pages',
-      draft: false,
-      limit: 1000,
-      overrideAccess: false,
-      pagination: false,
-      locale: locale as any,
-      select: {
-        slug: true,
-      },
-    })
+    for (const locale of locales) {
+      try {
+        const pages = await payload.find({
+          collection: 'pages',
+          draft: false,
+          limit: 1000,
+          overrideAccess: false,
+          pagination: false,
+          locale: locale as any,
+          select: {
+            slug: true,
+          },
+        })
 
-    const localeParams = pages.docs
-      ?.filter((doc) => {
-        return doc.slug !== 'home'
-      })
-      .map(({ slug }) => {
-        return { locale, slug }
-      })
+        const localeParams = pages.docs
+          ?.filter((doc) => {
+            return doc.slug !== 'home'
+          })
+          .map(({ slug }) => {
+            return { locale, slug }
+          })
 
-    params.push(...(localeParams || []))
+        params.push(...(localeParams || []))
+      } catch (error) {
+        console.warn(`Failed to fetch pages for locale ${locale}:`, error)
+      }
+    }
+
+    // Always include at least the home page for each locale
+    const locales_with_home = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'].map(locale => ({
+      locale,
+      slug: 'home'
+    }))
+
+    // Add some basic pages that should always exist
+    const basicPages = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'].flatMap(locale => [
+      { locale, slug: 'about' },
+      { locale, slug: 'contact' },
+      { locale, slug: 'privacy-policy' },
+      { locale, slug: 'terms-of-service' }
+    ])
+
+    return [...params, ...locales_with_home, ...basicPages]
+  } catch (error) {
+    console.warn('Failed to generate static params, using fallback:', error)
+    // Fallback to basic params if database connection fails
+    return ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'].map(locale => ({
+      locale,
+      slug: 'home'
+    }))
   }
-
-  return params
 }
 
 type Args = {
