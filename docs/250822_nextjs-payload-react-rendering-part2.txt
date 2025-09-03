@@ -1,0 +1,3281 @@
+https://www.youtube.com/watch?v=Uyq0W6vc8Ds
+Learn advanced Next.js with Payload: Rendering CMS data in React - Part 2
+
+Payload
+12.3K subscribers
+
+Subscribed
+
+614
+
+
+Share
+
+Ask
+
+Download
+
+25,084 views  Jan 20, 2025
+In part two of this series, we'll walk through the Payload website template in finer detail, explaining how everything is rendered—such as how we go from data on the backend to React components in Next.js on the frontend. This includes pages, posts, forms, and how all these things work together.
+
+As an outcome to this series, you’ll learn everything you need to know to become an expert in modern Next.js website development.
+
+What is Payload?
+Payload is the most popular open-source Next.js backend and the fastest growing JavaScript fullstack solution. It closes the gap between headless CMS and application framework, powering everything from enterprise websites to internal applications. It trusted by both independent developers and the Fortune 500.
+
+Get started with one line: npx create-payload-app@latest
+Website: https://payloadcms.com
+Github: https://github.com/payloadcms/payload
+
+CHAPTERS: 
+Overview of what we'll be talking about (00:00)
+Starting a new Payload project (00:43)
+Exploring the folder structure & components (01:12)
+Features of the website template (01:24)
+Pages collection overview & dynamic page layouts (02:22)
+Dynamic page layout with layout blocks (03:50)
+Payload config for Pages (06:02)
+Hero component design and functionality (08:59)
+Rendering blocks dynamically (12:06)
+Next.js routing for pages (14:18)
+Fetching and querying data with Payload local API (19:13)
+Handling redirects in the template (26:50)
+Building and rendering React components (30:10)
+Rich Text Fields and custom blocks (42:56)
+Media components for videos and images (49:43)
+Posts vs. Pages: Different layout approaches (1:00:24)
+Dynamic form handling with Payload (1:09:06)
+Customizing the blocks, fonts, and logos (1:13:43)
+Upcoming topics and optimizations (1:14:10)
+
+Write a Payload Config and instantly get:
+— A full Admin Panel using React server / client components, matching the shape of your data and completely extensible with your own React components
+— Automatic database schema, including direct DB access and ownership, with migrations, transactions, proper indexing, and more
+— Instant REST, GraphQL, and straight-to-DB Node.js APIs
+— Authentication which can be used in your own apps
+— A deeply customizable access control pattern
+— File storage and image management tools like cropping / focal point selection
+— Live preview - see your frontend render content changes in realtime as you update
+
+Transcript
+
+
+Search in video
+Overview of what we'll be talking about
+0:00
+hey everyone time for part two of our website Series this is where we go
+0:05
+through the payload website template out of the box you get everything that you see here and I'm going to just go
+0:11
+through every single aspect of this website template and explain it to you in detail to show you how everything
+0:16
+works and this is part two part one we just went over at a high level all the different bits and pieces but in this
+0:23
+video I want to focus on the rendering pipeline how everything is rendered how we go from content over here
+0:30
+over to react components in nextjs on the front end going to show you Pages
+0:35
+posts forms going to show you how these things all play together and to get started here I just started a brand new
+Starting a new Payload project
+0:43
+create payload app so I ran this one command and then I followed the prompts
+0:48
+so I gave myself a project name I chose the website template I chose which
+0:54
+database I'd like to use and again I used mongod DB here just because I've got it running SQL light might be an
+1:00
+option for you as well if you want to just get something up and running but you don't have a database connection to
+1:06
+use and then I'm done so I just I've got it running over here with pnpm Dev and
+Exploring the folder structure & components
+1:12
+here is the folder structure so this is just payload out of the box right just
+1:17
+exactly how the website template comes last video I kind of mentioned that there there's you know there's a lot of
+Features of the website template
+1:24
+pieces here but it's all here for a reason because if you're building a big website you're you're going to need
+1:30
+redirects you're going to need forms you're going to need Pages you're going to need on demand revalidation you're going to need static rendering you're
+1:36
+going to want live preview like this and so everything here comes out of the box
+1:42
+and it's my goal to kind of teach you about how all of the different pieces work together so payload as you probably
+1:48
+know at this point especially if you watch the first video it's really just nextjs so next Dev that's what we just
+1:55
+ran and then there's next build here and then there's next start and let's go
+2:03
+look at how all this plays together so the payload config I kind of went over that in a high level on the last um
+2:08
+video so you should definitely start there but I'm going to talk about some new things on this video so don't feel like you have to watch that first video
+2:15
+but this template comes with these five categories and then a bunch of plugins installed so we have like the redir
+Pages collection overview & dynamic page layouts
+2:22
+plugin we have the nested do blah blah blah all these plugins but these five are our like custom collections of
+2:29
+documents and so if I save that I show you this we go over to the admin panel and there's going to be a couple
+2:35
+different collections here so we've got Pages posts media categories users then we also have redirects forms form
+2:43
+submissions and search results I want to start this by looking at Pages now pages
+2:50
+are pretty versatile in nature they have Dynamic structures and it's not like a
+2:56
+blog post where it's kind of just like one column of text that just goes you want to have more of a versatile
+3:02
+layout so like you have the hero here and then you have the layout Builder where this is like a Content block this
+3:09
+is a media block this is a posts archive so you can pull in the most recent three
+3:14
+posts and pop them on the homepage if you want and then you have a call to action and then of course the footer and
+3:21
+the way that this is built is not on a template basis if you come from WordPress you might be familiar with
+3:27
+like page templates that is not not what this is rather we want to make it more
+3:33
+um expressive so that editors can create very Dynamic page templates On Demand by
+3:41
+mixing and matching different blocks in different orders and if you break down your layout into like vertical chunks so
+3:49
+like this being a vertical chunk this being a vertical chunk this being a vertical chunk blah blah blah then your
+Dynamic page layout with layout blocks
+3:56
+editors can mix and match these components into different orders so you see like I have the call to action down
+4:01
+here I can just drag and drop this and now it's in the middle drag and drop it down to the bottom I could delete it if I want by just removing it and then
+4:08
+editors can add and create Pages at their discretion using a bunch of Lego
+4:14
+blocks that you gave them that are all highly branded and deliberate and this website just comes with these first five
+4:21
+right these are kind of example blocks you don't need to keep these blocks in your code you can delete them if you want but really it's up to your design
+4:29
+system to define the blocks that you use and our own website is built like this our website is open source as well it's
+4:36
+a big website so there's a lot of moving pieces maybe not the best place to start if you're learning I think that the
+4:42
+website template is the place to start if you're learning but this right here is on that same type of layout block
+4:49
+mentality so this is like a layout block this is like a logo grid here's a layout block which is like a big featured image
+4:56
+here's a layout block which is kind of like a sticky highlight I don't even know what we call called this one then we have a slider then we have
+5:04
+this little feature that I can click on these different things and see the different features then we have a Content block with a couple calls to
+5:10
+action and then the footer right and so our own website uses this exact same
+5:15
+structure that we've got in the website template here and you can use th this structure to build a very very wide
+5:23
+array of different types of pages so for example you go here this page looks
+5:28
+completely different than this one right well it's the same principle this is one page in nextjs like the page
+5:36
+template and you can use these blocks and then kind of arrange them into very very versatile different shapes here all
+5:44
+with this same principle in mind so like obviously this layout is completely different than the homepage right well
+5:50
+it's not a page template it's a bunch of layout blocks so let's look at that from
+5:55
+top to bottom how does that look in our website template and what's involved in making that happen so the first thing I
+Payload config for Pages
+6:02
+want to start with is the payload config for this Pages collection so with
+6:09
+payload you define how you want payload to work and I've got Pages here you can
+6:15
+see we've got access control setup I've got a couple of things for population I'll get back to that in a second you
+6:20
+have admin some customization implementing live preview implementing preview those will'll cover in a
+6:27
+different video but the important part is the scheme like what kind of fields do I get to control if I'm creating a
+6:34
+page so I have a title field here on a page I have tabs and then the tabs have
+6:40
+a hero tab a Content Tab and a meta Tab and each one of those tabs has their
+6:47
+own Fields Associated to them and then I have a couple more fields at the bottom published at and then a slug field for
+6:53
+like the slug the URL field I've got hooks I've got versions configured this
+6:59
+all these fields right here so you've got three tabs right hero layout and
+7:04
+meta well that is right here hero content SEO we kind of broke them out
+7:11
+like that so that it's a really easy editing experience so that if your editor comes here and they know they want to change the hero well put that
+7:18
+stuff in a hero tab if they want to change the content of the page so all this stuff down here then put that stuff
+7:24
+in a Content tab if they want to manage the SEO put those SEO o fields in an SEO
+7:30
+tab just clean it up for them make it simple it would be kind of messy if you put all those things vertical on this
+7:36
+page you can design out the way that you want the payload admin panel to work using our fields and payload has a lot
+7:44
+of field types if you go to the docs we have I think 20 some field types so if I
+7:50
+scroll through here you can see we have array Fields blocks fields which is that block based layout Builder checkboxes
+7:57
+Json code blah blah blah we have a ton of and it's up to you to use those fields
+8:03
+to create your editor interface and to actually save the data of the page these
+8:09
+fields influence what comes out of payload apis it influences how the data
+8:15
+is saved in the database it influences the shape of everything in payload the admin panel everything so by
+8:22
+just defining these fields here you're going to be set up to create
+8:28
+the entirety of all of this that you see here and from there your editors can use
+8:34
+these fields to publish pages right so I mean this is kind of our suggested
+8:39
+approach we like to break out the hero in the content and just to be super clear what I mean by Hero is this first
+8:45
+thing on the page I didn't name it that I have no idea where that came from I
+8:51
+guess it like does a lot of work it's responsible for capturing your attention hence hero I don't know I don't care but
+Hero component design and functionality
+8:59
+down below that is the content that's where the content the layout starts and I could change this hero type to change
+9:05
+the way that the F the first thing on the page looks right so low impact is just a headline medium impact is kind of
+9:11
+puts the image below and then high impact up here you can add more Heroes
+9:17
+that's the first thing that I think we want to look at in the payload config side like this is a hero field we've
+9:23
+imported it from here Heroes config so we can go Heroes and we go to
+9:30
+config and you can see here's some more fields we have a type the hero type
+9:36
+right here this type has a couple different like options it's a select field by
+9:43
+default it will be set to the low impact hero right here but you can choose which type of
+9:50
+hero you want to show and then depending on which type of hero your front end can
+9:55
+render the react component for that hero type so we actually have a component that maps to this hero type we have a
+10:02
+react component that maps to this hero type and we have a react component that maps to this hero type and then from
+10:08
+there you can show and hide different fields using payload conditional logic to like for example we only show the
+10:13
+media field if the hero that was selected is either high impact or medium impact if I
+10:21
+can show you that in the browser real quick high impact we've got the media field low impact the media field goes
+10:27
+away because it's not relevant to that low impact hero it doesn't show so
+10:33
+conditional logic allows us to toggle that field on and off based on what we've selected here medium and high
+10:39
+still have the media field but low it goes away and so you can build really versatile like hero patterns to take
+10:47
+that to the extreme here's a website built on payload this is a hero style
+10:52
+operates with the same principles that I just showed I go into a page here's another hero style I go into another
+10:59
+page I don't know let's go here here's yet another hero style all these different hero styles are wired up and
+11:05
+so that the authors can choose these hero Styles and then on demand build a
+11:10
+very versatile conversion funnel or whatever they're trying to do with their website but they have full control and
+11:17
+so Heroes that's just the first thing on the page and then we have content I'm going to show you how this
+11:22
+works on the front end right after this but so that first tab has that one group field and Pages here
+11:29
+this is the pages collection again here's a tab for the hero that
+11:35
+corresponds to this tab right here and then all these fields inside of it this
+11:40
+is a group field and we imported that from a different file so it's a group
+11:45
+field called hero and here you go here's all the fields on that group
+11:51
+type right pretty simple stuff there let's go back to the pages
+11:57
+collection again so here we are on the Pages collection and then the content tab is
+Rendering blocks dynamically
+12:06
+here and the content tab just has this one layout field right and that one
+12:11
+layout field if I look at that here it is layout and we've got a couple blocks
+12:17
+tied to this layout field so this is the block based layout Builder where we have five different blocks registered able to
+12:25
+be used I can show you that if I click on ADD layout here's the five blocks that I have available to create my pages
+12:32
+I could register another one easily like I I I don't like how es lint
+12:37
+is taking my spaces out I like these spaces but I could add another block just like going like this slug my new
+12:45
+block fields and then we can name is
+12:52
+content type is Rich text now I have another block and then that's going to
+12:57
+be instantly exposed you can put this in another file as well you see how I've got these five here it's kind of best
+13:03
+practice to put these files or these block configurations in their own files so I've actually got like a blocks
+13:09
+folder I'm not going to save this because I don't want to use that right now but we're actually importing these
+13:16
+those come from the blocks folder so if I go over to the blocks folder here's my
+13:23
+blocks and so I can see here's the call to action block here's the config for
+13:28
+the call to action block I just export it and then I reimport it in the pages collection for use but by centralizing
+13:35
+that you can really keep your payload configs really clean and really easy to manipulate and navigate around and so
+13:42
+with that this is kind of like giving your editors those layout like Lego blocks to build with and then it just
+13:50
+becomes a matter of how do we render those in a concrete way on the front
+13:55
+end so let's look at how this comes together on the front end here's the hero obviously layout blocks
+14:02
+let's follow this through from top to bottom because so far really all we've talked about is how to generate the
+14:07
+payload side of things you could think about this as like the data source the backend the structure the data that
+14:13
+you're going to save but now let's look at how to actually render that so I'm going to close all my files close up all
+Next.js routing for pages
+14:18
+the folders let's go to Source this is a nextjs app right so all of payload runs
+14:25
+here the whole thing you don't need an account you just go this is a full self-contained repository with
+14:31
+everything you need payload mounts its admin panel and its API here and then your front end runs in
+14:38
+this folder coincidentally called front end and if we're rendering pages right
+14:44
+if we go over here you can see I'm on the homepage if I click on contact well now I'm on SL contct and so the routing
+14:52
+structure of nextjs means that when you click like here we go there's two pages
+14:59
+number one here's the homepage right so just like slash right this is root and
+15:04
+you can see we're importing the page template from thiss slug page and then
+15:10
+we're just re-exporting it that's it we're importing the generate metadata and the page template and then we're just simply re-exporting on this
+15:18
+homepage this is not in a folder you see this is at the root of the front end so
+15:23
+this is the homepage but then all pages in the Dos slug should also render this
+15:29
+exact same page template so this is actually where all the code goes this is the page template that is responsible
+15:36
+for rendering uh this stuff here like pages so slash that is the same contact that's
+15:44
+the same template they don't look anything alike right these two things look very different but it's the
+15:51
+same nextjs route we're just we're just exporting it
+15:56
+we're reusing it in this other file so it's kind of clear because it would be kind of a bummer if we had to duplicate all that the homepage is built with the
+16:04
+same structure as all other pages and so this file has a bunch of stuff going on
+16:10
+it Imports a bunch of stuff and then I'm going to just describe all of this to you from top to bottom I think the first
+16:16
+thing that I want to describe though is the page itself so this is what renders
+16:21
+the page content line by line the first thing we have pams and pams is a nextjs
+16:28
+con construct that gives you whatever gets filled in with this slug parameter here will show up on the pams so pam.
+16:37
+slug will be whatever the user enters here so for example if I go to
+16:44
+contact pam. slug will be contact right
+16:49
+and so I get that here and you can see we're defaulting it to home so if there is no slug then just assume that it's
+16:56
+home and the reason is because this right here remember that this component
+17:02
+this is a react component right this react component is reused for our homepage so if there is no slug coming
+17:08
+in from the pams then we know that it's the homepage and what we're doing here is
+17:13
+we're creating the URL we're we're adding a slash because like if the slug was just straight up contact well the
+17:19
+URL is actually slash contact and the first thing we're going to do now that
+17:24
+we know what page is being requested here we can go query that page Page by
+17:29
+the slug and you know slug is a weird word for this I don't know why it's called slug I think it's a Remnant from
+17:35
+WordPress ripe for renaming but we're going to query that page and we're going
+17:40
+to get the data from the CMS for that page by that slug so let's pretend that this was contact right slug was contact
+17:48
+like I showed you over here contact so we want to go query the contact page from the CMS so this
+17:55
+function we've actually got this in the same file I believe it's maybe down at the bottom query Page by
+18:02
+slug we're using nexj or we're using react cache to D duplicate this so that
+18:08
+if we had to run this multiple times to generate this page which we will have to do and I'll show you that then react
+18:15
+helps us and says hey this function was called twice for the same request we
+18:20
+only really need it to be called once so let's just cach that for the second call and the reason we're using cache here is
+18:27
+because we need that page we need the data for the page in two places here yes
+18:33
+we need it for this page react component that actually renders the page right we're calling it here but we are also
+18:40
+calling it in the generate metadata function right we're calling it here because we need the metadata from that
+18:47
+page remember how in payload I kind of showed you that there was SEO here well this is metadata right in nextjs you
+18:54
+would use that for Generate metadata so I need this I need this contact page or this H page in two places I need it here
+19:02
+and I need it here and so we just abstracted it out into a function and we wrap it with react cache which comes
+19:08
+from react just like that now we're going here we're all
+Fetching and querying data with Payload local API
+19:13
+happy we're going to get one page of course this is typed this is payload we're dealing with it's fully typed you
+19:20
+get end to end type safety just out of the box for free but what this query Page by slug does it takes an argument
+19:27
+of slug and that's going to be a string right so when we query Page by slug we got to pass it the slug that we want and
+19:34
+we're going to do a couple things number one we want our website to support preview and draft mode of nextjs which
+19:40
+is a great nextjs feature it allows logged in admins to be able to preview the newest copy of that page hey if
+19:47
+you're in draft mode I want the newest copy of this page available but if you're not in draft mode if you're a
+19:53
+public visitor of the site you should get whatever's published right so we're going to get draft mode we're going to
+19:59
+say hey are we in draft mode yes or no and then we're going to do this right here and we're going to get
+20:05
+payload this is the way that you initialize payload you say await get payload and then you pass it your
+20:11
+config and so we've there's a couple things here import draft mode so that
+20:17
+comes from nextjs draft mode and then we have get payload which comes from
+20:24
+payload import get payload from payload and then finally we have our payload config because if we want to get payload
+20:31
+if we want to get a copy of payload to use to query then we need to pass payload our config and the config is
+20:38
+actually a promise right here we import that right there you don't need to call
+20:43
+it config promise you could just call it config if you want like sure just like that but really it's
+20:50
+up to you um I like to just kind of keep that as config promise because if you tried to access something from that it's
+20:56
+going to be a promise you have to await the config promise if you want to access something from it and so if I show you
+21:03
+this build config we're exporting build config we're calling this function this
+21:09
+function is going to return a promise you see that when you call this function it returns a promise that has the
+21:14
+sanitized config but you need to await that luckily get payload does that for us so here I can get payload by saying
+21:23
+await get payload and pass it the promise and there we go now we've got payload which is running and it's able
+21:30
+to to query for us so what we're doing here when we want to get a page by a slug we're going to say hey payload find
+21:39
+pages are we in draft mode yes or no this is a Boolean right so we're are we
+21:45
+in draft mode okay if we're in draft mode then get this page in draft mode so give me the newest copy if we're not in
+21:52
+draft mode give me whatever is published and now we're going to limit this to one
+21:57
+we only want one really there should never be more than one page with the same slug we have that
+22:04
+set to being unique so you really can't have more than one but we just like to specify that generally payload is going to be
+22:11
+preparing some like pagination data so like for example um how many pages did
+22:16
+we get I know you only asked for one but how many pages are there total here well in this case we don't need that
+22:22
+information payload would perform another query to see how many pages we get returned if we're calling payload
+22:28
+fine but we don't need that information so I just say payload or pagination false which makes this query more
+22:35
+efficient now override access this is a property that says to payload hey should
+22:40
+we respect your Access Control yes or no should we care if a user is logged in
+22:47
+or not yes or no and override access what that does is it says to payload
+22:53
+because we're querying our database directly here we are on the server this code runs on the server so it is secure
+23:01
+and payload the local API by default assumes hey if you're running this on
+23:06
+the server then we know that it's you because some strange user can't get
+23:12
+access to the server to run code so yeah don't worry about it now we're going to set override access equal to draft so if
+23:19
+draft mode is false then we're not going to override the access you can think about this as
+23:25
+like a flag to turn the access control on or off so if we pass true then we're
+23:31
+going to say hey disregard our Access Control this is me so if it's a draft if you're in draft mode hey we want to
+23:36
+disregard Access Control give me whatever you got but if draft is false then override access will be false and
+23:42
+that says hey we're a public user here so we need to respect the access control
+23:48
+that was set on the payload config and so for example if I show you collections
+23:53
+Pages here access control for payload is very powerful too much to go into for
+23:59
+this video but read you can see read access control for pages is set to say
+24:07
+you need to be authenticated or you can read published documents only and so
+24:12
+this is a function we've got it in a separate file I'm going to show you that quickly you can see that this is a very
+24:17
+simple function that says okay here's the request and here's the user that's logged in if there's a user logged in
+24:25
+then yeah they can return yeah they can read every page if there's a user logged into payload then they can read every
+24:32
+single page but if there is no user logged into payload then return a query constraint that says hey non-logged in
+24:39
+users can only read pages where status is equal to published which means that
+24:47
+public users cannot read drafts they can only read published Pages which is kind
+24:52
+of like a nice security mechanism but it's very simple to do in payload right
+24:57
+so this is effective going to say hey if we say override access false well it's only going to give you back published
+25:02
+pages but if override access is true then it's only it's going to give
+25:09
+you whatever you want and finally this one last piece on this payload doind is
+25:14
+the where query you could think about this as like filtering so I want to filter the pages that payload returns by
+25:21
+saying hey give me only Pages where the slug the slug field equals the slug that
+25:28
+we we're asking for so give me Pages where slug equals contact in our example
+25:34
+and then of course result is going to be a paginated type because it's going to have like hey how many pages did we find
+25:39
+blah blah blah even though we've disabled it it will still return the same shape because of typescript you
+25:45
+don't want this shape to change and so that right there we have result. docs we
+25:50
+want to get the first one or we return null if we didn't find anything so we're
+25:56
+going to return the first document that gets returned or we're going to return null and then we use that right here so
+26:04
+you can see here that's a page type and then we're going to use that here to get the page data and this is
+26:11
+going to be Json so effectively what we're going to get here is this this Json data for the page it
+26:19
+gives you everything exactly how you defined it you see a lot of Rich Text here but really it's pretty simple and
+26:25
+clean and it's going to give you everything that you need need to render the page
+26:31
+so that's kind of fetching the required data right you don't really need this
+26:37
+part in the last video I deleted it we could probably delete it as well basically if you visit your website
+26:42
+before you actually have a homepage then it's going to show the static homepage data if there is no page that has been
+Handling redirects in the template
+26:50
+matched then we're going to run this through the payload redirects function this is a
+26:56
+component and what this does because in payload we can set up redirects right
+27:01
+inside of the admin panel so I can go over here I can look at redirects we don't have any redirects but I could say
+27:07
+hey if you get to the page like my
+27:14
+nonexistent page hey if we hit this URL let's go over to
+27:21
+google.com right so this is a new redirect if we go to this URL it's going to send us here instead well we got to
+27:27
+handle that on the front end right and so what we do if we didn't find a page then we're going to render payload
+27:33
+redirects and we're going to check there we're going to say hey this was a 404 so do we have a redirect should we
+27:41
+send this to somewhere someone else and that's why we've got this URL up here right so we know the URL is SL Conta so
+27:48
+then what this redirect this redirect component is going to do is it's going to say okay let's go get the
+27:54
+redirects we cache them so we get all these these cached
+27:59
+redirects all of them we're saying limit zero we're fetching all the redirects
+28:04
+but we don't want to just we don't want to call this all the time we want to call it only once and so we cash it um
+28:12
+with unstable cash here this will probably be a updated to use the um the new used cache directive but right now
+28:19
+it's just cach so we go get the redirects and then we Loop through them and we say hey do we have a redirect that matches here if we do and it's got
+28:26
+a valid two URL then redirect to that two URL otherwise if we have a reference
+28:33
+document so there's two ways to make a redirect you can do an internal link where I can select like the contact page
+28:39
+or I can specify a custom URL so if it's a custom URL then redirect to that
+28:45
+custom URL but otherwise if it's a related page then we need to redirect to
+28:51
+that page and we first need to go get that document like so that's going to
+28:56
+say hey we've got a page or a post and we need to go fetch that page to see where we actually send
+29:03
+it to so you can see like if it's a page that we chose over here like internal
+29:10
+link if we choose a page then we know to go to SL slug if it's a post well then
+29:17
+we need to go to SL posts slash the name of the post right so if you look at the
+29:23
+URL up here SL posts and we click this slash posts and then here's the slug so
+29:29
+they're kind of formatted differently so you kind of have to handle that like what kind of document did you get it's a page okay then send it to just Slash
+29:37
+Slug but if it's not a page then we slash we send it
+29:45
+to the the slug of whatever kind of collection it is relation to so this will be posts and then it will send it
+29:52
+to the slug of that as well and then finally if there is a redirect URL then
+29:57
+send it send it there so we're kind of binding the redirect URL in these different cases
+30:04
+here and then we're sending it there so we have to handle those
+Building and rendering React components
+30:10
+redirects this comes out of the box you really kind of have to set this and then you can forget about it but that's
+30:16
+pretty boring stuff finally we're at the fun part which is react I kind of I think that's one of
+30:22
+the points of this um website template is that you don't want to wire this up yourself just let us do it for you and
+30:27
+we're going to monitor this stuff and we're going to keep it up to date this is a good redirects pattern because it statically caches the redirect responses
+30:34
+so it's not super expensive um and it's built to be optimized when you deployed
+30:39
+to sell and things like that but here's the time where we actually go get our data from our page
+30:45
+because at this point we know we have a page right we would have returned this but now we know we have a page and it's
+30:51
+the page type it's all typed so I can hover over this boom here's my hero here's my options everything is all
+30:57
+typed really nicely the layout it knows what blocks we have registered we know
+31:03
+it knows it's an array of these blocks it's a union of all these block types but it's an array it has many
+31:09
+blocks so then we go to render so we wrap everything in an article with a couple Tailwind classes
+31:15
+here and then we go look at this page client real quick this basically just sets the header theme because for
+31:23
+example this template has light and dark mode and so we need to know on the
+31:29
+client's side is the theme light or dark and so this is just like a little utility that uses our header theme we've
+31:36
+got a provider here that stores that so if you needed to render a component differently based on if you're in light
+31:42
+or dark mode you can use this which basically just stores the
+31:49
+theme and it exposes those things through react context so that over here
+31:56
+I can say oh we're going to set it to light by default and that's it so that's kind of
+32:03
+a really simple one there this is a server component this whole thing is a server component which is why we can use
+32:09
+the payload local API that local API this get payload payload doind this is a
+32:15
+serers side only thing which is why this up here this is a server component it's
+32:20
+best practiced to use server components until you have a very good reason to do something on the client's side so this
+32:26
+being a server component component everything here is just going to be rendered on the server and that's it but
+32:32
+the client component here needs to have an effect so this is like kind of a self-contained tiny little client
+32:38
+component there now the thing about these redirects if we don't have a page while
+32:43
+we need to check to see if there's redirects but even if we do have a page if somebody publishes a redirect that
+32:49
+says like hey I don't want to delete the contact page but if anybody goes there send it to get started or something we
+32:55
+need to do the same thing for redirect as well now this component here is pretty
+33:02
+pretty cool I think I showed this earlier on in this video but I can actually go and see live preview as I
+33:10
+edit the site I'm going to see those changes take place immediately on the front end and so this live preview
+33:16
+listener is what's responsible for re-rendering the content when things change right so you
+33:23
+can see as I'm changing this it's instantly rendering well this is really cool by rendering
+33:29
+this one component we only want to do it if we're in draft mode because this really isn't
+33:35
+necessary unless you're in draft mode right but if you are in draft mode then we're going to render this component
+33:42
+this component is also a client component because we need access to the router and what this does is we pass the
+33:51
+router to our payload live preview component this comes from payload live
+33:56
+preview react payload live preview we pass it router. refresh because we're
+34:01
+going to refresh the whole page every time this component gets an alert that some data has changed from the payload
+34:08
+admin panel and we also need the server URL because we only want to trust events
+34:15
+that come from this server URL so we've got two things here but
+34:20
+this component takes care of everything for us it's going to the way that it works this is an iframe and it listens
+34:27
+to to events that the parent window posts to this iframe so when I make a
+34:32
+change and the form state is updated payload says Hey website check it out I
+34:38
+just got an update here's some new data you should refresh your router and get new data and what that does we only want
+34:45
+to trust those post message events from this server URL here and that's it so
+34:51
+just with this one line you can set yourself up to use live preview now there's a couple more things
+34:58
+that are pretty cool here and that's pretty much it at that that point for this page template you've got the render
+35:03
+hero component which is going to be responsible for rendering this and then
+35:09
+you've got the render blocks which is going to be responsible for iterating over all these layout blocks and
+35:15
+outputting the corresponding block to the page in a react component and this
+35:20
+is dynamic again this is not a template so we've kind of got two components one handles this and it's going to say okay
+35:27
+what type type of hero am I high impact okay render this component am I medium impact okay render this component am I
+35:33
+low impact render this component but then the content is going to map over that array and it's going to Output
+35:39
+blocks for each one of these so going back over here You' got the hero component you can see that we're
+35:45
+spreading this object this is an object and it's got a bunch of props and so we're spreading that hero into this
+35:53
+component so let's go check that out I'm going to command click on it
+35:58
+you can see here this is a very simple react component it's got kind of like a map of all of our heroes that we've got
+36:05
+available to us so if we wanted to add another type a hero type I would say my new hero type and then pass it my new
+36:12
+hero type component or whatever obviously that's not real yet but you
+36:17
+keep this map and so we type this component this is a react component we type it with the
+36:23
+props of the page hero so it knows that these props are the same type as we have
+36:29
+from payload again payload does give you all of those types you don't have to do anything here I can just go to payload
+36:36
+types I can look at the page and here's the hero payload gives you all of this
+36:41
+you don't have to write this from scratch payload will generate it for you and so we're importing that page type
+36:47
+from here and then we're selecting the hero key off of that page type right there and now props is typed to exactly
+36:55
+what we're passing it over here which makes it bulletproof because if I wanted to say like this doesn't this let's be
+37:03
+more explicit isn't real like typescript is going to not let you do that right
+37:08
+it's a very very big safety blanket having endtoend typee safety is going to make your applications
+37:14
+better so what we're saying here we know this type is going to be none high impact medium impact or low
+37:20
+impact that's exactly how we have it defined over here typescript if there is no type if
+37:27
+somebody didn't set it or if the data is corrupted or something or if the type is none uh we don't have to return anything
+37:34
+so return null but if type does exist then we can
+37:40
+go grab the proper hero to render from the type so we go up to this map and we
+37:46
+say hey I've got a type it's either high impact low impact or medium impact give
+37:52
+me that hero to render we have one more safety mechanism here to say if somehow someone corrupted
+38:00
+the data or something which is impossible because payload does validate things for you if someone somehow
+38:06
+corrupted the data or used this component incorrectly and passed it some junk well then just return
+38:13
+null but finally if we do have a hero to render if that was legit then we render it and we just spread the props we
+38:20
+spread all these hero props into that hero to render and then we let this component do whatever it needs to do so
+38:27
+for example let's look at the high impact hero this one so go here right this is the react
+38:36
+component that renders the high impact hero it does a couple things it's a client component it's going to set the
+38:43
+header theme to dark because this component has a background image that
+38:48
+needs that header to be dark I'm going to guess that the medium impact does not have that yeah because the medium impact
+38:54
+hero doesn't put text over top of an image like that it just puts it like this should be a white background if if
+39:00
+you were in light mode but this one we need to enforce that it's that it's dark mode right so the high impact hero we go
+39:08
+back over there we're going to set that heter theme to dark and then we just output the
+39:15
+content so we're using Tailwind we're defining all the Styles all the Styles
+39:21
+here we're rendering the rich text we're mapping over the link of the
+39:26
+array of links and we're outputting a UL for the links and then for each link we're outputting a component that we
+39:32
+have called CMS link and then finally we're outputting the media if we have media we're going
+39:39
+to Output the media so there's kind of three different concerns that this Hero has to solve for I mean outside of the
+39:45
+Tailwind CSS like how to actually style it and design it I don't even know how this works I hate Tailwind I don't hate
+39:52
+it I just I'm not interested in learning about what that means not going to lie I
+39:58
+know how to write CSS I don't know how to write that someday maybe I'll become less of a grouch but today's not that
+40:04
+day so let's forget Tailwind for a second we have Rich Text we have the CMS
+40:12
+links and we have the media well here's the rich text we got to Output that here
+40:19
+and then we have the links which are here we have two buttons output those here and then we have the media which
+40:26
+outputs in the background and so we like to have like reusable
+40:31
+components so everywhere that I need to render Rich text I'm going to use this component and there's going to be a lot
+40:37
+of places where I need to render Rich text like this is Rich Text if we go back to the homepage this
+40:44
+is Rich Text this is Rich Text this is Rich Text
+40:50
+so having one component there for Rich text that can just take that data and just render it out that's that's key so
+40:59
+if we have Rich Text then render that rich text component if we have an array of links then map over the links and
+41:05
+render that CMS link if we have media render the media
+41:11
+component and let's go through those one at a time so like this component's pretty straightforward this the
+41:16
+beautiful part about react and I think most of you probably are very familiar with this is that everything is
+41:22
+component based this high impact hero its sole job is to to make this thing
+41:28
+look good so if you have a problem with this component you know exactly where to go right here and then the rich text
+41:35
+component this thing it's one job is to make sure that this text looks
+41:41
+good same principles over and over so what we're doing here we have a custom
+41:46
+react component we've got a couple different things here we've got the props
+41:52
+defined we're getting the props out of here and this one has rich text without
+41:57
+blocks so it does look like we probably have a couple Rich Text blocks we're using some packages from payload to do
+42:04
+this and this looks like a lot of code it's not really that hard but basically what we have is converters so payload
+42:12
+gives you converters to take the HTML or to take the Json of Rich text like this
+42:19
+is what payloads Rich Text looks like right here it's Json which is great because you might not always need HTML
+42:26
+some sometimes you might want to Output your text as just raw plain text sometimes you might want to Output it as
+42:32
+markdown sometimes you might want to Output it as jsx and so by storing the
+42:38
+Json here and making it easy to render then you can write very very explicit
+42:45
+Rich Text here but the way that it's stored is versatile and because we're
+42:50
+using react on the front end we're going to use the jsx converter and so what we've got here
+Rich Text Fields and custom blocks
+42:56
+we've got the jsx converters from payload Rich teex lexical we give you everything you need
+43:03
+we have default converters here meaning that we take care of the H1s we take
+43:09
+care of the H2S we take care of the paragraphs the uls the HRS the Bold the italic all that stuff you don't need to
+43:15
+do you just need to tell us your custom blocks that we don't know about because
+43:21
+Rich text and payload is very very versatile and extensible so if I show you kind of like what the pages or the
+43:26
+posts look look like we've got custom Rich Text blocks here I've added a banner so that if I go
+43:34
+over here and I show you what this post looks like this doesn't come out of the box with payload nor does this one these
+43:40
+are custom you can take this concept and run with it very far but you need to manage those blocks you need to render
+43:47
+those yourself so you can see we have a node which is a rich text node and then we pass it to the code block component
+43:54
+that we have that should render the code component call to action the banner this one's
+43:59
+pretty simple let's look at this one so we need to tell our our jsx converter
+44:05
+how to take that Json of the rich text that I showed you and convert it into
+44:10
+our react components so like I showed you here this is a banner this is a custom
+44:18
+component well the banner we have a component for we know the node we know
+44:23
+the fields we know the banner I can go here and it's going to render the data
+44:29
+that we needed to render from our Rich Text Json and so it's kind of like a
+44:34
+component that we we match it up so just showing you that real quick this Banner right
+44:41
+here is this it's got two field style and then the rich text I can change this
+44:47
+to like a warning and then preview it it's going to be orange now change it to error red success blue info Gray
+44:58
+so what are we doing over here we've got the style we know what options we have and we render a different thing based on
+45:06
+what the style is and then finally we render that rich text and that rich text is right here
+45:14
+right here so you do have to if you're using this this is kind of an advanced feature of payload but if you are using
+45:21
+custom blocks in your Rich text you need to kind of tell us how to render them so
+45:27
+we have these jsx converters and then we just render that here and then you're
+45:34
+done so that's kind of the the principle there it's actually not as hard as it looks I think if you kind of get into it
+45:40
+you'll be able to see we're just spreading the default converters we're spreading the link converter and then we're showing how to render our blocks
+45:47
+and then this function here will take that rich Tex Json and render it out
+45:58
+okay let's see what else should we go through rich text comes from here as well so you can import it directly from
+46:04
+payload that's a component that you don't need to write yourself you don't need to write this you just need to pass us your converters and then you can put
+46:10
+class names on it Etc so next up let's look at the
+46:17
+links you're going to map over the links and then this is of course all typed as well in payload and those links are just
+46:23
+Fields right so if I go over to Pages go to home let's look at these links this is kind
+46:30
+of a nice structure to use for links in the CMS because you can link to internal links or you can link to custom URLs so
+46:36
+I could link to another page or I could link to a fully custom URL I could specify if it's opening in a new tab I I
+46:43
+fill out the custom URL and then I add the label and I can choose the appearance as well because if I wanted
+46:49
+to render buttons or something well I've got to be able to specify what style of button right so I can do outline now
+46:55
+they're both outline I could do two white buttons If I want I could flip that one to default as well you kind of
+47:02
+need to choose what the rendering style is of these buttons and so then we map over those
+47:10
+links and we return CMS link and CMS link is a simple component it takes that
+47:16
+link type here and it's going to render what type of component it needs
+47:23
+to render so if it's in line it's going to render just a regular old link a nextjs
+47:31
+link but if it is a button if it's not in line so I think appearance if we
+47:37
+hover over that yeah it's going to have a bunch of these different types if it's not in line then we're going to render a
+47:43
+button we're going to pass it the size the variant the class names and then inside of that button we're going to put
+47:48
+our link from nextjs and that's pretty easy right we have to we do have to um build out the
+47:55
+hre kind of like in those redirects you know how in those redirects when I showed that earlier on in this
+48:02
+video you have to tell your front end is this a page that we're linking to okay
+48:07
+then go to Slash Slug is this a post okay there you have to go to SL posts
+48:13
+SLS Slug and so that's kind of what this is doing here if it's not equal to Pages
+48:18
+then we say Okay Go slash whatever it's related to posts SL
+48:23
+Slug and so you just kind of build up that HF and then you can pass pass it if the HF is incorrect or if it's not valid
+48:30
+then we just say return null don't render it that's a pretty simple thing though having this component be
+48:35
+centralized into one place means that as you build different types of nav structures you can change that href
+48:42
+structure in one place rather than having to change it in a bunch of places but really it's you out put the link if
+48:49
+it's an inline button or an inline CMS link I should say and if it's not inline
+48:55
+then you up with the button but that's a nice little handy dandy reusable CMS link right
+49:02
+there then finally we have media so just like we have a component to handle links
+49:08
+we have a component to handle media and it's really nice you're starting to see that if you can like put together these
+49:14
+like pieces then you can use these pieces everywhere and really move quickly throughout the development of
+49:19
+your application and we give you these pieces from a starting point so you probably don't have to do a lot of this
+49:25
+yourself you can just use this template you're going to obviously want to make your website look a lot different that's
+49:31
+fine but you can use these pieces because a lot of this is kind of the same no matter what you're doing so
+49:38
+having this boiler plate here is going to help you finally though media so
+Media components for videos and images
+49:43
+let's go into this media component what we're going to do here is we're going to say hey this media
+49:49
+component can render both a video and an image so what we're going to do we have
+49:54
+is video okay we have a read resource the resource comes from the props which is in let's see where is
+50:01
+props types here so here's the props for this component and resource is going to be a
+50:09
+media type or a string or a number because it could be an ID or it could be
+50:15
+a full populated media document from payload and to be explicit what I mean
+50:20
+there is we have a media collection and this is a media document
+50:26
+so if I go to the API here's the shape we've got the ID of the media document we've got the alt text we've got the
+50:31
+file name we've got the MIM type we've got the file size all this stuff comes from the API and then we can use that
+50:38
+stuff to render the media document so I'm going to close man I'm getting crazy
+50:44
+Let's uh go here okay this is where I was and
+50:51
+then we in media okay so we're g to say hey does
+50:57
+this resource's mime type include video okay then it's a video otherwise it's an
+51:02
+image and you can see mime type resource. MIM type going back over here
+51:07
+MIM type so this does not have video this is an image but if you upload it an mp4 well we're going to want to render
+51:14
+that differently right so if it's a video we're going to Output the video media component but if it's not video
+51:20
+then we're going to Output the image media component so video media right here it's going to return uh HTML 5
+51:27
+video it's gonna have the source and all that stuff to the media file name but if
+51:34
+it's an image we're going to do some pretty cool stuff first we're going to do a placeholder blur and we're going to
+51:40
+Output we're g to we're going to look at all the file sizes that we have right because we have a lot of different sizes
+51:46
+you could see that this template comes with lots of different predefined sizes
+51:51
+that we can render for different purposes right you could also just use the nextjs component to do this but what
+51:58
+we do is we grab the sizes and then we render it out
+52:05
+here with sizes so that basically we we create the nextjs image component sizes
+52:12
+from the break points that we want or from the props but break points as you
+52:18
+can see up here we have different break points defined as our CSS variables so here's some different common breakpoint
+52:24
+sizes so we're going to map over over those or if the component had overrides we're going to map over those as well
+52:31
+and then we're just going to create this string so this is not really payload this is more nextjs but you can specify
+52:38
+nextjs to output and resize automatically different sizes of your image for different screen sizes and
+52:45
+that's pretty much what that is
+52:52
+cool yeah so I mean I think that's pretty much it for the render hero each
+52:58
+one of these Heroes has different components so low impact doesn't have the media doesn't have the links it just has Rich text Medium impact has all
+53:06
+three of those things but they're output in a different order right media is just below with the medium impact but in the
+53:13
+high impact media is going to be absolutely positioned behind
+53:19
+everything so you can kind of position things differently you can do whatever you want and having these kind of as
+53:24
+their own react components in this one fold is kind of Handy there
+53:31
+okay so that's the heroes now let's look at blocks blocks are very similar
+53:37
+probably a little bit more simple actually so if I go to blocks very similarly to how we had the heroes we
+53:44
+have kind of a map and we have different blocks for different component names and
+53:50
+I think you can see where this is going all we do first we check and see if we have blocks right now this is going to
+53:57
+be typed again so if I say if I hover over this we know the types but first we just need to do some
+54:03
+sanity checks like hey do we have blocks here do we have more than one block okay then let's go let's output them but if
+54:10
+we don't just return null just kind of like a safety check so if we have blocks we're going to Output a fragment and
+54:16
+then we're going to say blocks. map and then here we have the block and we know it's one of these five blocks and we
+54:23
+have the index so 0 1 2 3 it'll output that as we go we're going to use the index as the key but the block is the
+54:31
+actual magic here so we have that block and we have the block type and you can see the block
+54:38
+type typescript knows that it will be one of these five block types so if we have a valid block type
+54:46
+and that key exists in our map up here then we know we have the
+54:53
+block honestly I think this might be Overkill here but it's fine so we grabb
+54:58
+the block to render just like hero to render you know like it's basically the same thing as we did over here we say
+55:04
+hero to render and then over here we say the block to render we're going to
+55:10
+Output a div and then we're going to Output that block component from this map and spread the props of the block
+55:18
+and so I think Paul actually oh this doesn't show I think Paul wrote a typescript expect error you can if you
+55:24
+want to do this in a fully type safe way you would have to write a switch casee I think here which is overly verbose and I
+55:30
+think it's not worth it so we just flattened this into just let's just
+55:35
+pretend that that doesn't exist and then we have the block component and that's really all there is
+55:42
+to it to render to map over those blocks and to render each one of these blocks but then each block component
+55:48
+itself is responsible for rendering its own Fields so for example the media
+55:54
+block is going to have different fields than the call to action
+56:01
+block right so we're just pulling this right from the payload types but the call to action block is very simple it
+56:08
+just has links and Rich text right so if we look at that over here we go back to that
+56:16
+page we've got links and we've got the rich text and so this component's job is
+56:22
+to use Tailwind to be styled and to Output the rich text and the links just like we saw
+56:27
+before and that's the beauty of this because you can build up Your Arsenal of
+56:33
+Lego blocks over time ultimately come out with a site that looks like payload this is just a starting point this is
+56:39
+just the architecture you want to add your own blocks I'm going to show you how to do that in the next video but for
+56:45
+now I just want to explain kind of the moving pieces and the rendering pipeline here but yeah so this block has two pieces
+56:54
+it's got the config what's great is that we can put them in the same folder as well so if I show you like the folder
+57:01
+structure here we've got here's our app folder and here's our blocks here's our
+57:08
+collections here's our components that are used miscellaneous places here's custom endpoints here's Fields here's
+57:14
+the footer here's the header here's the heroes everything is really nicely organized and for all of our blocks each
+57:20
+one has its own folder and each one has two things in there so if I look at the call to folder I've got two things I've
+57:29
+got the config which is what this is this defines the block config for
+57:34
+payload this is the backend piece to this block it's got two Fields Rich Text
+57:39
+field and a link group field so you have to define the shape of the data you have to define the fields that you want your
+57:46
+editors to use and then I mean these fields are going to be different on a block byblock basis right media just has
+57:53
+a media field call to action has content and links archive has intro content
+58:00
+populate by collection or individual selection collections to show categories
+58:06
+to show limit content has columns each one of your blocks will
+58:12
+have its own fields and so the first thing in one of these folders is the config right here where you define the
+58:18
+fields and then the second thing is the react component that goes with those fields that renders it on the front
+58:24
+end and so with those two things you can build a very very expressive system over
+58:30
+time what that looks like for you when you go to build your own website from this template is you want the backend
+58:36
+piece the config and then the component the thing that renders the data and it's all bundled up in this nice little
+58:42
+folder architecture here so those two concerns and then you're done go to Banner same thing the banner has a style
+58:50
+field info warning error success it's required defaults to info and it has the
+58:57
+content and just with those two fields we go back over to that post that I was
+59:02
+showing here's the banner block right there and so this render
+59:09
+blocks just goes and grabs the right block and it passes it the props and it renders out that component the corresponding component
+59:16
+done and so this type of block-based layout mentality is really nice for
+59:21
+Pages where the layout is very expressive right very full screen each page looks different going back to our
+59:28
+website we have like all kinds of crazy different blocks and very versatile layouts and all this stuff but then if
+59:35
+we go to the blog well each one of these blog posts kind of looks the same right like it's kind of more templated it's
+59:41
+got a long scrolling Center like alignment here and so you don't really
+59:46
+need that full power of um layout building on posts but you do need it on
+59:52
+pages right so that's kind of how this is set up and that's why there's like if you go to the posts collection it's
+59:59
+going to be different but Pages content is built with a layout Builder you don't have to do that you
+1:00:06
+could do everything with a rich text field you could do everything with layout blocks doesn't really matter this
+1:00:11
+is kind of our suggested way of working but you can take that and run with
+1:00:16
+it okay so on that note about the differences between pages and posts I do want to go through posts quickly I think
+Posts vs. Pages: Different layout approaches
+1:00:24
+you've got the ground kind of IDE ideas with looking at pages but why do we do
+1:00:29
+different things for pages and posts and how do posts work where Pages have that
+1:00:34
+layout Builder posts just have this one Big Rich Text field right I mean it's all kind of a simple concept but I do
+1:00:40
+want to walk through that really quickly so here's our pages right in our app folder we have the slug which is kind of
+1:00:46
+like a catchall and it's going to render Pages based on slug but then inside the post folder if I go to the front end I
+1:00:54
+show you the post folder well first we're going to render this archive and
+1:00:59
+then second we're going to render an individual post so posts slug right and
+1:01:05
+so how does that work well we have a posts folder in nextjs which is what creates that URL structure so having
+1:01:11
+that folder called posts corresponds to this anything after posts is going to go
+1:01:17
+inside of this folder and be rendered in here so we have the slug this is that catchall route for the slug of the post
+1:01:24
+just like we have the pages but here it's going to do something different and then we have the root so posts so slash
+1:01:32
+posts is going to go here but slash poost slashy post or whatever is going
+1:01:37
+to go here and those are different right so this is the archive so here it is right here and
+1:01:45
+we're going to go get many posts we're going to get 12 posts and then we're going to Output an H1 for post and then
+1:01:51
+we're going to Output the range the range component and we're going to Output a collection archive which is a shared component and then we have a
+1:01:58
+pagination component but here we're getting 12 posts right in the page example thus far I was only getting one
+1:02:04
+here we're getting 12 because we're making this archive that homepage right here so we got the H1 then we've got the
+1:02:11
+range then we've got the archive and we don't have page Nation because we don't have more than three posts but pageon
+1:02:17
+Nation would show up down here if we did and so that's kind of this I'm not going to go into each one of these components
+1:02:22
+because I want to talk about something in specific but here like this is fully typed right so collection archive you
+1:02:28
+can just map over the posts and output a card for each post real easy but the
+1:02:35
+magic is that this page will fetch the posts and then render
+1:02:41
+them now we are forcing this one to be static and revalidating every 10 minutes
+1:02:46
+looks like but if we go to one of these
+1:02:52
+posts that's going to be here so this is very similar to the pages
+1:03:00
+rendering with a couple specific differences I'm going to cover generate static prams and static site generating
+1:03:05
+in the next video where we talk about optimizing and making sure that things are fast but right now I just want to talk about the rendering so a lot of
+1:03:11
+this is going to be pretty similar right getting draft mode do we need to get the newest copy of this post or do we need to get whatever has been published we're
+1:03:19
+going to share that function again because we need that post data in both the react component and the metad
+1:03:26
+data this function looks exactly the same give me one pass it draft override
+1:03:33
+access based on if you're in draft mode or not don't need pagination and give me posts where slug equals the slug that I
+1:03:39
+asked for so this is all very very similar at this point we're just getting different collection
+1:03:45
+data and then what we do to render this stuff is different as well we do have to manage the redirects for this page as
+1:03:51
+well you know that's pretty pretty typical stuff we do have to render the preview listener because this is a
+1:03:57
+completely different file than the other one right so there is kind of a little bit of duplicity there I don't know if that's the right word I think it
+1:04:04
+is but then from here we have one post hero we don't allow for multiple
+1:04:10
+different hero styles on a post it's just this one no matter what post you go to it's going to be the same post hero
+1:04:18
+different content but the same hero right and so there we know hey let's just send it that's all we need pass the
+1:04:25
+the whole post and we're good and then this hero doesn't do anything surprising it's going to render out the categories
+1:04:32
+it's going to render out the H1 of the title if it has authors it's going to format the authors and output the
+1:04:37
+authors if it has published at we're going to Output the published at time it's got a hero image we're gonna output
+1:04:43
+media and then let me turn this on let's see where's the rich text did I skim over it oh this is just the hero yeah
+1:04:50
+this doesn't even have the rich text in it this is just the hero so right there that's going to render this first thing on the page if I
+1:04:57
+go here it's going to render this but then below that we've just got
+1:05:02
+two more components to go we already talked about Rich Text posts are easier because it's just one long flowing post
+1:05:08
+so it's just one rich text component and you can see this is why it's kind of nice to have the layout builder for the
+1:05:14
+pages because there's more expression going on there's more versatility but then for a post you just boom go to town
+1:05:21
+one rich text field and you're done and then we if we want to render related posts I think that that I think if we go
+1:05:26
+over to the CMS here meta has related posts so if we want to render out these related posts at the at the bottom like
+1:05:34
+this then we should be able to do that but this Rich Text in payload Rich text
+1:05:40
+is very powerful so you might have code blocks you might have like crazy like comparison charts or tables or all kinds
+1:05:47
+of Rich teex stuff that you want to like show in your post you can have a custom Rich text
+1:05:52
+renderer that makes it so that your post can still have blocks but you actually use those blocks inside
+1:05:58
+of the rich text I can drag this around and better yet I can go to live preview and do
+1:06:04
+that let me drag that around okay now it's in the middle of that headline and paragraph boom back up the top let's pop
+1:06:10
+this over to a warning this is demonstration purposes content okay cool we get it move that
+1:06:18
+back down here I don't know why our blog post the seed data comes with content about money I'm gonna change that by the
+1:06:25
+time you watch this video maybe we'll have changed that I don't know um should be about like space or something talk to
+1:06:32
+me about quantum physics not money all right um yeah so one Rich Text Editor I
+1:06:40
+think that's much better of an editing experience for posts and that's kind of why our blog like our out of thebox blog
+1:06:46
+just uses that one rich text component but you can actually add your own blocks here like this template shows you how to
+1:06:52
+do that so if I close all these files and I show you collections posts this is
+1:06:58
+very similar to what we looked at with pages right but it's got different fields still has
+1:07:05
+a title field just like pages but we have we know we need a hero image we don't have a hero tab anymore because
+1:07:10
+it's not even relevant we know that we need a hero image this is like the featured image for all you WordPress fans but then we have a rich text field
+1:07:19
+and this Rich Text field has a blocks feature you can customize which features
+1:07:24
+of lexical you want to to use per field so this lexical field lets you choose
+1:07:31
+from blocks and you can see these blocks we just pass them to this array here these blocks are the same as the blocks
+1:07:39
+for the pages they've got a backend structure the config and you've got the
+1:07:44
+front end component but you can see here for the content of a blog post you get some more
+1:07:50
+powerful features here you get the blocks feature you get you can choose between headings you can tell which
+1:07:55
+settings you want enabled and which ones you don't want enabled so let's go look at that this Rich Text Editor has more
+1:08:02
+stuff I can go here and type in slash Banner bam new
+1:08:07
+banner I can't do that in Pages let me show you that I can go over to
+1:08:13
+Pages let's go to that call to action Banner doesn't exist here I can
+1:08:19
+do like headings and stuff but I can't do a banner that's cool you can take your blog and you can make a very
+1:08:26
+explicit editing experience that's still very fully featured without compromising
+1:08:31
+on the ability to use blocks but it just makes more sense to you don't really need the whole layout Builder there
+1:08:36
+let's just use one rich text field and then you can customize it as you
+1:08:42
+will so to take that one step further I'm showing you how blocks are very
+1:08:48
+powerful in payload and they're kind of the same concept but you can use them for the blocks field or you can put them
+1:08:53
+into lexical blocks are like a layout Builder basically well there's one more
+1:08:59
+cool thing about this that I want to quickly show I don't want to go too far into it I think it's pretty self-explanatory if you've gotten this
+Dynamic form handling with Payload
+1:09:06
+far but forms here's a form and I know I showed
+1:09:12
+you the contact page but this is all fully handled inside a payload
+1:09:17
+everything and this form uses blocks
+1:09:23
+these fields are blocks that's it when I want to edit this form
+1:09:28
+I want to add another field let's say like a country field boom right there
+1:09:33
+that's a block and the way that we render forms if I go and I show you the form
+1:09:41
+block Let's see we have a relationship field to a form so if I go to the page
+1:09:50
+contact and go to the content we have a form block and here you just choose
+1:09:56
+which form you want to render and then you can add add some content if you want
+1:10:01
+and then this form you have the data on the front end when you go to fetch this page and then for that form here's the
+1:10:09
+the fields then here is the component and it's got more stuff I mean looking into
+1:10:15
+this there's this is a whole video of its own but this uses react hook form which is a great library and it's going
+1:10:22
+to do similar things to what we we did when we rendered blocks so we're going
+1:10:28
+to map over the fields we're going to grab that field from the from the list
+1:10:33
+of fields and guess what that is maybe in a different file Fields yep that looks familiar right same Principle as
+1:10:40
+what we were doing with the layout builder of the pages we're also doing that for form
+1:10:46
+Fields where did I go I am losing
+1:10:52
+it okay map over the Fields grab the field if we have one render it spread
+1:10:58
+the props it's going to show up on the page that builds a fully Dynamic form
+1:11:03
+Builder all you have to handle is submitting the data and sending it to payload and we also gave you all of that
+1:11:09
+code so like the rendering here is pretty simple now that you've got the M like the the thinking behind how to
+1:11:15
+render blocks and all that stuff well you do the same thing with field inputs for for a form and then you have a
+1:11:21
+handle submit function right which that's this up here
+1:11:27
+onsubmit and we just make a fetch to payload with the form data and it's a post and there we go so
+1:11:36
+it's a fetch this could be a server function I think we should change this over to being a server function I think I'm going to get um get that updated for
+1:11:44
+you there's no sense in making a fetch I mean we do have the API out um the endpoint opened but we might as well
+1:11:50
+just make this a server function but yeah it's more of the same
+1:11:56
+at this point I think all these pieces come together so that you define your
+1:12:01
+data in payload that's step one you want to make sure the editing experience is good you
+1:12:07
+want to make sure that you have the right blocks that each block has the fields that it needs make sure that it
+1:12:13
+looks good in the CMS really nice and easy to use with the different kind of
+1:12:18
+um focus areas being tabs or whatever you want to do there you can use the sidebar whatever you want to do once you
+1:12:25
+have this perfect then you take that data and then you render it on the front end right inside that same app folder so
+1:12:33
+I never have to leave this GitHub I don't have to go sign into another service or anything I just do it right here and that's pretty powerful stuff it
+1:12:40
+is a lot this is the future though this is so much better than working with WP
+1:12:46
+posts and the loop and like querying posts and WordPress and everything no
+1:12:52
+this is just react this is the cleanest that this could ever be and it's got such a focus
+1:12:58
+on component based design that once you build that CMS link component or that
+1:13:05
+media Block You've tested that Block You've tested that component you know it
+1:13:10
+works then you just use it and you're done and you start flying so you know
+1:13:16
+there is a lot in this in this um template but it is pretty much there for
+1:13:21
+a reason you can delete anything you want of course but don't let it over overwhelm you don't let it discourage
+1:13:27
+you if you're learning about nextjs and about cms's and seems like there's a lot
+1:13:33
+here but once you break it down into the simple different pieces like the different conventions it will click for
+1:13:38
+you and then you will move very quickly you just got to get over that initial hurdle and I'm going to keep doing
+Customizing the blocks, fonts, and logos
+1:13:43
+videos I think the next video that we're going to do is going to be on customizing so adding your own block
+1:13:51
+building your own block registering your own block to the payload config stuff like that swapping out the fonts and the
+1:13:58
+logos and whatever you want to do there we're going to customize it and then the one after that is going to be about
+1:14:03
+optimizing so heavily going through everything making sure that everything is statically rendered I know I glossed
+Upcoming topics and optimizations
+1:14:10
+over that in this video but I I want to give it justice so like we're rendering these as static Pages generate static
+1:14:16
+prams I'm going to talk about that I'm going to show you how to make sure that your website is statically generated
+1:14:21
+that it reacts when you click on Save in the CMS then it rebuilds automatically for you you and talk about all that
+1:14:26
+stuff I'm going to talk about some of the things we're doing here were like select super cool I got to tell you
+1:14:32
+about that and we're going to talk about server components in general that'll be the next video and then finally we're
+1:14:38
+going to talk about deployment how to take this template and make it go live so there's a lot of good videos good
+1:14:45
+content coming out soon and I'm going to keep my head down and keep making videos so tell us what you want to see I know a
+1:14:51
+lot of you have been asking for multi-tenancy we got a video Coming For That localization we've got a video coming
+1:14:57
+for that customizing the admin panel but please keep us in the loop with what you want to see where you want to see our
+1:15:03
+docs optimized we're going to prioritize that over the coming weeks thank you
+
+Payload CMS: Fast Admin UI Custom Views
+
+Aaron Saunders
+8.05K subscribers
+
+Subscribe
+
+96
+
+
+Share
+
+Ask
+
+7,840 views  Jan 6, 2025  DISTRICT OF COLUMBIA
+Payload CMS: Fast Admin UI Custom Views - Add Create User View To Admin UI
+#payloadcms #reactjs #webdevelopment #payload 
+
+Learn how to create custom views in Payload CMS to customize your admin UI and enhance your user experience. With these tips, you can easily create accounts and manage your content with ease!
+
+⚡ Looking for help with your project - https://www.clearlyinnovative.com/val...
+
+Payload CMS 3 - Backend (server)
+🛠 Payload CMS with SQLite database
+👤 User authentication system
+🔑 Role-based access control (Admin/User roles)
+🌐 REST API endpoints
+🚀 Custom Create Account Screen / Endpoint
+
+⏱️ Chapters
+=================
+00:00 - introduction
+01:40 - Create the Payload Project
+02:24 - Explaining The Problem We Are Solving In App Demo
+03:15 - Modify Payload Config To Add New View
+04:21 - Creating the Custom Component For the New View ( use server )
+06:33 - Child Component for Actual Form ( use client )
+09:40 -  Add API Call to Create User
+11:15 - Testing Code
+13:50 - Wrap Up
+
+🔥 Recent Payload Content
+————————————————
+- Need Real-Time Data (websockets) in Payload CMS? Watch This NOW!
+   • Need Real-Time Data in Payload CMS? Watch ...  
+
+Quick Payload 3 Custom Component Example -    • Quick Payload 3 Custom Component Example  
+Real Time Chat -    • Building a Simple Real-Time Chat App with ...  
+Payload CMS And React Router 7 -    • Payload CMS Authentication with React Rout...  
+Custom Dynamic Select Component -    • Payload CMS - Build A Custom Dynamic Selec...  
+
+🔗 Helpful Links
+=================
+Payload CMS - https://payloadcms.com/
+Blog Post - https://dev.to/aaronksaunders/payload...
+
+Payload is the open-source, fullstack Next.js framework, giving you instant backend superpowers. Get a full TypeScript backend and admin panel instantly. Use Payload as a headless CMS or for building powerful applications.
+Ask & learn
+Learn by asking questions, practicing and getting guidance
+
+Transcript
+
+
+Search in video
+introduction
+0:00
+hello and welcome to the channel as you
+0:02
+can see back again we are going to go
+0:04
+through another quick payload CMS
+0:08
+video I have a couple of that I've
+0:10
+created last couple of days but just a
+0:12
+quick refresher payloads open source NEX
+0:14
+a backend used basically what it is it's
+0:17
+a full stack backend built on nextjs
+0:21
+that is a
+0:22
+CMS but it also has ability to build
+0:26
+applications on top of it it packages up
+0:28
+your database it has or it has ways for
+0:31
+you to create um
+0:34
+authentication security against API
+0:36
+calls in a database all of this stuff is
+0:38
+integrated very little coding required
+0:41
+to kind of get it going clearly you do
+0:43
+need to understand react some next but I
+0:46
+think it's a pretty powerful platform
+0:48
+I'm kind of going through and learning
+0:50
+things along the way and and finding
+0:51
+some interesting things to do and so
+0:54
+this is going to be a video on another
+0:56
+interesting thing that I have stumbled
+0:59
+into so the idea here what we want to do
+1:01
+in this video is quickly show how you
+1:04
+can create a new screen or basically
+1:07
+extend the admin UI to have a screen to
+1:11
+create a new user right now the way the
+1:13
+system works is that when the system
+1:16
+starts up there's one admin that admin
+1:19
+creates an account and the admin is in
+1:21
+there's no other way to create a user
+1:24
+unless you are the admin and the admin
+1:27
+goes in and creates user for you I'm
+1:29
+going to create a UI that will allow you
+1:30
+to create a user inside the system and
+1:33
+then be allowed to log in all right
+1:36
+let's just start
+1:37
+quickly also please make sure to like
+1:39
+And subscribe share with your friends if
+Create the Payload Project
+1:42
+there's other things you'd like to see
+1:44
+being done with payload please drop a
+1:48
+comment and um I'll see what I can do
+1:52
+thanks okay we're going to call this
+1:56
+create user app
+2:00
+and we'll use a blank template we will
+2:03
+select
+2:04
+sqlite and we'll just use that as a
+2:06
+connection
+2:08
+string oh okay so our app finished
+2:12
+creating we switched directories and now
+2:15
+we've opened up our app and cursor so
+2:17
+let's go to
+2:18
+cursor um actually let's just run this
+2:20
+so that folks who aren't familiar can
+2:22
+kind of see what we get when we first
+Explaining The Problem We Are Solving In App Demo
+2:24
+get started
+2:33
+okay now let's go to Local Host
+2:37
+3000 okay so this is what you get if you
+2:40
+see up at the top it says create first
+2:41
+user I'll create my first
+2:45
+user and then now I'm in now the only
+2:48
+other way to create a user once you get
+2:49
+here is to click that and then click
+2:52
+create user what we want is we want the
+2:55
+user to be able to come to a URL up here
+2:58
+and get to create user so what we're
+3:00
+going to do is we're going to follow
+3:02
+this root views what do we we got this
+3:05
+customizing views create individual
+3:07
+pages on the admin panel we're going to
+3:09
+focus specifically on our root View and
+3:11
+this is the approach we're going to
+3:12
+take so let's open up our
+Modify Payload Config To Add New View
+3:15
+code and go to payload config because
+3:18
+that's kind of where all the magic
+3:19
+starts and
+3:21
+then we'll we'll just follow the pattern
+3:24
+that they have here you can see that
+3:26
+what they've done is they've added this
+3:27
+component views underneath the admin so
+3:30
+we're going to come to admin and
+3:32
+underneath
+3:35
+here components and then
+3:39
+views and then here we will add our view
+3:42
+for those who like to read I have
+3:45
+created a companion blog post that kind
+3:48
+of walks through this whole thing so
+3:50
+this will get posted along with the
+3:52
+video for you to kind of be able to
+3:53
+check it out and this is kind of what
+3:55
+I'm also going to use as my reference
+3:56
+since I've already did it once I don't
+3:58
+you know I can quickly just pull some
+4:00
+code here paste it and kind of document
+4:01
+it so we're here on The View
+4:04
+configuration and what we need to do is
+4:06
+we need to add this additional
+4:08
+information underneath our
+4:09
+views so what we want is we're going to
+4:12
+create a path called create account that
+4:15
+you're going to go to to create the
+4:16
+account and what we're going to do is
+4:18
+we're going to do it with this component
+4:20
+called create account view
+Creating the Custom Component For the New View ( use server )
+4:23
+component you need to specify the path
+4:26
+of where the actual component is
+4:28
+normally what I do is I usually either
+4:31
+create a separate components directory
+4:32
+or put it in with the uh collection that
+4:35
+I'm working on for now just to keep
+4:38
+things simple actually no I I'll follow
+4:40
+my same pattern uh so source source and
+4:44
+we'll create a file here components M
+4:49
+components all right so we have our file
+4:52
+we're following along with the pattern
+4:54
+this pattern here and so you can see
+4:56
+here custom reviews option can use one
+4:58
+of the templates provides the most
+5:00
+common is the default template provides
+5:02
+a basic layout of navigation so we're
+5:04
+just going to use this because we're
+5:05
+just trying to get the basic
+5:08
+understanding of how it works so I'll
+5:09
+just drop this in as my
+5:10
+component and let's see what do we
+5:14
+got
+5:15
+xport so remember if we go back to our
+5:19
+config that this is the name of my
+5:21
+component so I'm just going to just to
+5:22
+stay consistent I'm just going to copy
+5:24
+this over say export cons we'll just do
+5:28
+this
+5:29
+and then we'll go down here export
+5:33
+default all right oh my bad I have to
+5:37
+name this
+5:42
+TSX okay so we have our basic component
+5:45
+in create account component it's just
+5:48
+going to say custom default view and
+5:50
+then we're exporting it here and we go
+5:51
+back to our payload config and you see I
+5:53
+have the full path here um let's see if
+5:57
+if this is working so the path is create
+6:01
+account so I'll go up here go to
+6:07
+admin
+6:10
+okay and we get some errors oh let's
+6:14
+see let's just try a
+6:25
+rebuild okay so now we have our custom
+6:27
+view showing right so the next thing is
+6:30
+that because this is a server component
+Child Component for Actual Form ( use client )
+6:33
+we and I'm going to do some UI stuff I'm
+6:37
+going to move I'm going to put another
+6:39
+component in
+6:41
+here that'll handle all the UI stuff so
+6:44
+first let's put a header here create
+6:46
+account so what we're going to do next
+6:48
+is we're going to create our form here
+6:51
+so create account
+6:53
+form and
+6:55
+then just to keep our lives easy we'll
+6:58
+put it in the exact same
+7:03
+directory and in here it since it's it's
+7:06
+just a regular client component so we're
+7:08
+going to say use client let's just use a
+7:11
+regular form now to show that it's
+7:13
+working so
+7:15
+div create account
+7:18
+form and go back to Local
+7:21
+Host oh did I not import it let's import
+7:25
+it
+7:29
+and so we have our form all right the
+7:32
+next thing that we want to do is we want
+7:33
+to try and leverage payloads UI so we're
+7:37
+going to say
+7:38
+const so we're going to get the text
+7:41
+input and the button from payload and
+7:45
+this needs to be changed to path
+7:48
+value and then on change this value will
+7:53
+be email and we're going to set our use
+7:56
+State up here so we want email and cons
+8:00
+password we won't do a confirm password
+8:03
+we'll just leave that text input
+8:06
+password our
+8:09
+event and then we're going to do our set
+8:11
+email and then we're going to do the
+8:13
+same thing down here we'll get our event
+8:15
+and we're going to do set
+8:19
+password let's get our Imports so let's
+8:21
+update these Imports appropriately to
+8:23
+get our errors to go away let's add our
+8:26
+import for use State and now let's see
+8:29
+what our UI looks like all right so we
+8:31
+have our email field and our password
+8:36
+field that's looking good so far except
+8:38
+the problem is our password is showing
+8:39
+our password so this is one of the
+8:41
+things that caused me great pain and I
+8:43
+had the hunt and P like I would assume
+8:45
+that on here there would be a password
+8:49
+input but there is not the password
+8:52
+input was hidden and I had the search to
+8:54
+the doc to find it so hold on while I
+8:56
+dig that up so this is where I found it
+9:01
+and for someone who might know payload
+9:03
+better than me and can explain why and
+9:07
+explain why I have to go through this to
+9:09
+get access to the password input I'm
+9:11
+very happy to to learn because for me
+9:15
+this is all just about learning stuff
+9:16
+and I want to know like is there another
+9:19
+way that I should be doing this a lot of
+9:21
+this for me is I'm putting this content
+9:23
+out there hopefully someone who knows
+9:24
+better than me can respond and say hey
+9:26
+Aaron this is the way to do it so I can
+9:28
+learn and and move on from it
+9:30
+okay so now let's take a look at our app
+9:33
+again and we have our
+9:36
+Fields got some data our password is
+9:39
+hidden and I got my button all right so
+Add API Call to Create User
+9:42
+what we're going to do is we're just
+9:44
+going to handle do an on click
+9:47
+event create account Handler and so what
+9:51
+we need to do here is we can just call
+9:55
+the API endpoint to create the user
+9:59
+and that'll just be a simple fetch let's
+10:01
+just console log email and password to
+10:03
+make sure we got them we're going to do
+10:05
+a fetch obviously it's not create
+10:08
+account cursor is trying to be helpful
+10:10
+but it's not being that helpful because
+10:13
+it's not API create account it's API
+10:16
+users and it's a post and then we're
+10:18
+going to stringify the body send our
+10:21
+response we want to Jon our jsonify Json
+10:25
+our response to return it um but what we
+10:27
+really want to do here is we want to say
+10:29
+if respond is okay then we'll do it
+10:31
+otherwise fail to create an account
+10:33
+actually let's just thr an
+10:35
+alert fail to create an
+10:38
+account if my account was successfully
+10:41
+created not only do I want to console
+10:43
+log
+10:45
+data I want to navigate to the admin
+10:50
+page because now I'm logged in so to do
+10:53
+that I believe I need my use router yes
+10:56
+from next
+10:57
+navigation and we will use our router up
+11:00
+here at the top and then down here I'm
+11:03
+going to push to the default page and
+11:05
+that
+11:07
+should take me to the main console for
+11:09
+the admin actually let's just say admin
+11:13
+admin users just take us to the admin
+Testing Code
+11:16
+users page okay let's see if this was
+11:19
+all it took and I actually have an
+11:21
+account created so let's close this out
+11:24
+let's well my this Aaron account is
+11:26
+already created let's add a new one
+11:28
+Aaron 100
+11:34
+failed to create an account let's see
+11:36
+what it
+11:42
+said um not read properties updated at
+11:46
+that's a new one let's take a look at
+11:48
+our users console and see what's going
+11:50
+on the first thing I'm I'm realizing I
+11:53
+forgot to do I forgot to allow us to
+11:56
+create
+11:57
+accounts because
+12:00
+because you need to set the access on
+12:02
+here so
+12:04
+access you just set access to create
+12:07
+true so that I actually can create an
+12:09
+account this is not the most secure
+12:12
+approach there's definitely a much
+12:13
+better way to do it I'm just doing this
+12:15
+application for demonstration purposes
+12:17
+to show you how to integrate new um
+12:21
+views inside your application so let's
+12:23
+go
+12:27
+back I'm still logged in as clearly
+12:31
+inative okay so everything's
+12:36
+good this bug I have no idea what it's
+12:40
+talking
+12:41
+about I'm
+12:43
+missing dummy mistake I didn't put my
+12:46
+headers appc Json there we go let see if
+12:50
+that resolves everything
+12:52
+it's
+12:55
+okay sorry there's nothing to respond to
+12:58
+your request that's
+13:01
+interesting so it looks like it did
+13:03
+create a
+13:04
+user but back to dashboard admin uh I
+13:09
+see so it added my user here's my new
+13:12
+user I had the wrong path it should be
+13:16
+admin collection users so let's fix this
+13:20
+admin collection
+13:22
+users also see now I'm logged
+13:28
+in I'm still logged in as the other user
+13:31
+which is interesting let's try that so
+13:33
+let me log
+13:36
+out all right so I'm logged out and I'm
+13:40
+going to go to
+13:42
+admin create
+13:45
+account and we're going to say
+Wrap Up
+13:50
+eron
+13:52
+new and create
+13:56
+account all right so it created my
+14:00
+account but it didn't log me in I could
+14:03
+probably add that code to log in the
+14:04
+user if successful but if I put Aon
+14:08
+new NOP I think it was Aaron plus
+14:13
+new and I've logged in so eron plus new
+14:17
+that's new kind of created like I said
+14:19
+this is meant to be a short one so it is
+14:21
+short I will include all the source code
+14:23
+for you to kind of take a look and poke
+14:25
+around and try this yourself as I said
+14:28
+the there is a where is it here's a blog
+14:32
+post that I created now that I've gone
+14:34
+through the process I'll review what I
+14:35
+wrote to make sure it matches but this
+14:37
+will be available too blog post video
+14:40
+source code hopefully you found this
+14:41
+enjoyable we will see you next time and
+14:44
+drop a link if there's anything
+14:45
+interesting that you'd like to see with
+14:46
+payload CMS thanks bye now
+
+
+
+
+
+Advanced Admin Options in Payload CMS You Should Know
+
+NLV Codes
+1.86K subscribers
+
+Join
+
+Subscribe
+
+74
+
+
+Share
+
+Ask
+
+1,833 views  Apr 15, 2025  #webdevelopment #nextjs #payloadcms
+Resources and links: 
+Repo: https://nlvcodes.com/tutorials/advanc...
+Support These Tutorials:   / nlvcodes  
+Find me on Twitch:   / nlv_codes  
+Basic admin configurations:    • Step-by-Step Guide to Configuring PayloadC...  
+
+In this comprehensive tutorial, I dive into the powerful admin configuration options available in Payload CMS. Whether you're just getting started or want to fine-tune your admin dashboard for development or production, this video has you covered.
+
+What You'll Learn:
+Custom Admin UI Configurations, including custom avatars
+How to use auto login for development
+Meta and OpenGraph configurations
+Customizing routes
+How to gain granular control over field visibility, styling, layout, and behavior
+
+This video is packed with practical examples and real project use cases, perfect for developers building with Payload CMS and Next.js.
+
+Subscribe for more tutorials and live coding on Payload CMS & modern web development!
+
+Chapters: 
+00:00 - Introducing more admin configurations
+00:37 - Introducing Root Admin Configurations
+00:54 - Updating the Payload CMS Avatar
+01:35 - Using a React Component for the Payload CMS Avatar
+05:17 - Using the autoLogin option
+07:27 - Payload CMS’s Root Meta Prop
+08:58 - Including Favicons in Payload CMS
+10:35 - Setting OpenGraph Tags in Payload CMS
+11:37 - Editing Root Routes (Admin and API routes)
+13:21 - Editing Admin-level Routes
+15:15 - PayloadCMS’s Timezone Option
+16:56 - About Collection and Global Admin Options
+17:22 - Configuring Your Default Columns in the Collection List View
+18:32 - Conditionally Hiding your API Button in Collections and Globals
+19:39 - Changing GraphQL Options in Globals and Collections
+20:54 - Meta Options for Collections and Globals
+21:44 - Using Conditional Rendering for Payload CMS Fields
+22:50 - Adding Fields to the Edit View Sidebar
+23:32 - Adjusting a Field’s Width in a Row Field
+24:39 - Adding Inline Styles to Any Admin Field in Payload CMS
+25:07 - Using Classes to Style Payload CMS Admin Fields
+25:50 - Using the hidden Option
+26:44 - Closing thoughts and next steps
+
+#payloadcms #nextjs #webdevelopment #codingtutorials
+
+Transcript
+
+
+Search in video
+Introducing more admin configurations
+0:00
+What's up everyone?
+0:01
+In this video we're going to cover a few useful admin configurations
+0:05
+in Payload CMS’s admin UI, collections, globals, and fields.
+0:09
+Before we get started though,
+0:10
+make sure you're subscribed to my channel and getting notifications
+0:13
+so you never miss when I release a video about Payload CMS, Next.js, and more.
+0:19
+If you'd like to see the code that I use in this video,
+0:21
+there's a link to the repo in the description.
+0:23
+Now let's dive in.
+0:24
+We've covered a few admin customization options in the past,
+0:27
+but now I wanted to take some time to dive deep into what you're able
+0:32
+to do with these options.
+0:33
+Starting with additional admin config options in the admin panel.
+Introducing Root Admin Configurations
+0:37
+Any admin configurations you want to add to your admin
+0:40
+panel will need to be defined in your Payload config.
+0:43
+This is where we've already set things like components and date format.
+0:47
+Anything you configure here will apply to your entire Payload
+0:50
+admin UI, with a few exceptions that we'll go over shortly.
+Updating the Payload CMS Avatar
+0:54
+first option we'll cover in this video is the avatar.
+0:57
+You can use this to set an account profile picture.
+1:00
+You have the option to set this to default.
+1:02
+So we'll do that here at the top of our admin prop.
+1:06
+We can just add avatar and set it to be default.
+1:10
+Now when we save this and refresh we can see that we just get
+1:13
+this default icon in our admin UI.
+1:16
+You can also set this to be Gravatar, which will change the image
+1:20
+to be a blue background with a sideways G on it.
+1:23
+You're also able
+1:24
+to return a react component here, which is what I'm going to opt to do.
+1:28
+This allows a user to upload their own image to be used
+1:31
+as their avatar across the Payload admin UI.
+Using a React Component for the Payload CMS Avatar
+1:35
+We can do this just like we would with any other react component.
+1:38
+First we'll need to add the ability for users to upload an image.
+1:41
+can go to our collections directory and open our users.ts file.
+1:47
+And at the top of our fields here We're going to add
+1:50
+a new upload field called avatar.
+1:53
+With the relation to media.
+1:56
+Now when we save this we can go to our users collection.
+1:58
+And we'll open our primary account here that we're currently logged into.
+2:04
+And we can see that we have an avatar upload field right here.
+2:09
+Let's go ahead now and choose from our existing images
+2:12
+and use a picture of myself as our avatar.
+2:16
+Now we need to render this on the front end.
+2:18
+So we'll go to our components directory admin UI.
+2:23
+And in here we're going to add a new TypeScript
+2:25
+file called avatar TSX.
+2:29
+And we're going to import our types of media
+2:33
+from Payload types as well as our user.
+2:37
+We're also going to import the image component from Next image.
+2:42
+We'll then export a new const called avatar and open an arrow function.
+2:48
+And for our props we're going to pass in the user
+2:51
+which has the type of user.
+2:55
+Next we'll create a const called avatar and set this equal to the image field
+3:01
+we created earlier in our user config, which we called avatar.
+3:05
+So we can use user avatar.
+3:07
+We'll cast the type as Media so we can process this better in our component.
+3:12
+We'll then need to check if the avatar exists.
+3:15
+If it does, we can return an image component
+3:18
+which takes a source, an alt, a height, and a width.
+3:21
+So for our source, we'll add in our environment
+3:25
+variable for our S3 bucket.
+3:29
+And then also our avatar file
+3:32
+name for the alt, we can use avatar alt With a height of 25
+3:38
+and a width also of 25.
+3:41
+And then we can close that.
+3:42
+If there is no avatar defined, we'll want a fallback.
+3:46
+I copied the SVG that Payload uses for the default option,
+3:49
+and we can use that if a user selected avatar doesn't exist.
+3:53
+So we'll create an else statement by adding else at the bottom of our if
+3:58
+and then I can return this SVG that I copied here in the else statement.
+4:05
+As always, whenever you copy and paste an SVG from anywhere on the internet,
+4:09
+be sure that the attributes match JSX rules, or you might get errors.
+4:14
+Finally, we're going to include our export
+4:18
+default avatar at the end of our file here.
+4:22
+Now let's use the component in our admin configuration.
+4:25
+on the avatar prop.
+4:26
+Open up a new object instead of this gravatar here,
+4:29
+and we can add our component option with the path prop included.
+4:35
+So our path is going to be components admin UI avatar.tsx
+4:41
+And since
+4:42
+I used a default export, we should see this work.
+4:46
+No problem.
+4:47
+I can see that this is just a square image right now, so let's make it round
+4:51
+by adding a style attribute to our image of border radius of 50%.
+4:58
+So when I save this now, I can see that we have a nice
+5:01
+avatar profile picture here in the top right of our admin UI.
+5:04
+Now if we click on this and remove our image
+5:08
+and hit save, can see that nothing will break and it will just return
+5:12
+back to the default SVG that we included in our component.
+Using the autoLogin option
+5:17
+The next option I want to cover is auto login.
+5:20
+This allows you to set a default user to use to log into your admin dashboard,
+5:25
+without having to enter a password whenever your session expires.
+5:28
+This comes in handy when you're in development, testing or demo mode,
+5:32
+but is definitely not recommended for production as it will
+5:35
+allow anyone to access your admin UI.
+5:38
+I'll start by creating an environment variable called
+5:41
+NEXT_PUBLIC_ ENABLE_AUTO_LOGIN and set it to true.
+5:44
+Now I'm going to create a new user that'll be used just for our auto log in,
+5:50
+which will be our nick+test@midlowebdesign.com.
+5:57
+And we're going to set a simple password of test.
+6:00
+I'm going to save that and definitely not save the password.
+6:03
+Now that we've created our test user let's log out Now underneath our avatar
+6:07
+we're going to add our auto login option which is first going to check
+6:12
+if our environment variable of next public enable
+6:18
+auto login is set to true.
+6:22
+And if it is, we'll return a set of credentials.
+6:25
+But if not, we'll return false.
+6:28
+And for those credentials we'll pass in the email and password
+6:31
+that we just created.
+6:32
+So nick+testmidlowebdesign.com.
+6:36
+And our password which is just test.
+6:40
+Now when I save this and come over to the admin panel,
+6:43
+I'll be logged in immediately.
+6:45
+this in itself will simply check in environment
+6:47
+variable you set to determine if you're in production or not.
+6:50
+I would encourage you to either delete your auto login user
+6:53
+before going to production, or using a development database like I am
+6:57
+when you're still in development.
+6:59
+Otherwise, if this user exists in your database
+7:02
+and is published to a public repo, anyone will still be able to find it
+7:06
+and log in with those credentials.
+7:08
+Now, at any time, if I want to disable this, I can set my environment
+7:11
+variable to false instead of true and I'll be logged out.
+7:14
+Now that I have this user though, I'm going to stay logged in with it.
+7:17
+We have our project configured to accept email only, but this also does
+7:21
+work with usernames, which I'll cover how to handle in a future video.
+7:25
+Next up is the meta prop.
+Payload CMS’s Root Meta Prop
+7:27
+This is the root metadata that will apply to your whole Admin UI
+7:30
+It includes things like favicons, title, description and open graph data.
+7:35
+There are several options you can use in this property.
+7:37
+So let's get started by opening up our meta option.
+7:41
+So under our auto login we can add meta.
+7:44
+And we'll create a new object here.
+7:47
+first option is title suffix, which will add
+7:50
+just a little bit of text to the end of our generated titles.
+7:55
+Then we can also change the title, which we will just change to our Blank
+7:59
+Payload Example, then add a description
+8:02
+which we can say is, “This is an example to be used
+8:07
+for educational purposes only.”
+8:11
+Now when I save this and come to inspect our elements here
+8:15
+and look in the head tag, we can see, we have our meta description which says.
+8:19
+This is an example to be used for educational purposes only.
+8:23
+Then we have our title with the title suffix in there as well.
+8:27
+As the version 3.28, you can include any other property
+8:31
+that Next.js supports within the generate metadata function.
+8:34
+This includes title and description like we just did, which accept string values,
+8:39
+but it also includes props like generator, application name, referrer,
+8:43
+keywords, authors, creator, publisher, and format detection.
+8:48
+None of these are frequently used, but know that they are available.
+8:52
+You can include an alternates object that accepts canonical
+8:55
+and alternate languages, among other things.
+Including Favicons in Payload CMS
+8:58
+You can also include the icons option to set your fave icon.
+9:01
+We'll set ours using icons we've already added.
+9:04
+Let's first add the icons prop to our meta tags here.
+9:08
+We can add icons and that takes an array
+9:12
+and we're going to
+9:12
+pass in first our light mode option, which is going to have
+9:17
+our environment variable for our S3 bucket.
+9:21
+And I happen to know the file name is square 1 2.png.
+9:26
+And it's going to have a relationship of icon.
+9:30
+And the icons type is image png.
+9:34
+We'll include a few sizes for good measure, like 16 by 16, 32
+9:40
+by 32, and 64 by 64,
+9:43
+and set the fetch priority to be high.
+9:46
+We can also add a dark mode version of this by first copying
+9:51
+everything that we just did there, changing the title to be just square one,
+9:55
+which is our dark mode icon, and adding the media prop
+10:00
+which we can add prefers color scheme, dark.
+10:05
+Now I'm using PNG because Safari and some other browsers don't accept WebP
+10:09
+or any other kind of files for their favicons
+10:13
+that means PNG is supported by the most amount of browsers.
+10:17
+So that's what I'm going to use here.
+10:18
+Now once we save and refresh, we can see that
+10:22
+nothing really changes here in Safari for our favicon.
+10:26
+if I open up Chrome, I can see that the favicon has been updated here.
+10:30
+Safari takes a while to update the favicon,
+10:32
+but since we see it in Chrome, we can trust that it will work
+Setting OpenGraph Tags in Payload CMS
+10:35
+To set specific open graph tags, you can use the open graph option.
+10:39
+So we'll open a new object.
+10:41
+And we can put in a title which we'll
+10:44
+just use Blank Payload Example.
+10:47
+A description which is the same as what we did above.
+10:51
+We can add site name which is going to be blank Payload example.
+10:56
+And we can also include images if we'd like by including
+11:00
+an array of objects with at least the URL defined.
+11:04
+open graph is used for things like social media sharing.
+11:06
+So if you don't plan on sharing links to your dashboard on social media
+11:10
+or any other kind of channel like that, feel free to skip open graph options
+11:14
+altogether.
+11:14
+As of version 3.28, you can also set your Payload CMS robots
+11:19
+using the meta option, which controls how search engines crawl your site.
+11:23
+Typically, your admin UI shouldn't be public, so
+11:26
+by default Payload has this to be no index nofollow.
+11:29
+But if you want to change this behavior, you can do that by replacing these options
+11:33
+with any robots options that Next.js accepts.
+11:36
+The next option we'll cover is the routes prop.
+Editing Root Routes (Admin and API routes)
+11:39
+And here you have two areas you can change.
+11:41
+So the first is root level routes.
+11:44
+Your root level routes are the routes that include either the base
+11:47
+path of the admin UI or anything else that doesn't include the admin path.
+11:53
+To set this, you'll need to include the routes prop outside of your admin
+11:56
+option, So we'll go above our admin option in our build config and include routes.
+12:02
+And here it's going to accept an object.
+12:05
+You can change the admin, API, GraphQL, and GraphQL playground routes here.
+12:10
+So for example I can change my admin route to be
+12:14
+something like NLV Codes instead.
+12:17
+And we can change my API to be NLV API Now that we've changed this, I'm
+12:24
+getting an error saying that it can't find the Payload import map folder.
+12:28
+This is because changing the admin route also changes the project structure.
+12:32
+So you'll need to change your admin directory
+12:34
+in the Payload folder to match what you just changed your admin to be.
+12:38
+So we will refactor and rename this to be NLV Codes and hit refactor.
+12:45
+Now we get a 404 because we're still trying to go to the admin route.
+12:48
+But if I change this to nlv codes.
+12:51
+Our admin UI pops back up and we can see down here
+12:54
+that Nova API is our new API route.
+12:58
+There are plenty of times when you might want to
+13:00
+change these routes in order to be less predictable to bad actors,
+13:04
+so just be mindful when you make these changes to also update the project.
+13:08
+Since I'm not too worried about bad actors on this sample project, I'm
+13:11
+going to switch things back to the default admin and API routes,
+13:15
+but to leave the example up, I'm going to state them explicitly.
+Editing Admin-level Routes
+13:21
+The second set of routes you can change is admin level routes.
+13:24
+This is everything that follows the admin path like account, forgot,
+13:28
+login, logout, and more.
+13:30
+You can set these routes by adding a routes prop to your admin options.
+13:34
+So I'll do that at the top here where we can include routes
+13:38
+and open a new object.
+13:41
+So in this object we'll change our log out route,
+13:45
+which we'll set as log me out
+13:48
+and our account route,
+13:52
+which we'll set to be my account.
+13:56
+We can now see by going to our profile icon
+13:59
+that our route is now admin slash my account.
+14:03
+However, since we made a custom logout component, we'll need to update that
+14:07
+to our new route by going to the component and changing where the link is pointing.
+14:11
+Let's futureproof this while we're at it, Let's go to our logout
+14:15
+TSX file in our UI folder here.
+14:18
+And at the top of our file we're going to import type config
+14:22
+from our Payload package as well as Payload.
+14:27
+then pass our Payload object with the type of Payload
+14:32
+assigned to it as our props.
+14:36
+We’ll then destructure our Payload config
+14:39
+cast as type of config.
+14:42
+destructure it to admin and routes.
+14:45
+To get everything we need to futureproof this.
+14:47
+Now we just need to update our h ref to be routes
+14:52
+dot admin and then followed
+14:54
+by admin dot routes
+14:59
+dot log out.
+15:00
+Now no matter what our base admin or logout routes are,
+15:04
+it will always update our logout button.
+15:06
+We can see this in action after we restart our server.
+15:09
+see it switched from log out and then when I refresh.
+15:12
+can see at the bottom that it now says log me out.
+PayloadCMS’s Timezone Option
+15:15
+the last root admin option I'll cover in this
+15:17
+video is Time Zones, which was introduced in version 3.23.
+15:21
+This option lets you configure your time zone settings by providing
+15:24
+which time zones you want to support, and which time zone is selected
+15:27
+by default, which must be included in the supported time zones array.
+15:32
+Underneath our routes here we'll add our time zones
+15:36
+option and open up an object.
+15:39
+And we'll create a supported time zones array, which is going to take
+15:45
+an array of objects with labels and values.
+15:49
+So we'll set West Coast to be the first label.
+15:53
+And the value is going to be America
+15:58
+Los Angeles.
+16:00
+And below it we’ll include an East Coast time using New York.
+16:05
+We can then set our default time
+16:08
+zone to be Los Angeles, for example.
+16:11
+So now when I save this and go to our blog posts,
+16:15
+I can open up blog test one And if we refresh our post here,
+16:20
+we see that date doesn't have a time zone attached to it yet.
+16:24
+That's because anytime we use time
+16:26
+zone, we have to enable it on the date field in the config.
+16:30
+We'd like it to show up.
+16:32
+So for our date field, we'll set time zone to be true.
+16:36
+And now that we have time zone set to true, we can look here in our blog
+16:39
+post and see West Coast as the default time zone.
+16:43
+And we can publish those changes.
+16:44
+And we can see it also in our schedule.
+16:46
+Publish where the time zone is set to West Coast.
+16:49
+Even with West Coast as the default, we can always change it
+16:52
+using the Time Zone dropdown that now exists under our date field.
+About Collection and Global Admin Options
+16:56
+Now, before we move on to
+16:57
+Collections and globals, if you're finding this content helpful,
+17:00
+don't forget to check and make sure you're subscribed to my channel.
+17:03
+These are the types of videos I make
+17:05
+and will continue to make for Payload CMS, Next.js, and more.
+17:09
+Now let's talk about the admin options
+17:10
+that are available for configuration within collections and globals.
+17:14
+Three of the four options I'll cover
+17:16
+here are shared between globals and collections,
+17:19
+so I'll call out the differences between them when we get there.
+Configuring Your Default Columns in the Collection List View
+17:22
+Let's start with the one option that's unique to collections.
+17:25
+You can include the default columns you want to show up in the list view
+17:28
+by including an array of string values that matches the name of top level fields
+17:33
+in your collection.
+17:34
+This means that while you can include groups, arrays, and more as a column,
+17:39
+you can't include any field that's nested within those groups or arrays
+17:42
+as a default column.
+17:44
+In the case of our post config,
+17:46
+it looks like we'll want to include authors title, date and slug.
+17:50
+looking at our blog post list view, we only see title,
+17:53
+email and authors as well as one other additional field.
+17:56
+That doesn't make a whole lot of sense to keep as our default columns.
+18:00
+So at the top here in our admin, we can add our default columns.
+18:05
+As an array.
+18:06
+and we're going to include our title our slug
+18:10
+our date and our authors.
+18:14
+Now I want to save this.
+18:16
+We can see that our list view has updated.
+18:18
+While it's not listed in my config.
+18:20
+You can also include ID as a default column if you'd like to.
+18:24
+All I need to do is simply add the ID string to this array,
+18:28
+and as soon as it refreshes, we can see that the id has been added.
+Conditionally Hiding your API Button in Collections and Globals
+18:32
+If you don't want your editors to see the button
+18:34
+that shows the API response of your collection or global,
+18:37
+you can disable that by setting a hide API url to true.
+18:41
+So I'm going to do that now with hide api url.
+18:45
+And that is set to true.
+18:47
+And now when I let this refresh the API button goes away.
+18:52
+and if I commented out, we can see it reappear there.
+18:55
+This will completely remove the API option from the edit view
+18:59
+in both collections and globals where you include this option.
+19:02
+I always find the API link helpful though, so I don't want to disable it
+19:05
+while I'm in development mode.
+19:07
+luckily we created an environment variable that enables auto login
+19:10
+when set to true.
+19:11
+Since this variable returns true, we need to flip the logic to make sure
+19:15
+hide API url is false, which we can do by using our environment variable
+19:21
+which is next public enable
+19:25
+auto log in and set it to not equal true.
+19:30
+this will return false when the variable is set to true in development mode,
+19:33
+which keeps the API in my edit view, but will remove it
+19:37
+when I push this to production.
+Changing GraphQL Options in Globals and Collections
+19:39
+The next option that applies to both collections and globals is GraphQL.
+19:43
+I don't like using GraphQL personally, so I can just disable this
+19:46
+at the global level by going to my Payload config
+19:49
+and at the top of my build config include
+19:52
+GraphQL and set disable to true.
+19:57
+However, if I want more control here, I can go to the collection
+20:00
+or global I want to exclude from GraphQL.
+20:03
+And then underneath the slug here I can include GraphQL and set this to false.
+20:09
+If you do use GraphQL, you can change the name that GraphQL
+20:13
+generates for globals by going to any of your globals
+20:17
+and using the GraphQL option,
+20:21
+and then setting our name
+20:24
+be something like header GraphQL.
+20:27
+You also have the ability to disable queries as well as mutations
+20:33
+in your global.
+20:33
+For collections, you have the same disable options
+20:36
+that I mentioned for globals, but you can also include a singular name
+20:42
+and a plural name.
+20:44
+Instead of just a name option for globals.
+20:47
+But since I have GraphQL disabled at the root level,
+20:50
+I can just remove this because I won't be using GraphQL anyway.
+Meta Options for Collections and Globals
+20:54
+The last option I'll cover for globals and collections is the meta option.
+20:58
+This is similar to the admin level metadata we discussed earlier.
+21:01
+You can use this collection or global option to override what metadata
+21:05
+Payload CMS returns at the collection or global level.
+21:08
+Just as an example, we'll add a meta object
+21:12
+that just includes our title suffix,
+21:16
+and we'll set it to be NLV codes.
+21:19
+And I can save this.
+21:21
+Now when I add a tab we can see the suffix changes to just NLV codes.
+21:25
+And that'll be true for anywhere that we have our blog posts.
+21:29
+But if I go back to the homepage, we have the hyphen added back in
+21:32
+because that is our global metadata right there.
+21:35
+Now let's discuss the admin options that are available to you in your fields.
+21:39
+These are the most granular controls you have, so there are plenty to use here.
+Using Conditional Rendering for Payload CMS Fields
+21:44
+We’ll start with condition.
+21:45
+You can use condition to programmatically hide or show a field
+21:49
+based on the value or state of another field.
+21:51
+For example, let's create a checkbox field
+21:55
+with the name of show blocks.
+21:59
+And while we're at it we're going to take our blocks array
+22:01
+out of our content tab and add it below our checkbox here.
+22:05
+We'll go into our blocks field
+22:07
+and in the admin prop include a condition as an option.
+22:11
+This takes a function which takes data and sibling data as props.
+22:15
+We don't need data,
+22:16
+but we do need the sibling data, which we can actually destructure
+22:19
+into the field name of checkbox, which is going to be show blocks.
+22:24
+We can then have this return show blocks, and since checkboxes
+22:29
+return either true or false, this returns a boolean value for me.
+22:33
+Now we can load up our edit view
+22:37
+of any blog post, and I can click show blocks here.
+22:40
+And we can see our blocks array show up.
+22:42
+And if I uncheck it it goes away.
+22:45
+This can be useful in making your dashboard
+22:47
+more manageable by hiding fields you don't always need access to.
+Adding Fields to the Edit View Sidebar
+22:50
+There may be fields that you don't want in the normal flow of your dashboard.
+22:54
+If that's the case, you can send them to the sidebar by including position
+22:57
+sidebar to the admin config of any field.
+23:01
+You're not able to do this with any nested fields like fields within our tabbed UI.
+23:05
+So why don't we pull out our date field and put that in the sidebar?
+23:09
+So we find our date field right here.
+23:12
+We'll cut that out and put it below our blocks field and include in here
+23:19
+our admin position sidebar.
+23:24
+Now when I save that.
+23:25
+And zoom out, we can see our date field has been moved
+23:28
+over to the sidebar, just like our author's field here.
+23:31
+Next up is width,
+Adjusting a Field’s Width in a Row Field
+23:33
+which can be used within row fields to get multiple fields on one line.
+23:37
+We don't have any row fields, but it makes sense to have title and slug in one.
+23:41
+let's find our title text field.
+23:44
+And above it we're going to create a new field of type row.
+23:50
+Row fields need fields arrays.
+23:53
+And we can just include our text as the first field in that array.
+23:59
+And then our slug as the next field in that array.
+24:04
+can then go into our admin options here.
+24:07
+And we're going to type in width.
+24:09
+And we'll put 50% for both.
+24:11
+But that is the default value.
+24:13
+So why don't we put 40% there and 60% here.
+24:18
+And now when I save this we can see now that our title and slug are put together.
+24:23
+And while we're at it, why don't I remove this custom component here
+24:28
+for our field so we can see that slug is taking up
+24:32
+60% of our row field
+24:36
+and title is taking up 40%.
+Adding Inline Styles to Any Admin Field in Payload CMS
+24:39
+You have the ability to add inline styles to any field as well by using
+24:42
+admin style and passing in an object
+24:45
+just like you would with react on the front end.
+24:48
+We'll use our title field as an example, where we'll pass in the style object
+24:54
+and will include a background color.
+24:57
+of red.
+24:59
+Now this is not something we would normally do,
+25:00
+but I just wanted to show this as a clear example.
+25:04
+So I'll go ahead and delete style there.
+Using Classes to Style Payload CMS Admin Fields
+25:07
+You can also use the class name prop to add a class name to whatever field
+25:11
+you'd like.
+25:11
+Let's replace the background color that I just removed
+25:15
+with the class name prop, which is going to take a string.
+25:18
+We'll set our class name string to be a title label.
+25:22
+And then we'll go over to our Payload
+25:25
+directory and go into custom.scss.
+25:29
+And we're going to add our title label and set the label itself
+25:34
+to be font weight of bold Now I can save this.
+25:37
+And we see that nothing happens.
+25:39
+And that's because we have a custom label here.
+25:41
+So let's go ahead and delete that custom label.
+25:45
+And when this refreshes.
+25:46
+We'll see that our title is there.
+25:48
+And it is bolded.
+Using the hidden Option
+25:50
+The last option we'll go over is the hidden option.
+25:53
+This takes a boolean value
+25:54
+to either apply the hidden input type or leave a value shown.
+25:59
+Regardless, any information included in the field
+26:01
+will be saved to the database, but it won't be visible to editors.
+26:05
+As an example, let's hide our text area field
+26:09
+by adding admin hidden set to true.
+26:12
+can then see that our plain text field disappears.
+26:16
+However, we do still see it saved in our API as our plain text field.
+26:21
+Now, if we go to our front end directory,
+26:24
+then we go to our post slug page.
+26:28
+We can add this to our content by adding our post dot plain text.
+26:34
+when we refresh and go to our post page.
+26:37
+At the bottom here we can see this is an example
+26:40
+of a meta description, which is what the plain text reads.
+Closing thoughts and next steps
+26:44
+And that's it for admin options
+26:46
+across your admin UI collections, globals and fields.
+26:50
+In this video I included options I use often, but there are still more
+26:54
+options to choose from.
+26:55
+Be sure to check out the documentation to see if there's anything I didn't cover
+26:59
+that might be useful to you.
+27:01
+If you found this video helpful,
+27:02
+please like it and share it with others who might also find it useful.
+27:06
+Check to make sure you're subscribed to my channel and receiving notifications
+27:09
+so you never miss
+27:10
+when I release more content around Payload CMS, Next.js, and more.
+27:15
+If you have suggestions or questions, please leave those in the comments.
+27:18
+I'd love to hear from you.
+27:20
+Until then, I'll see you on the next one.

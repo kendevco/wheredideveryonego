@@ -1,0 +1,855 @@
+
+
+Payload CMS and Next.js Internationalization with dynamic pages
+
+AllAboutPayload
+4.6K subscribers
+
+Subscribed
+
+84
+
+
+Share
+
+6,770 views  Feb 22, 2024
+Hey everyone! 🌍🎉 Welcome to our Internationalization Guide! 📺👨‍💻
+
+In this special episode, we're tackling the exciting world of internationalization, focusing on seamlessly integrating multiple languages into your applications using Payload CMS for the backend and Next.js for the frontend. 🌐💻 Building on our expertise from previous tutorials, we dive into creating a multilingual website, enabling you to offer content in German and English, with the flexibility to add more languages as needed. 🗺️✨ Join me, Joshua, as I guide you through the process, from configuring Payload CMS to support multiple locales to implementing language switching in Next.js. Expect comprehensive code walkthroughs and insightful tips to ensure your global audience enjoys a tailored experience. 📝💡
+
+🔗 Useful Links:
+
+Last tutorial on Payload CMS and Next.js:    • Payload CMS - Google Auth in the Admin Panel  
+
+Code Snippets: https://10x-media-gmbh.notion.site/Dy...
+
+For the latest updates, follow us on Twitter:
+  / wrngphilosophr  
+  / 10xmediagmbh  
+
+⏰ Timestamps:
+
+00:00 Introduction 🎬
+00:09 Overview & Setup 📱✨
+00:29 Payload CMS Configuration 🔄🛠️
+01:36 Next.js Frontend Setup 🌍🔧
+02:05 Implementing Language Switching 💡
+04:16 Localization in Collections 📲🔑
+05:25 Creating Multilingual Pages 🔒
+06:02 Dynamically Fetching Content Based on Language 📊👤
+06:13 Conclusion & Invitation for Feedback 🏁💬
+
+If you find this tutorial valuable, hit that LIKE button 👍💥 and remember to SUBSCRIBE 🔔📢 for more in-depth tech tutorials.
+
+💬 Your Feedback:
+We're eager to hear from you! Drop your questions or feedback in the comments below. Your insights are incredibly important to us. 💬💜
+
+🚀 Catch You Next Time!
+Stay tuned for our upcoming videos, where we'll continue to explore the latest in tech and development! 🚀💫
+Ask & learn
+Learn by asking questions, practicing and getting guidance
+
+Transcript
+
+
+Search in video
+Introduction
+0:00
+hi my name is Joshua and in this video we're going to talk about how to implement internationalization with a
+0:06
+payload back end and a nextjs front end so what are we going to build what we have here is a very simple
+Overview & Setup
+0:14
+nextjs frontend and as you can see we can select language here so if we click
+0:20
+on this it's going to change between German and English and to that we have a fitting payload back end with a Pages
+0:27
+collection and in this case with two pages an index page and a test page and we can
+Payload CMS Configuration 🔄🛠️
+0:34
+arrange or change anything about this page if we want also in the back end we
+0:40
+have the possibility of changing the language we are editing this is currently in English and if I change
+0:46
+this to German then we're going to see the German content we can um change this
+0:53
+publish change and if we now go to the German version of the site this has
+0:59
+changed as well so all of this content is dynamically fetched in in the
+1:04
+language that we want and we can change the language so let me kill the test
+1:11
+server and we start our service where we're going to implement the
+1:20
+changes what I have here are is a very very basic payload backend um if you
+1:26
+follow the tutorial series of sandre you have it very easy to implement this it's there's nothing here except the media
+1:33
+and users collection and the basic setup for a payload back end and we also have here a
+Next.js Frontend Setup
+1:40
+Bare Bones nextjs front end whereas also there's there's nothing in here except
+1:46
+the base base documents and also p uh Tailwind is implemented so also if you follow SRO serus then you will have no
+1:52
+problem in setting this up and we started the servers and of
+1:58
+course this page is not defined find and we have our oh one
+2:04
+second let's go to admin backend so there it is it's simply a
+Implementing Language Switching
+2:12
+users in media collection with nothing else going on so also no localization or
+2:19
+anything what we want to add now is the first and most important step let's put
+2:24
+this out of the way is we need to extend the the payload
+2:30
+config to tell payload that we want to support multiple languages and for this
+2:36
+we go simply at any position in this um document or in this object and we add
+2:44
+localization and a comma and this
+2:50
+localization object has locals local locals and it contains an array of
+2:58
+different locals you can Define this completely on however you want and we're
+3:04
+going to implement two locals in our case the first um T
+3:11
+label of um English n English and then we need
+3:19
+the one with the label or it's also this this is the label then in in German
+3:24
+because we want to implement it in German and English it has uh
+3:33
+English and then now we got lost with the ah here we
+3:40
+go we Define the code which is en now we
+3:46
+need to add a comma here and to do the same thing for German label ah it's
+3:51
+already autoc completed so we have label in English English it's German in German
+3:57
+it's dutch and the code is De and what we also want to set up after the locals is to have a default local
+4:04
+it's in English and we wanted to fall back fall fall back to English so with
+4:12
+this we told payload to add
+Localization in Collections
+4:18
+localization let's see when this reloads oh there is a there is a mistake here
+4:25
+foric must be a Boolean ah yes of course um this simply tells that it should fall
+4:31
+back to English if there is no other translation can see this effect later
+4:37
+on and we reload the page yes exactly and how expected we
+4:43
+should now have the different locals here we can select German and English and now to the question how do
+4:51
+we implement the localization in the specific collections um what we want to
+4:58
+do now is create a page of this collection that contains a layout and the layout contains different blocks and
+5:05
+the localization with payload works on an individual field level so you you say
+5:11
+you tell an individual field that it is localized and should therefore store multiple variants and when you retrieve
+5:18
+an object from The Collection then you can tell it I want the German or the English version so
+Creating Multilingual Pages
+5:26
+first we're going to create the pages collection page
+5:32
+PJs and this Pages equals uh has a slack pages
+5:44
+and uses the name as the title use name name uses title then we have the
+5:55
+labels it's going to be singular page and plural pages
+6:00
+and we're going to have versions versions drafts equals true so
+Dynamically Fetching Content Based on Language
+6:09
+we can change something on the page without needing to publish it right away which is very
+Conclusion & Invitation for Feedback
+6:15
+handy then for now we set access to True um for
+6:24
+read and we add the fields fields
+6:33
+so what we need here is first a name name it's a
+6:39
+type text and the label is also name
+6:44
+then we're going to add a slack with the slack the page is reachable it's this will be shown in the in the URL so
+6:54
+name name slack and we have a label
+7:01
+slack and it's type text it needs to be
+7:07
+unique and it's also required true you can also put the name required true
+7:14
+every page should have a name and we also code it in the sidebar
+7:22
+then it's um it's better for the layout so
+7:28
+position sidebar so and now the most important
+7:33
+part we need to add the layout and this layout has a
+7:40
+name layout has the label layout and it is of
+7:47
+type blocks and what we can do here now is Define blocks with which this layout can
+7:54
+be built so and and we're also oh yes and we're
+8:01
+also going to put that it's initially collapsed so because the blocks are going to be displayed in this Ops in
+8:08
+going to be displayed in this um expandable array configuration and it's
+8:14
+way easier to overlock if it's initially always collapsed in it
+8:20
+collapsed equals true and now we need to define the blocks
+8:28
+blocks but we don't have blocks yet so now
+8:33
+we're going to add um we're going to add this collection to the payload
+8:40
+config now we also need to export it export
+8:46
+default pages and we add it to the payload config in here
+8:53
+Pages pages with a capital P and it's also imported
+9:00
+pages and version draft something is wrong again version draft is not
+9:09
+allowed draft what rent wrong here drafts are because it's
+9:16
+drafts yes so let's see what
+9:23
+happens now we have a Pages collection here ah I take took the same database as
+9:29
+for the last time so we're just going to delete all of this confirm Del delete and we have Pages we can create a new
+9:36
+page it has a name it has a slack and it has a layout but there is no are no blocks
+9:42
+yet so then we are going to add two blocks we're going to add a navigation
+9:47
+block and we're going to add a r text block which can which are which uses the lexical editor and then you can add
+9:54
+whatever kind of text or content to the page you want for this we're going to add a new
+10:00
+folder folder blocks and create a new file um
+10:08
+Navar block. JS which contains
+10:14
+oops um export const nfar
+10:20
+block a nefar block also has a slack let's just say
+10:28
+NF NF bar it has labels Navar NV
+10:35
+bars and it has Fields so these are these are the parameters you will be
+10:42
+able to change about your block and this will show the difference also in in the
+10:48
+localization so this nfar is very simple it's just going to contain a title we can individual Define for each language
+10:56
+um then we're going to add this field name
+11:03
+title it has type type text oh and this should
+11:09
+be an array yes type
+11:14
+text label title required true and now the most
+11:21
+important part we need to add localized true because with this we tell
+11:26
+payload that this individual field should be localized which means that there are
+11:32
+multiple variants stored in um multiple language where in stored in the database
+11:40
+so now we have the nefar block and we're going to add it to our page so
+11:48
+NV bar block simply going to import it from there and we're going to add the add the
+11:55
+rich text block new file Rich Text block
+12:03
+.js and it's export const Rich Text
+12:09
+block it has a slack R text is this
+12:15
+okay I think we can already use this but we're going
+12:21
+to remove the minus here because we didn't do it in the other one as well R
+12:26
+text let's do temp case uh Rich text Rich text and it has the
+12:33
+type Rich Text okay if we now add this also to our blocks Bri text
+12:42
+block and add a comma then let's see how our pill p
+12:49
+looks
+12:54
+like so let's try this
+13:01
+um name the slug is index oh and later on
+13:06
+we're going to make it so that the page with the slug index does not have an address so it it's simply um is the main
+13:14
+page and we can add layouts and now we have here the Navar and we have the rich text so let's add a nav
+13:21
+bar which has the tit title and we're going to add the rich
+13:28
+text um head wa no this is in a way heading
+13:35
+one wait in which language are we we are in German up
+13:42
+then inal going to modify this as well to a
+13:49
+German text T and we're going to publish the change save it so now what we're also going to
+13:57
+do is change this to English and you see the fields where we put localization
+14:04
+are now empty so now we can add the English context uh
+14:10
+content header one important content no important
+14:16
+title important content and save this as well so now we
+14:23
+have two versions of the site of this page in German and in English so and that's
+14:32
+already it for the backend setup now we're going to turn to the front end let's move this to our correct
+14:39
+location again payload and we go to the next CH front end what we need to do here is we need
+14:47
+to go to our console in our next J front end and first we're going to need to install next Minos i18 next which is a
+14:55
+npm package that supports the internationalization next minus I8
+15:03
+next ah of course npm n PM install next
+15:10
+minus 18 next and we're going to start the server
+15:20
+again so this frontend currently is pretty empty we don't have any page any
+15:26
+page here in pages um but before we're going to add pages
+15:31
+we need to modify the config the next config and we also need to tell it that
+15:37
+it has to be uh localized and we need to tell it which locals we want to support
+15:43
+so here we add
+15:49
+i8n which has locals locals in EN for English and the
+15:58
+de for German and also the defa local is going to be
+16:05
+English so what we can do then is ADD our first page and we don't really have
+16:12
+Pages all of them are Dynamic so we add a new file and name
+16:19
+it slug or in the square brackets slack
+16:25
+because this is the slack with which we're going to identify the web page .js uh
+16:31
+jsx and this is kind of our Universal page where we going to fetch all the
+16:37
+pages are we're going to pregenerate them on the Rell server and this is symbolically for all the pages
+16:45
+so what we uh what we need to do here is create a simple
+16:51
+page with it's
+16:57
+props and this page has uh in its props
+17:03
+has con um the page data and global data
+17:08
+this is later on this is optionally because when we fetch the page data you
+17:14
+could also fetch data that is true for all the pages and also pass it on later
+17:19
+to our individual layout components but for now we're simply going to say then if we don't have any
+17:27
+page data then this page has been undefined or simply does not exist on
+17:33
+our server and we are simply going to
+17:40
+return uh yes 44 not found and what we're also going to do is
+17:47
+we add the open graph description const SEO open graph
+17:55
+equals and then we have URL and the URL is a
+18:02
+interpolation of our next or um of our environment
+18:10
+variable where we Define the next public front end so process.
+18:15
+env. next public frontend
+18:21
+URL and yes there already was the page Slug and the title
+18:30
+is going to be the page Dot Page do uh page
+18:38
+name and the description okay we don't really have this now so we're just going
+18:45
+to put it as the also as the name but you could add the page description then also in the back end and for now we
+18:51
+don't have images images is an empty array and then we're going to
+19:00
+return all of this so first the next
+19:09
+seo seo title page name open graph open
+19:16
+graph and description what no this
+19:25
+cryption equals page name as well for now you can
+19:31
+change this later on close this tag so and now we come to
+19:36
+the next most important things thing here we need to add our
+19:42
+blocks we don't yet have defined our render blocks component because the
+19:47
+render blocks component is going to take a layout from our server and translate it to our next Jaz
+19:55
+frontend so before we add that just keep in mind we need to add that
+20:01
+here we are going to finishing up the loading of the data because first we
+20:07
+need to get the all the static paths and we also need to tell the versal front end or the next ja front end that these
+20:14
+are all the locals we support and these are all the pages we have and then we need to get static props where we take
+20:21
+the path and get the individual page data which then can be passed onto our page which we have um
+20:29
+which we have here with the page data and then pass it onto the render blocks
+20:35
+component which then takes this page layout so let's then continue with the static paths so we export const get
+20:45
+static paths which is an as async function and what this does is G it's
+20:52
+going to um is going to contact our payload back
+20:58
+end so const page request equals a wait
+21:06
+xus uh let's import let's import it dot uh no AOS and
+21:14
+then we have API pages with a limit of zero because this
+21:22
+means it fetches all the pages and let's close it and then we're going to put the pages
+21:30
+uh the page data in page data equals page r.
+21:38
+dat so and now we need to define the paths so const paths equals page data
+21:49
+dot docs. flat map and we're going to iterate with the
+21:56
+slack going to to get this slck then we have the function
+22:05
+here wait a second this is too much no where do all
+22:12
+the all
+22:17
+the oh the braces go uh we need to have an opening brace closing brace here and
+22:24
+now we need to have the curly braces here okay in here we want if the slack equals
+22:35
+equals index then we don't want it to use it as index slck but we want to return simply the
+22:43
+page so here we return we return an array and here also
+22:49
+comes the next important step because who here we again need to tell
+22:57
+the I 18 n package that this supports internationalization and nextjs is
+23:04
+automatically going to prefix our URL with the language
+23:10
+code so we have params here which are which are slack
+23:18
+false and local
+23:24
+local and now we're going to add the same for local for slug oops slack fals
+23:31
+local de this is the case where the slack equals index if the slack does not
+23:38
+equals equal index then going to do slack Parts equals slack do
+23:48
+split and return again an array ah can pretty much
+23:55
+take this with the individual slack parts and again the
+24:01
+local and then after everything local we can return all of
+24:09
+this return
+24:15
+paths equals paths and fallback we do
+24:22
+fals so then now here we collected all the possible paths from our server
+24:27
+server including the localization then the next step is to fetch the individual page data and we're
+24:34
+going to do this with get static props so now we put export const get
+24:44
+stat static props which is also an
+24:50
+async function and we need the
+24:56
+context and oh okay I just got
+25:02
+caught um where have we been get static props and now we're going to get uh the
+25:09
+con uh the slack slug equals c from the context
+25:15
+params oh one second this is when you forget to put
+25:20
+everything on silent mode before you start recording so we have slack we want to get the slack from the
+25:26
+context in the context we have params params if there is dot Slug and
+25:35
+if not we're going to take index and we need the local const
+25:43
+local equals cx. loal if not then we're going to take
+25:49
+English and yes now we're going to fetch the page data which is cons page page
+25:55
+request equals a way AAS and then we're going to compound all
+26:01
+of this together we have API pages and then
+26:10
+where where where uh
+26:19
+slug slug equals
+26:25
+equals then we add the slug
+26:31
+and we're going to need the local where and and local equals local so with this we tell
+26:40
+payload which version of the page we want to get and then
+26:46
+we take the page W data the first one and return it
+26:53
+turn props and in this case not global data we don't because we don't have local
+27:00
+global data here but in this get static props you could now also fetch global data and pass it on simply pass it on to
+27:06
+all of them and then you have this global data everywhere but we want to pass on the
+27:13
+local um no yes local and the
+27:23
+page so that should be it for
+27:28
+this and we have set our slack so the next step is to add the renderer we
+27:36
+forgot or not forgot but we still need to implement here so for this we're going to create a new
+27:43
+folder let's name it um com
+27:50
+components and it's going to be a render blocks
+27:56
+component just six brender blocks component and here we
+28:04
+Define con render blocks equals and we get a layout class name
+28:13
+and global data and we
+28:20
+return uh and we return and if
+28:29
+with the class
+28:34
+name now first we need to class name.
+28:40
+filter Boolean dot
+28:46
+join and here we go through the layout
+28:52
+layout. map and may layout
+28:58
+map block and index and then we map this to a to the
+29:11
+function if block. block type equals
+29:21
+pre preset oops
+29:28
+we return block. preset do blocks.
+29:34
+map block I and map this
+29:42
+again and here we have const block equals
+29:52
+blocks block. block type and if we have a block
+30:01
+here we return the block with this global data and the rest
+30:09
+of the parameters and if we go then else
+30:14
+else const [Music] block
+30:21
+um this is already it Con block from blocks the the block type and if we have
+30:27
+a block we return this block close the braces and if that all of that fails we
+30:34
+simply return return
+30:39
+now okay and then we need to export it export default render
+30:47
+blocks so now you may uh have noticed that blocks is not defined this is
+30:54
+because we need to define a list with all the blocks and in this list of blocks we then have all the blocks so
+31:01
+we're going to create a new folder blocks and here we're going to
+31:08
+put block list new file block
+31:15
+list.js JS or no this is simply J JavaScript oh
+31:21
+whatever and Export cons blocks equals in this case
+31:28
+it's simply an empty because later we're going to add the blocks here so we go
+31:33
+back into render blocks and we import blocks from our block list
+31:39
+here and this is correct now and now we can use our render blocks component in
+31:46
+our where is it in our Slug
+31:55
+and r blocks equals and here we again we pass
+32:03
+the layout and potentially also the global data so this should now work and now we
+32:11
+are at the last step and adding the blocks and we have defined two blocks uh
+32:17
+navbar blocks block and uh Rich Text block and for the nefar
+32:23
+block we also going to implement the language switch Switcher so you can switch the language on the page so but
+32:30
+first let's do the rich text block we're going to add a new file Rich text block.
+32:38
+jsx and for this we need to add a serializer
+32:44
+that translates the lexical R text to our to basically to to um jsx and for
+32:53
+this I prepared a code snippet you can find here we have a serial realizer this page is also going to be
+32:59
+linked in the description so we can copy um all of this serializer code lexical serializer
+33:08
+code and we're going to add a utils folder
+33:14
+utils new file serializer
+33:20
+JS uh rename JX and we simply paste it here
+33:27
+now that we have the serializer we can go back into the rich text
+33:33
+block and we're going to import react from
+33:39
+react and Export default function we have here the class names
+33:46
+that might be passed on we have the content of the of the block and we have
+33:51
+custom class names which you could Define to modify y certain styles of the
+33:58
+of what is rendered and
+34:04
+if the content or if the children of the content of our element is is zero then
+34:11
+we're going to return simply null so we have content content. root which is the LM
+34:19
+which is from lexical the root element and this root element has children and if the length of these
+34:26
+children equals z then we're going to return null if not then we're going to
+34:31
+return a diff and this this di is going to take our class
+34:37
+name uh class
+34:43
+name and again we put it through the futter and we're going to join them um
+34:50
+with trip and another the square braces class
+34:59
+name do filter ian.
+35:05
+join and uh if you also have
+35:13
+the um in the Styles the design system file then you can simply add Rich text
+35:21
+Rich Text here because this these are some predefined Styles and we're going to add add by default to this Max with 7
+35:30
+XL so it's like always in this contained area with a WID of full and this it
+35:37
+should be centered with a margin top of eight and then we're going to add the
+35:43
+serializer so we have serialize
+35:50
+serialize what yes serialized lexical Rich text
+35:56
+and then the rich text box serialize lexical Rich Text which takes several
+36:03
+parameters we have children which are the children of this root element and we have class names where pass on the
+36:11
+custom class names so this is our Rich text component we can add it now to our
+36:17
+render uh to our block list and important here is that the slack is that
+36:23
+we put here the slack that we also defined on our server which is what is this slck again oh let
+36:31
+me look Source blocks Rich Text this slack
+36:36
+is simply Rich Text so we go to the block list add here Rich text and we're
+36:43
+going to add Rich Text block so then we added our
+36:49
+first block and we can add our next block your file NF bar
+36:55
+block uh block.
+37:01
+jsx and for this we simply going to or we're going to Define a simple nfar
+37:08
+export defa default function
+37:14
+NV nvar and this has a here we are here we're going to pass on the information
+37:20
+that we defined previously or that we also defined in the schemer on the server which has a title
+37:27
+and we have Glo data again and here we're going to return
+37:35
+simply a very simple nfar div with the class
+37:40
+name n or with the class names Flex uh feeling Flex Flex row with screen
+37:50
+justify between we have a padding of two a background that that is slightly gray
+37:58
+and items Center so everything is centered nicely and then we're going to add a
+38:05
+link back to the main page always link hre to the main
+38:12
+page oh and we cannot forget to import the link component from nextjs and here we're going to display
+38:19
+our title diff class name is/ font
+38:24
+Bol then it's look a little bit different and we're going to add the title and this is going to show the
+38:30
+title in German or in English that we defined on the server then what we also want to add is a language toggle so
+38:36
+we're going to create a new component here um
+38:43
+export function language toggle total
+38:50
+toggle and what this does is change basically change the url to it to
+38:56
+reflect the language you want the page to be in so we going to use the router
+39:01
+from next Shar use router and we also need to import the router import use
+39:10
+router from next nest next router
+39:16
+and have the link ah we also need import react import react from
+39:24
+react so we have the router here then we're going to extract the current local
+39:32
+concurrent local Exel router. local because that is also saved in the router as it's
+39:38
+automatically appended and then we're going to
+39:45
+return Ed this div has a class name class name
+39:54
+equals Flex items
+39:59
+Center and we're going to add two links because
+40:04
+we're going to jump in this way between the between the um Pages we have a link
+40:12
+which takes the current path router. s
+40:18
+path and we're going to set the local
+40:24
+local equals for German we're going to pass the h
+40:31
+r and as a uh as the content we're going to put or we're going to make it so it
+40:37
+can switch between so we need to tell here what is the current language and if it's the current language as selected
+40:42
+then we mark it black so we add another div and we're going to close the
+40:50
+link link so the content is the
+40:57
+E and now in the class name class
+41:03
+name we have p uh px2
+41:10
+py1 and then we're going to check what the current local is so prrint
+41:19
+local equals de and if so we're going to put the background black BG black and
+41:26
+text white and if not so we're going to
+41:33
+put nothing but we're going to put a hover hover BG
+41:38
+gray 200 and we're going to repeat the same thing for English so we can just going
+41:44
+to copy this put the language as n and here
+41:50
+n and if it is en n then we're going to put it so that to that then we can include
+41:58
+the language toggle language toggle
+42:05
+and uh we need to add this to our block list still so block list still we need
+42:11
+to use the same the same slack we have here nfar
+42:17
+which takes block list so we're going to add this as nvar as well
+42:24
+NV bar from a nefar block oh how do we name the
+42:30
+nefar ah let's also name this block nefar block and here
+42:38
+nef bar block process delete this and
+42:44
+now we should be set so let's look what this resulted in page cannot be reached
+42:50
+is there ah npm run def let's restart the server
+42:57
+and let's look there is something missing cannot resolve slave slate oh I think I
+43:04
+installed slate npm in
+43:12
+slate oh it's from the serializer then let's install it and uh
+43:19
+mpm run death restart what do we have
+43:24
+now the me media oh yes we also have to add the media component this is
+43:32
+another um another code snippet you can copy second so this media component
+43:38
+basically tells the serializer how it should display um media objects like images and
+43:44
+for this we go also to the code snippet page we're going to copy the
+43:50
+media code snippet and we're going to paste it in the same directory where we have our serializer
+43:56
+new file new file media.
+44:03
+jsx paste it here and let's see what happens
+44:14
+now fail to compile there's some still something missing media media one second okay um I simply
+44:24
+pasted the media object two times so there was this error and another small error I encountered is here in get
+44:30
+static props you have to add uh an add an end sign there in order for it to
+44:37
+work if we reload this now we have title here but we are still missing the
+44:42
+serializer so let's see what's wrong with that second okay um I hope you already
+44:48
+corrected it there are two more small mistakes in the uh Rich Text boook first
+44:54
+of all I misspelled length length and of course we have to return
+44:59
+this here now if we go to the page we have the index page it's currently in German V inhal if you put it in English
+45:07
+it's going to change to English and back yes so this is it with how serial
+45:16
+uh how internationalization works if you have any feedback or suggestion please write it in the comments and see the Cod
+45:23
+snipper document which is linked in the descript description and that's it for today thank you
+

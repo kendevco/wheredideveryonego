@@ -1,0 +1,141 @@
+@import '~@payloadcms/ui/scss';
+
+.dashboard .before-dashboard {
+  margin-bottom: base(1.5);
+
+  &__banner {
+    & h4 {
+      margin: 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  &__card {
+    padding: 1.5rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #fafafa;
+
+    &-title {
+      margin: 0 0 0.75rem 0;
+      font-size: 1.1rem;
+
+      &--feedback {
+        color: #059669;
+      }
+
+      &--content {
+        color: #dc2626;
+      }
+
+      &--media {
+        color: #7c3aed;
+      }
+    }
+
+    &-description {
+      margin: 0 0 1rem 0;
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &-link {
+      font-size: 0.875rem;
+      text-decoration: none;
+      font-weight: 500;
+
+      &--feedback {
+        color: #059669;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      &--content {
+        color: #dc2626;
+      }
+
+      &--media {
+        color: #7c3aed;
+      }
+    }
+  }
+
+  &__quick-actions-title {
+    margin: 2rem 0 1rem 0;
+    font-size: 1.1rem;
+  }
+
+  &__instructions {
+    list-style: none;
+    padding: 0;
+
+    & li {
+      margin-bottom: 0.75rem;
+      padding: 0.75rem;
+      background-color: #f8fafc;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    &-link {
+      font-weight: bold;
+      text-decoration: none;
+
+      &--primary {
+        color: #3b82f6;
+      }
+
+      &--success {
+        color: #059669;
+      }
+    }
+
+    &-description {
+      color: #64748b;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__status {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f0f9ff;
+    border-radius: 12px;
+    border: 1px solid #0ea5e9;
+
+    &-title {
+      margin: 0 0 0.75rem 0;
+      color: #0369a1;
+    }
+
+    &-description {
+      margin: 0 0 0.5rem 0;
+      font-size: 0.875rem;
+      color: #0c4a6e;
+      line-height: 1.4;
+    }
+
+    &-info {
+      margin: 0;
+      font-size: 0.875rem;
+      color: #0c4a6e;
+    }
+  }
+
+  & a:hover {
+    opacity: 0.85;
+  }
+}
