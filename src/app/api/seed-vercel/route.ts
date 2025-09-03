@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     // Check if this is running on Vercel and if seeding is allowed
     const authHeader = request.headers.get('authorization')
     const expectedAuth = process.env.SEED_SECRET || 'wdeg-seed-2025'
-    
+
     if (authHeader !== `Bearer ${expectedAuth}`) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
@@ -22,9 +22,9 @@ export async function GET(request: NextRequest) {
     })
 
     if (existingPages.docs.length > 0) {
-      return NextResponse.json({ 
+      return NextResponse.json({
         message: 'Database already seeded',
-        pages: existingPages.totalDocs 
+        pages: existingPages.totalDocs,
       })
     }
 
@@ -118,37 +118,43 @@ export async function GET(request: NextRequest) {
         layout: [
           {
             blockType: 'content',
-            richText: {
-              root: {
-                type: 'root',
-                children: [
-                  {
-                    type: 'paragraph',
+            columns: [
+              {
+                size: 'full',
+                richText: {
+                  root: {
+                    type: 'root',
                     children: [
                       {
-                        type: 'text',
-                        detail: 0,
-                        format: 0,
-                        mode: 'normal',
-                        style: '',
-                        text: 'Welcome to the WDEG platform. The database is being seeded with content.',
+                        type: 'paragraph',
+                        children: [
+                          {
+                            type: 'text',
+                            detail: 0,
+                            format: 0,
+                            mode: 'normal',
+                            style: '',
+                            text: 'Welcome to the WDEG platform. The database is being seeded with content.',
+                            version: 1,
+                          },
+                        ],
                         version: 1,
                       },
                     ],
+                    direction: 'ltr',
+                    format: '',
+                    indent: 0,
                     version: 1,
                   },
-                ],
-                direction: 'ltr',
-                format: '',
-                indent: 0,
-                version: 1,
+                },
               },
-            },
+            ],
           },
         ],
         meta: {
           title: 'Where Did Everyone Go? | WDEG',
-          description: 'A prophetic blueprint explaining our present chaos and the storm still ahead.',
+          description:
+            'A prophetic blueprint explaining our present chaos and the storm still ahead.',
         },
         publishedAt: new Date().toISOString(),
       },
@@ -200,37 +206,43 @@ export async function GET(request: NextRequest) {
             layout: [
               {
                 blockType: 'content',
-                richText: {
-                  root: {
-                    type: 'root',
-                    children: [
-                      {
-                        type: 'paragraph',
+                columns: [
+                  {
+                    size: 'full',
+                    richText: {
+                      root: {
+                        type: 'root',
                         children: [
                           {
-                            type: 'text',
-                            detail: 0,
-                            format: 0,
-                            mode: 'normal',
-                            style: '',
-                            text: `Welcome to the WDEG platform (${locale}). Content is being prepared.`,
+                            type: 'paragraph',
+                            children: [
+                              {
+                                type: 'text',
+                                detail: 0,
+                                format: 0,
+                                mode: 'normal',
+                                style: '',
+                                text: `Welcome to the WDEG platform (${locale}). Content is being prepared.`,
+                                version: 1,
+                              },
+                            ],
                             version: 1,
                           },
                         ],
+                        direction: 'ltr',
+                        format: '',
+                        indent: 0,
                         version: 1,
                       },
-                    ],
-                    direction: 'ltr',
-                    format: '',
-                    indent: 0,
-                    version: 1,
+                    },
                   },
-                },
+                ],
               },
             ],
             meta: {
               title: 'Where Did Everyone Go? | WDEG',
-              description: 'A prophetic blueprint explaining our present chaos and the storm still ahead.',
+              description:
+                'A prophetic blueprint explaining our present chaos and the storm still ahead.',
             },
             publishedAt: new Date().toISOString(),
           },
@@ -254,11 +266,11 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Seeding error:', error)
     return NextResponse.json(
-      { 
-        error: 'Failed to seed database', 
-        details: error instanceof Error ? error.message : 'Unknown error' 
+      {
+        error: 'Failed to seed database',
+        details: error instanceof Error ? error.message : 'Unknown error',
       },
-      { status: 500 }
+      { status: 500 },
     )
   }
 }
