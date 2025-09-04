@@ -12,7 +12,7 @@ export const WDEGNavigationBlock: React.FC<WDEGNavigationBlockProps> = ({
   currentPage,
   totalPages = 26,
   baseUrl = '/wdeg-book',
-  disableInnerContainer,
+  disableInnerContainer: _disableInnerContainer,
 }) => {
   return <WDEGNavigation currentPage={currentPage} totalPages={totalPages} baseUrl={baseUrl} />
 }

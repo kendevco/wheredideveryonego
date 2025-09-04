@@ -4,14 +4,9 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { ChevronLeft, ChevronRight, Globe, BookOpen, Languages } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Globe } from 'lucide-react'
 import { WDEGHero } from '@/heros/WDEGHero'
 import Image from 'next/image'
-
-interface Chapter {
-  number: number
-  content: string
-}
 
 interface WDEGBookProps {
   initialLanguage?: string
@@ -114,7 +109,7 @@ export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookP
   }
 
   // Get cover art for main view
-  const getCoverArt = () => '/wdeg/images/cover_art.png'
+  //const getCoverArt = () => '/wdeg/images/cover_art.png'
 
   return (
     <>

@@ -11,8 +11,8 @@ export type WDEGBookBlockType = {
 
 export const WDEGBookBlock: React.FC<WDEGBookBlockType> = ({
   initialLanguage = 'en',
-  showLanguageSelector = true,
-  defaultViewMode = 'single',
+  showLanguageSelector: _showLanguageSelector = true,
+  defaultViewMode: _defaultViewMode = 'single',
 }) => {
   return (
     <div className="container mx-auto">
@@ -20,5 +20,3 @@ export const WDEGBookBlock: React.FC<WDEGBookBlockType> = ({
     </div>
   )
 }
-
-
