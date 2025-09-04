@@ -21,3 +21,4 @@ export const WDEGBookBlock: React.FC<WDEGBookBlockType> = ({
   )
 }
 
+

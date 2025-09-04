@@ -34,7 +34,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }, [])
 
   useEffect(() => {
-    let themeToSet: Theme = defaultTheme
+    let themeToSet: Theme | null = defaultTheme
     const preference = window.localStorage.getItem(themeLocalStorageKey)
 
     if (themeIsValid(preference)) {
@@ -44,11 +44,15 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
       if (implicitPreference) {
         themeToSet = implicitPreference
+      } else {
+        themeToSet = 'light' // fallback
       }
     }
 
-    document.documentElement.setAttribute('data-theme', themeToSet)
-    setThemeState(themeToSet)
+    if (themeToSet) {
+      document.documentElement.setAttribute('data-theme', themeToSet)
+      setThemeState(themeToSet)
+    }
   }, [])
 
   return <ThemeContext value={{ setTheme, theme }}>{children}</ThemeContext>

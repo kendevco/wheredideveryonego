@@ -1,7 +1,7 @@
 import Script from 'next/script'
 import React from 'react'
 
-import { defaultTheme, themeLocalStorageKey } from '../ThemeSelector/types'
+import { defaultTheme, themeLocalStorageKey } from '../shared'
 
 export const InitTheme: React.FC = () => {
   return (
@@ -26,20 +26,23 @@ export const InitTheme: React.FC = () => {
       return theme === 'light' || theme === 'dark'
     }
 
-    var themeToSet = '${defaultTheme}'
+    var themeToSet = null
     var preference = window.localStorage.getItem('${themeLocalStorageKey}')
 
     if (themeIsValid(preference)) {
       themeToSet = preference
     } else {
       var implicitPreference = getImplicitPreference()
-
       if (implicitPreference) {
         themeToSet = implicitPreference
+      } else {
+        themeToSet = 'light' // fallback
       }
     }
 
-    document.documentElement.setAttribute('data-theme', themeToSet)
+    if (themeToSet) {
+      document.documentElement.setAttribute('data-theme', themeToSet)
+    }
   })();
   `,
       }}

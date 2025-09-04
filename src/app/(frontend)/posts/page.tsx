@@ -28,15 +28,49 @@ export default async function Page() {
     },
   })
 
-  // Get the hero image (same as home page)
-  const heroImage = await payload.find({
+  // Get the WDEG hero image (same as home page)
+  let heroImage = await payload.find({
     collection: 'media',
     where: {
       alt: {
-        equals: 'Straight metallic shapes with a blue gradient',
+        equals: 'Where Did Everyone Go? - Main Hero Background',
       },
     },
     limit: 1,
+  })
+
+  // Fallback to filename search if alt text search fails
+  if (!heroImage.docs.length) {
+    heroImage = await payload.find({
+      collection: 'media',
+      where: {
+        filename: {
+          equals: 'wdeg.jpg',
+        },
+      },
+      limit: 1,
+    })
+  }
+
+  // Final fallback to any WDEG image
+  if (!heroImage.docs.length) {
+    heroImage = await payload.find({
+      collection: 'media',
+      where: {
+        alt: {
+          contains: 'WDEG',
+        },
+      },
+      limit: 1,
+    })
+  }
+
+  // Debug logging
+  console.log('Posts page hero image search results:', {
+    found: heroImage.docs.length > 0,
+    imageId: heroImage.docs[0]?.id,
+    imageAlt: heroImage.docs[0]?.alt,
+    imageFilename: heroImage.docs[0]?.filename,
   })
 
   const hero = {

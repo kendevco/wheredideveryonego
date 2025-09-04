@@ -2,18 +2,8 @@ import type { Payload, PayloadRequest } from 'payload'
 import fs from 'fs'
 import path from 'path'
 
-// Language configuration
-const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'es', name: 'Español' },
-  { code: 'fr', name: 'Français' },
-  { code: 'de', name: 'Deutsch' },
-  { code: 'it', name: 'Italiano' },
-  { code: 'pt', name: 'Português' },
-  { code: 'pl', name: 'Polski' },
-  { code: 'ar', name: 'العربية' },
-  { code: 'he', name: 'עברית' },
-]
+// Only English language now
+const languages = [{ code: 'en', name: 'English' }]
 
 // Page metadata - extracted from content analysis
 const pageMetadata = [
@@ -387,14 +377,8 @@ export const seedWDEGPages = async ({
           continue
         }
 
-        // Read the content file
-        const filePath = path.join(
-          process.cwd(),
-          'public',
-          'wdeg',
-          language.code,
-          `${pageNumber}.txt`,
-        )
+        // Read the content file (English only)
+        const filePath = path.join(process.cwd(), 'public', 'wdeg', 'en', `${pageNumber}.txt`)
 
         if (!fs.existsSync(filePath)) {
           payload.logger.warn(`⚠️ Content file not found: ${filePath}`)

@@ -7,7 +7,6 @@ import { contact as contactPageData } from './contact-page'
 import { home } from './home'
 import { about } from './about'
 import { community } from './community'
-import { reviews } from './reviews'
 import { privacyPolicy } from './privacy-policy'
 import { termsOfService } from './terms-of-service'
 import { image1 } from './image-1'
@@ -16,7 +15,6 @@ import { imageHero1 } from './image-hero-1'
 import { post1 } from './post-1'
 import { post2 } from './post-2'
 import { post3 } from './post-3'
-import { seedWDEGPages } from './wdeg-pages'
 
 const collections: CollectionSlug[] = [
   'categories',
@@ -333,55 +331,97 @@ export const seed = async ({
     payload.logger.warn('⚠️ Failed to upload WDEG hero image:', error)
   }
 
+  // Upload all WDEG book images
+  payload.logger.info(`— Uploading WDEG book images...`)
+  try {
+    const wdegImagesDir = path.join(process.cwd(), 'public', 'wdeg', 'images')
+    if (fs.existsSync(wdegImagesDir)) {
+      const imageFiles = fs
+        .readdirSync(wdegImagesDir)
+        .filter((file) => file.match(/\.(jpg|jpeg|png|gif|webp)$/i))
+
+      let uploadedCount = 0
+      let skippedCount = 0
+
+      for (const imageFile of imageFiles) {
+        try {
+          // Check if image already exists
+          const existingImage = await payload.find({
+            collection: 'media',
+            where: { filename: { equals: imageFile } },
+            limit: 1,
+          })
+
+          if (existingImage.docs.length === 0) {
+            const imagePath = path.join(wdegImagesDir, imageFile)
+            const imageBuffer = fs.readFileSync(imagePath)
+
+            await payload.create({
+              collection: 'media',
+              data: {
+                alt: `WDEG Book - ${imageFile.replace(/\.(jpg|jpeg|png|gif|webp)$/i, '').replace(/[_-]/g, ' ')}`,
+              },
+              file: {
+                name: imageFile,
+                data: imageBuffer,
+                mimetype: `image/${path.extname(imageFile).slice(1).toLowerCase()}`,
+                size: imageBuffer.length,
+              },
+            })
+            uploadedCount++
+          } else {
+            skippedCount++
+          }
+        } catch (error) {
+          payload.logger.warn(`⚠️ Failed to upload ${imageFile}:`, error)
+        }
+      }
+
+      payload.logger.info(
+        `✅ WDEG images: ${uploadedCount} uploaded, ${skippedCount} already existed`,
+      )
+    } else {
+      payload.logger.warn('⚠️ WDEG images directory not found')
+    }
+  } catch (error) {
+    payload.logger.warn('⚠️ Failed to process WDEG images:', error)
+  }
+
   payload.logger.info(`— Seeding pages...`)
 
-  const [
-    _,
-    aboutPageDoc,
-    communityPageDoc,
-    reviewsPageDoc,
-    privacyPageDoc,
-    termsPageDoc,
-    contactPage,
-  ] = await Promise.all([
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: home({ heroImage: wdegHeroImage || imageHomeDoc, metaImage: image2Doc }),
-    }),
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: about({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
-    }),
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: community({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
-    }),
-
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: reviews({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
-    }),
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: privacyPolicy({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
-    }),
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: termsOfService({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
-    }),
-
-    payload.create({
-      collection: 'pages',
-      depth: 0,
-      data: contactPageData({ contactForm: contactForm }),
-    }),
-  ])
+  const [homePageDoc, aboutPageDoc, communityPageDoc, privacyPageDoc, termsPageDoc, contactPage] =
+    await Promise.all([
+      payload.create({
+        collection: 'pages',
+        depth: 0,
+        data: home({ heroImage: wdegHeroImage || imageHomeDoc, metaImage: image2Doc }),
+      }),
+      payload.create({
+        collection: 'pages',
+        depth: 0,
+        data: about({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
+      }),
+      payload.create({
+        collection: 'pages',
+        depth: 0,
+        data: community({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
+      }),
+      payload.create({
+        collection: 'pages',
+        depth: 0,
+        data: privacyPolicy({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
+      }),
+      payload.create({
+        collection: 'pages',
+        depth: 0,
+        data: termsOfService({ heroImage: imageHomeDoc, metaImage: image2Doc }) as any,
+      }),
+      payload.create({
+        collection: 'pages',
+        depth: 0,
+        data: contactPageData({ contactForm: contactForm }),
+      }),
+    ])
 
   payload.logger.info(`— Seeding globals...`)
 
@@ -472,9 +512,6 @@ export const seed = async ({
       },
     }),
   ])
-
-  // Seed WDEG book pages
-  await seedWDEGPages({ payload, req })
 
   payload.logger.info('Seeded WDEG database successfully!')
 }

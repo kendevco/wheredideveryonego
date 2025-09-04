@@ -23,7 +23,6 @@ export async function generateStaticParams() {
       limit: 1000,
       overrideAccess: false,
       pagination: false,
-      locale: 'en', // English only
       select: {
         slug: true,
       },
@@ -44,19 +43,14 @@ export async function generateStaticParams() {
       { slug: 'contact' },
       { slug: 'privacy-policy' },
       { slug: 'terms-of-service' },
-      { slug: 'wdeg-book' }
+      { slug: 'wdeg-book' },
     ]
 
     return [...(params || []), ...basicPages]
   } catch (error) {
     console.warn('Failed to generate static params, using fallback:', error)
     // Fallback to basic params if database connection fails
-    return [
-      { slug: 'home' },
-      { slug: 'about' },
-      { slug: 'contact' },
-      { slug: 'wdeg-book' }
-    ]
+    return [{ slug: 'home' }, { slug: 'about' }, { slug: 'contact' }, { slug: 'wdeg-book' }]
   }
 }
 
@@ -120,7 +114,6 @@ const queryPageBySlug = cache(async ({ slug }: { slug: string }) => {
     limit: 1,
     pagination: false,
     overrideAccess: draft,
-    locale: 'en', // English only
     where: {
       slug: {
         equals: slug,

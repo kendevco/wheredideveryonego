@@ -14,3 +14,4 @@ if (isMainModule) {
   console.log('❌ Not detected as main module')
 }
 
+

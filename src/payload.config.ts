@@ -22,49 +22,6 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-  // Internationalization configuration
-  localization: {
-    locales: [
-      {
-        label: 'English',
-        code: 'en',
-      },
-      {
-        label: 'Español',
-        code: 'es',
-      },
-      {
-        label: 'Français',
-        code: 'fr',
-      },
-      {
-        label: 'Deutsch',
-        code: 'de',
-      },
-      {
-        label: 'Italiano',
-        code: 'it',
-      },
-      {
-        label: 'Português',
-        code: 'pt',
-      },
-      {
-        label: 'Polski',
-        code: 'pl',
-      },
-      {
-        label: 'العربية',
-        code: 'ar',
-      },
-      {
-        label: 'עברית',
-        code: 'he',
-      },
-    ],
-    defaultLocale: 'en',
-    fallback: true,
-  },
   admin: {
     meta: {
       titleSuffix: '- Angel OS: WDEG',

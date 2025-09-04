@@ -11,8 +11,8 @@ export default function PageClient() {
   useEffect(() => {
     // Prefetch common routes for better performance
     router.prefetch('/')
-    // Set header theme according to system preference (do not force light/dark)
-    setHeaderTheme(undefined as any)
+    // Don't override header theme - let it inherit from global theme
+    // setHeaderTheme(undefined as any)
   }, [router, setHeaderTheme])
 
   return null

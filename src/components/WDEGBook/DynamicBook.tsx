@@ -257,6 +257,37 @@ export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookP
                   </div>
                 </div>
               </div>
+
+              {/* Bottom Pagination Controls */}
+              <div className="mt-8 pt-6 border-t border-border">
+                <div className="flex items-center justify-between">
+                  <Button
+                    variant="outline"
+                    onClick={() => setCurrentChapter(Math.max(1, currentChapter - 1))}
+                    disabled={currentChapter <= 1}
+                    className="flex items-center gap-2"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                    Previous
+                  </Button>
+
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span>
+                      {currentChapter} of {totalChapters}
+                    </span>
+                  </div>
+
+                  <Button
+                    variant="outline"
+                    onClick={() => setCurrentChapter(Math.min(totalChapters, currentChapter + 1))}
+                    disabled={currentChapter >= totalChapters}
+                    className="flex items-center gap-2"
+                  >
+                    Next
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
             </CardContent>
           </Card>
         )}
@@ -305,6 +336,51 @@ export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookP
                             Chapter {chapterNum} Illustration
                           </p>
                         </div>
+                      </div>
+                    </div>
+
+                    {/* Chapter Navigation in Complete Book View */}
+                    <div className="mt-6 pt-4 border-t border-border">
+                      <div className="flex items-center justify-between">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => {
+                            const prevChapter = parseInt(chapterNum) - 1
+                            if (prevChapter >= 1) {
+                              document.getElementById(`chapter-${prevChapter}`)?.scrollIntoView({
+                                behavior: 'smooth',
+                              })
+                            }
+                          }}
+                          disabled={parseInt(chapterNum) <= 1}
+                          className="flex items-center gap-2"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                          Previous Chapter
+                        </Button>
+
+                        <div className="text-xs text-muted-foreground">
+                          Chapter {chapterNum} of {totalChapters}
+                        </div>
+
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => {
+                            const nextChapter = parseInt(chapterNum) + 1
+                            if (nextChapter <= totalChapters) {
+                              document.getElementById(`chapter-${nextChapter}`)?.scrollIntoView({
+                                behavior: 'smooth',
+                              })
+                            }
+                          }}
+                          disabled={parseInt(chapterNum) >= totalChapters}
+                          className="flex items-center gap-2"
+                        >
+                          Next Chapter
+                          <ChevronRight className="h-4 w-4" />
+                        </Button>
                       </div>
                     </div>
                   </CardContent>

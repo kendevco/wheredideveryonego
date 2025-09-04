@@ -11,7 +11,6 @@ export async function POST(request: NextRequest) {
     const req = {
       payload,
       user: null,
-      locale: 'en',
     }
 
     // Run the seed function
@@ -32,5 +31,3 @@ export async function POST(request: NextRequest) {
     )
   }
 }
-
-

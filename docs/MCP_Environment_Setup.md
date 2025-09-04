@@ -71,3 +71,4 @@ const collections = await fetch('/api/mcp/collections', {
 - **Monitor usage** via health endpoint
 - **Enable rate limiting** in production
 
+
