@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -26,8 +27,23 @@ const AVAILABLE_LANGUAGES = [
   { code: 'jp', name: '日本語', flag: '🇯🇵' },
 ]
 
-export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookProps) {
-  const [currentLanguage, setCurrentLanguage] = useState(initialLanguage)
+export function DynamicWDEGBook({ initialLanguage, className }: WDEGBookProps) {
+  const searchParams = useSearchParams()
+  const langFromUrl = searchParams.get('lang')
+
+  // Determine initial language from URL or prop or default
+  const availableLanguages = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he', 'jp']
+  const getInitialLanguage = () => {
+    if (langFromUrl && availableLanguages.includes(langFromUrl)) {
+      return langFromUrl
+    }
+    if (initialLanguage && availableLanguages.includes(initialLanguage)) {
+      return initialLanguage
+    }
+    return 'en'
+  }
+
+  const [currentLanguage, setCurrentLanguage] = useState(getInitialLanguage())
   const [chapters, setChapters] = useState<{ [key: number]: string }>({})
   const [currentChapter, setCurrentChapter] = useState(1)
   const [loading, setLoading] = useState(false)
@@ -35,11 +51,13 @@ export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookP
   const [viewMode, setViewMode] = useState<'single' | 'all'>('single')
   const [showLanguageSelector, setShowLanguageSelector] = useState(false)
 
-  // Update currentLanguage when initialLanguage prop changes
+  // Update currentLanguage when URL changes
   useEffect(() => {
-    console.log('🔍 DynamicBook - initialLanguage prop changed to:', initialLanguage)
-    setCurrentLanguage(initialLanguage)
-  }, [initialLanguage])
+    const newLanguage = getInitialLanguage()
+    console.log('🔍 DynamicBook - URL language changed to:', newLanguage)
+    setCurrentLanguage(newLanguage)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [langFromUrl, initialLanguage])
 
   // Load chapters for current language
   const loadChapters = async (language: string) => {

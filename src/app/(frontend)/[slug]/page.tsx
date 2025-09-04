@@ -43,14 +43,13 @@ export async function generateStaticParams() {
       { slug: 'contact' },
       { slug: 'privacy-policy' },
       { slug: 'terms-of-service' },
-      { slug: 'wdeg-book' },
     ]
 
     return [...(params || []), ...basicPages]
   } catch (error) {
     console.warn('Failed to generate static params, using fallback:', error)
     // Fallback to basic params if database connection fails
-    return [{ slug: 'home' }, { slug: 'about' }, { slug: 'contact' }, { slug: 'wdeg-book' }]
+    return [{ slug: 'home' }, { slug: 'about' }, { slug: 'contact' }]
   }
 }
 

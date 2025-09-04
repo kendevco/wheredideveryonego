@@ -10,7 +10,7 @@ const BeforeDashboard: React.FC = () => {
   return (
     <div className={baseClass}>
       <Banner className={`${baseClass}__banner`} type="success">
-        <h4>Angel OS: WDEG Admin Dashboard</h4>
+        <h4>WDEG Admin Dashboard</h4>
       </Banner>
       <p>Manage WDEG feedback and content for the digital book platform.</p>
 
