@@ -16,80 +16,65 @@ import { LivePreviewListener } from '@/components/LivePreviewListener'
 export async function generateStaticParams() {
   try {
     const payload = await getPayload({ config: configPromise })
-    const locales = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'] as const
 
-    const params = []
+    const pages = await payload.find({
+      collection: 'pages',
+      draft: false,
+      limit: 1000,
+      overrideAccess: false,
+      pagination: false,
+      locale: 'en', // English only
+      select: {
+        slug: true,
+      },
+    })
 
-    for (const locale of locales) {
-      try {
-        const pages = await payload.find({
-          collection: 'pages',
-          draft: false,
-          limit: 1000,
-          overrideAccess: false,
-          pagination: false,
-          locale: locale as any,
-          select: {
-            slug: true,
-          },
-        })
+    const params = pages.docs
+      ?.filter((doc) => {
+        return doc.slug !== 'home'
+      })
+      .map(({ slug }) => {
+        return { slug }
+      })
 
-        const localeParams = pages.docs
-          ?.filter((doc) => {
-            return doc.slug !== 'home'
-          })
-          .map(({ slug }) => {
-            return { locale, slug }
-          })
+    // Add basic pages that should always exist
+    const basicPages = [
+      { slug: 'home' },
+      { slug: 'about' },
+      { slug: 'contact' },
+      { slug: 'privacy-policy' },
+      { slug: 'terms-of-service' },
+      { slug: 'wdeg-book' }
+    ]
 
-        params.push(...(localeParams || []))
-      } catch (error) {
-        console.warn(`Failed to fetch pages for locale ${locale}:`, error)
-      }
-    }
-
-    // Always include at least the home page for each locale
-    const locales_with_home = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'].map(locale => ({
-      locale,
-      slug: 'home'
-    }))
-
-    // Add some basic pages that should always exist
-    const basicPages = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'].flatMap(locale => [
-      { locale, slug: 'about' },
-      { locale, slug: 'contact' },
-      { locale, slug: 'privacy-policy' },
-      { locale, slug: 'terms-of-service' }
-    ])
-
-    return [...params, ...locales_with_home, ...basicPages]
+    return [...(params || []), ...basicPages]
   } catch (error) {
     console.warn('Failed to generate static params, using fallback:', error)
     // Fallback to basic params if database connection fails
-    return ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he'].map(locale => ({
-      locale,
-      slug: 'home'
-    }))
+    return [
+      { slug: 'home' },
+      { slug: 'about' },
+      { slug: 'contact' },
+      { slug: 'wdeg-book' }
+    ]
   }
 }
 
 type Args = {
   params: Promise<{
-    locale: string
     slug?: string
   }>
 }
 
 export default async function Page({ params: paramsPromise }: Args) {
   const { isEnabled: draft } = await draftMode()
-  const { locale, slug = 'home' } = await paramsPromise
-  const url = `/${locale}/${slug}`
+  const { slug = 'home' } = await paramsPromise
+  const url = `/${slug}`
 
   let page: RequiredDataFromCollectionSlug<'pages'> | null
 
   page = await queryPageBySlug({
     slug,
-    locale,
   })
 
   // Remove this code once your website is seeded
@@ -118,13 +103,13 @@ export default async function Page({ params: paramsPromise }: Args) {
 }
 
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
-  const { locale, slug = 'home' } = await paramsPromise
-  const page = await queryPageBySlug({ slug, locale })
+  const { slug = 'home' } = await paramsPromise
+  const page = await queryPageBySlug({ slug })
 
   return generateMeta({ doc: page })
 }
 
-const queryPageBySlug = cache(async ({ slug, locale }: { slug: string; locale: string }) => {
+const queryPageBySlug = cache(async ({ slug }: { slug: string }) => {
   const { isEnabled: draft } = await draftMode()
 
   const payload = await getPayload({ config: configPromise })
@@ -135,7 +120,7 @@ const queryPageBySlug = cache(async ({ slug, locale }: { slug: string; locale: s
     limit: 1,
     pagination: false,
     overrideAccess: draft,
-    locale: locale as any,
+    locale: 'en', // English only
     where: {
       slug: {
         equals: slug,
