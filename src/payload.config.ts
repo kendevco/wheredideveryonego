@@ -76,12 +76,7 @@ export default buildConfig({
   // database-adapter-config-end
   collections: [Pages, Posts, Media, Categories, Users],
   cors: [getServerSideURL()].filter(Boolean),
-  csrf: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://angel-os.kendev.co',
-    getServerSideURL(),
-  ],
+  csrf: ['http://localhost:3000', 'http://localhost:3001', getServerSideURL()],
   globals: [Header, Footer],
   plugins: [
     ...plugins,
