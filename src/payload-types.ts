@@ -197,6 +197,7 @@ export interface Page {
     | MediaBlock
     | ArchiveBlock
     | FormBlock
+    | LanguageSelectorBlock
     | {
         /**
          * Current page number (1-26)
@@ -768,6 +769,35 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LanguageSelectorBlock".
+ */
+export interface LanguageSelectorBlock {
+  /**
+   * Main heading for the language selector
+   */
+  title?: string | null;
+  /**
+   * Subtitle text below the main heading
+   */
+  subtitle?: string | null;
+  /**
+   * How to display the language options
+   */
+  displayStyle?: ('grid' | 'list') | null;
+  /**
+   * Show flag emojis next to language names
+   */
+  showFlags?: boolean | null;
+  /**
+   * Select which languages to display (all are selected by default)
+   */
+  enabledLanguages?: ('en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'pl' | 'ar' | 'he' | 'jp')[] | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'languageSelector';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -1057,6 +1087,7 @@ export interface PagesSelect<T extends boolean = true> {
         mediaBlock?: T | MediaBlockSelect<T>;
         archive?: T | ArchiveBlockSelect<T>;
         formBlock?: T | FormBlockSelect<T>;
+        languageSelector?: T | LanguageSelectorBlockSelect<T>;
         wdegNavigation?:
           | T
           | {
@@ -1171,6 +1202,19 @@ export interface FormBlockSelect<T extends boolean = true> {
   form?: T;
   enableIntro?: T;
   introContent?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LanguageSelectorBlock_select".
+ */
+export interface LanguageSelectorBlockSelect<T extends boolean = true> {
+  title?: T;
+  subtitle?: T;
+  displayStyle?: T;
+  showFlags?: T;
+  enabledLanguages?: T;
   id?: T;
   blockName?: T;
 }

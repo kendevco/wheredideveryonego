@@ -6,6 +6,7 @@ import { ArchiveBlock } from '@/blocks/ArchiveBlock/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { ContentBlock } from '@/blocks/Content/Component'
 import { FormBlock } from '@/blocks/Form/Component'
+import { LanguageSelectorBlock } from '@/blocks/LanguageSelector/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component'
 import { WDEGNavigationBlock } from '@/blocks/WDEGNavigation/Component'
 import { WDEGBookBlock } from '@/blocks/WDEGBook/Component'
@@ -15,6 +16,7 @@ const blockComponents = {
   content: ContentBlock,
   cta: CallToActionBlock,
   formBlock: FormBlock,
+  languageSelector: LanguageSelectorBlock,
   mediaBlock: MediaBlock,
   wdegNavigation: WDEGNavigationBlock,
   wdegBook: WDEGBookBlock,

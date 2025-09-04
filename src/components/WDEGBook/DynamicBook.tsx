@@ -23,6 +23,7 @@ const AVAILABLE_LANGUAGES = [
   { code: 'pl', name: 'Polski', flag: '🇵🇱' },
   { code: 'ar', name: 'العربية', flag: '🇸🇦' },
   { code: 'he', name: 'עברית', flag: '🇮🇱' },
+  { code: 'jp', name: '日本語', flag: '🇯🇵' },
 ]
 
 export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookProps) {
@@ -33,6 +34,12 @@ export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookP
   const [error, setError] = useState<string | null>(null)
   const [viewMode, setViewMode] = useState<'single' | 'all'>('single')
   const [showLanguageSelector, setShowLanguageSelector] = useState(false)
+
+  // Update currentLanguage when initialLanguage prop changes
+  useEffect(() => {
+    console.log('🔍 DynamicBook - initialLanguage prop changed to:', initialLanguage)
+    setCurrentLanguage(initialLanguage)
+  }, [initialLanguage])
 
   // Load chapters for current language
   const loadChapters = async (language: string) => {
@@ -69,6 +76,7 @@ export function DynamicWDEGBook({ initialLanguage = 'en', className }: WDEGBookP
 
   // Load chapters when language changes
   useEffect(() => {
+    console.log('🔍 DynamicBook - useEffect triggered, currentLanguage:', currentLanguage)
     loadChapters(currentLanguage)
   }, [currentLanguage])
 
