@@ -6,27 +6,39 @@ import { Pagination } from '@/components/Pagination'
 import { RenderHero } from '@/heros/RenderHero'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
+import { unstable_cache } from 'next/cache'
 import React from 'react'
 import PageClient from './page.client'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
 
+const getCachedPosts = unstable_cache(
+  async () => {
+    const payload = await getPayload({ config: configPromise })
+    return payload.find({
+      collection: 'posts',
+      depth: 1,
+      limit: 12,
+      overrideAccess: false,
+      select: {
+        title: true,
+        slug: true,
+        categories: true,
+        meta: true,
+      },
+    })
+  },
+  ['posts-page'],
+  {
+    tags: ['posts'],
+    revalidate: 600,
+  },
+)
+
 export default async function Page() {
   const payload = await getPayload({ config: configPromise })
-
-  const posts = await payload.find({
-    collection: 'posts',
-    depth: 1,
-    limit: 12,
-    overrideAccess: false,
-    select: {
-      title: true,
-      slug: true,
-      categories: true,
-      meta: true,
-    },
-  })
+  const posts = await getCachedPosts()
 
   // Get the WDEG hero image (same as home page)
   let heroImage = await payload.find({
