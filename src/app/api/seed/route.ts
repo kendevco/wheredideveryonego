@@ -4,6 +4,17 @@ import configPromise from '@payload-config'
 import { seed } from '@/endpoints/seed'
 
 export async function POST(request: NextRequest) {
+  // Disable seeding in production for security
+  if (process.env.NODE_ENV === 'production') {
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'Seeding is disabled in production',
+      },
+      { status: 403 },
+    )
+  }
+
   try {
     const payload = await getPayload({ config: configPromise })
 
