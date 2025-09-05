@@ -17,12 +17,12 @@ export const Logo = (props: Props) => {
     /* eslint-disable @next/next/no-img-element */
     <img
       alt="Where Did Everyone Go? Logo"
-      width={100}
-      height={100}
+      width={75}
+      height={75}
       loading={loading}
       fetchPriority={priority}
       decoding="async"
-      className={clsx('w-[100px] h-[100px]', className)}
+      className={clsx('w-[75px] h-[75px]', className)}
       src="/wdeg_transparent.png"
     />
   )

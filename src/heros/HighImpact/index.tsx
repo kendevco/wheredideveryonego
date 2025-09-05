@@ -40,6 +40,8 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ links, media, richText 
         {media && typeof media === 'object' && (
           <Media fill imgClassName="-z-10 object-cover" priority resource={media} />
         )}
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40 -z-5" />
       </div>
     </div>
   )

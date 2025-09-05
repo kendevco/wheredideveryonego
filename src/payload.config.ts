@@ -1,5 +1,6 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres' // database-adapter-import
+import { resendAdapter } from '@payloadcms/email-resend'
 
 import sharp from 'sharp' // sharp-import
 import path from 'path'
@@ -24,7 +25,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   admin: {
     meta: {
-      titleSuffix: '- Angel OS: WDEG',
+      titleSuffix: '- WDEG',
     },
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
@@ -120,4 +121,9 @@ export default buildConfig({
     },
     tasks: [],
   },
+  email: resendAdapter({
+    defaultFromAddress: 'info@kendev.co',
+    defaultFromName: 'Where Did Everyone Go',
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
 })

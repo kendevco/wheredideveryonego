@@ -72,3 +72,8 @@ const collections = await fetch('/api/mcp/collections', {
 - **Enable rate limiting** in production
 
 
+
+
+
+
+

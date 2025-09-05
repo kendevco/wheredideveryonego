@@ -171,3 +171,8 @@ The MCP server enables a powerful command palette in the admin dashboard:
 This MCP integration transforms our development workflow from "code then manually update content" to "code and programmatically update content together" - exactly what we need for efficient feature development! 🚀
 
 
+
+
+
+
+

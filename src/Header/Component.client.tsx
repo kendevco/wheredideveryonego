@@ -30,8 +30,18 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [headerTheme])
 
+  // Dynamic header styling based on headerTheme
+  const getHeaderClasses = () => {
+    if (headerTheme === 'dark') {
+      // Add semi-transparent background for better contrast with white text
+      return 'container relative z-20 bg-black/20 backdrop-blur-sm'
+    } else {
+      return 'container relative z-20'
+    }
+  }
+
   return (
-    <header className="container relative z-20">
+    <header className={getHeaderClasses()}>
       <div className="py-8 flex justify-between">
         <Link href="/">
           <Logo loading="eager" priority="high" className="invert dark:invert-0" />

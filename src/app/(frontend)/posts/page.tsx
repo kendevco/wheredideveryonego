@@ -87,7 +87,7 @@ export default async function Page() {
 
   const hero = {
     type: 'highImpact' as const,
-    media: heroImage.docs[0]?.id,
+    media: heroImage.docs[0],
     richText: {
       root: {
         type: 'root' as const,
