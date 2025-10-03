@@ -8,7 +8,8 @@ import { Content } from '../../blocks/Content/config'
 import { FormBlock } from '../../blocks/Form/config'
 import { LanguageSelector } from '../../blocks/LanguageSelector/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
-import { WDEGNavigationBlock } from '../../blocks/WDEGNavigation/config'
+import { BookNavigationBlock } from '../../blocks/BookNavigation/config'
+import { BookViewerBlock } from '../../blocks/BookViewer/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
@@ -77,7 +78,16 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, LanguageSelector, WDEGNavigationBlock],
+              blocks: [
+                CallToAction,
+                Content,
+                MediaBlock,
+                Archive,
+                FormBlock,
+                LanguageSelector,
+                BookNavigationBlock,
+                BookViewerBlock,
+              ],
               required: true,
               admin: {
                 initCollapsed: true,

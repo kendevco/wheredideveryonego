@@ -154,7 +154,7 @@ export interface Page {
       root: {
         type: string;
         children: {
-          type: string;
+          type: any;
           version: number;
           [k: string]: unknown;
         }[];
@@ -213,7 +213,24 @@ export interface Page {
         baseUrl?: string | null;
         id?: string | null;
         blockName?: string | null;
-        blockType: 'wdegNavigation';
+        blockType: 'BookNavigation';
+      }
+    | {
+        /**
+         * Default language to display when the page loads
+         */
+        initialLanguage?: ('en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'pl' | 'ar' | 'he') | null;
+        /**
+         * Show the language selector dropdown
+         */
+        showLanguageSelector?: boolean | null;
+        /**
+         * Default view mode when the page loads
+         */
+        defaultViewMode?: ('single' | 'all') | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'BookViewer';
       }
   )[];
   meta?: {
@@ -252,7 +269,7 @@ export interface Post {
     root: {
       type: string;
       children: {
-        type: string;
+        type: any;
         version: number;
         [k: string]: unknown;
       }[];
@@ -298,7 +315,7 @@ export interface Media {
     root: {
       type: string;
       children: {
-        type: string;
+        type: any;
         version: number;
         [k: string]: unknown;
       }[];
@@ -434,7 +451,7 @@ export interface CallToActionBlock {
     root: {
       type: string;
       children: {
-        type: string;
+        type: any;
         version: number;
         [k: string]: unknown;
       }[];
@@ -485,7 +502,7 @@ export interface ContentBlock {
           root: {
             type: string;
             children: {
-              type: string;
+              type: any;
               version: number;
               [k: string]: unknown;
             }[];
@@ -542,7 +559,7 @@ export interface ArchiveBlock {
     root: {
       type: string;
       children: {
-        type: string;
+        type: any;
         version: number;
         [k: string]: unknown;
       }[];
@@ -578,7 +595,7 @@ export interface FormBlock {
     root: {
       type: string;
       children: {
-        type: string;
+        type: any;
         version: number;
         [k: string]: unknown;
       }[];
@@ -635,7 +652,7 @@ export interface Form {
               root: {
                 type: string;
                 children: {
-                  type: string;
+                  type: any;
                   version: number;
                   [k: string]: unknown;
                 }[];
@@ -718,7 +735,7 @@ export interface Form {
     root: {
       type: string;
       children: {
-        type: string;
+        type: any;
         version: number;
         [k: string]: unknown;
       }[];
@@ -750,7 +767,7 @@ export interface Form {
           root: {
             type: string;
             children: {
-              type: string;
+              type: any;
               version: number;
               [k: string]: unknown;
             }[];
@@ -791,7 +808,9 @@ export interface LanguageSelectorBlock {
   /**
    * Select which languages to display (all are selected by default)
    */
-  enabledLanguages?: ('en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'pl' | 'ar' | 'he' | 'jp')[] | null;
+  enabledLanguages?:
+    | ('en' | 'es' | 'fr' | 'de' | 'it' | 'pt' | 'pl' | 'ar' | 'he' | 'ja' | 'ru' | 'ko' | 'zh' | 'nl' | 'sv')[]
+    | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'languageSelector';
@@ -1088,12 +1107,21 @@ export interface PagesSelect<T extends boolean = true> {
         archive?: T | ArchiveBlockSelect<T>;
         formBlock?: T | FormBlockSelect<T>;
         languageSelector?: T | LanguageSelectorBlockSelect<T>;
-        wdegNavigation?:
+        BookNavigation?:
           | T
           | {
               currentPage?: T;
               totalPages?: T;
               baseUrl?: T;
+              id?: T;
+              blockName?: T;
+            };
+        BookViewer?:
+          | T
+          | {
+              initialLanguage?: T;
+              showLanguageSelector?: T;
+              defaultViewMode?: T;
               id?: T;
               blockName?: T;
             };
@@ -1771,7 +1799,7 @@ export interface BannerBlock {
     root: {
       type: string;
       children: {
-        type: string;
+        type: any;
         version: number;
         [k: string]: unknown;
       }[];

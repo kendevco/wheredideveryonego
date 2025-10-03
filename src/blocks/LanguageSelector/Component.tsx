@@ -18,7 +18,12 @@ const allLanguages: Language[] = [
   { code: 'pl', name: 'Polski', flag: '🇵🇱' },
   { code: 'ar', name: 'العربية', flag: '🇸🇦' },
   { code: 'he', name: 'עברית', flag: '🇮🇱' },
-  { code: 'jp', name: '日本語', flag: '🇯🇵' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'ru', name: 'Russian', flag: '🇷🇺' },
+  { code: 'ko', name: 'Korean', flag: '🇰🇷' },
+  { code: 'zh', name: 'Chinese', flag: '🇨🇳' },
+  { code: 'nl', name: 'Dutch', flag: '🇳🇱' },
+  { code: 'sv', name: 'Swedish', flag: '🇸🇪' },
 ]
 
 type Props = {
@@ -38,7 +43,7 @@ export const LanguageSelectorBlock: React.FC<Props> = ({
   enabledLanguages = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl', 'ar', 'he', 'jp'],
 }) => {
   // Filter languages based on enabled selection
-  const languages = allLanguages.filter(lang => enabledLanguages.includes(lang.code))
+  const languages = allLanguages.filter((lang) => enabledLanguages.includes(lang.code))
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6">
@@ -57,7 +62,7 @@ export const LanguageSelectorBlock: React.FC<Props> = ({
         {languages.map((language) => (
           <Link
             key={language.code}
-            href={`/wdeg-book?lang=${language.code}`}
+            href={`/book?lang=${language.code}`}
             className={cn(
               'group relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700',
               'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',

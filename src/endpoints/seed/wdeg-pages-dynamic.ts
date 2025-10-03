@@ -56,7 +56,7 @@ export const seedWDEGPages = async ({
 
   // Create a simple page that will use the dynamic React component
   try {
-    const wdegBookPage = await payload.create({
+    const BookViewerPage = await payload.create({
       collection: 'pages',
       data: {
         title: 'Where Did Everyone Go? - Complete Book',
@@ -96,10 +96,3 @@ export const seedWDEGPages = async ({
     payload.logger.error('❌ Failed to create dynamic WDEG book page:', error)
   }
 }
-
-
-
-
-
-
-

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ChevronLeftIcon, ChevronRightIcon, BookOpenIcon } from '@heroicons/react/24/outline'
 import styles from './styles.module.css'
 
-interface WDEGNavigationProps {
+interface BookNavigationProps {
   currentPage: number
   totalPages: number
   baseUrl?: string
@@ -40,10 +40,10 @@ const pageMetadata = [
   { pageNumber: 26, title: 'Joy Unrelenting in Prayer and Praise' },
 ]
 
-export const WDEGNavigation: React.FC<WDEGNavigationProps> = ({
+export const BookNavigation: React.FC<BookNavigationProps> = ({
   currentPage,
   totalPages = 26,
-  baseUrl = '/wdeg-book',
+  baseUrl = '/book',
 }) => {
   const prevPage = currentPage > 1 ? currentPage - 1 : null
   const nextPage = currentPage < totalPages ? currentPage + 1 : null
@@ -155,4 +155,4 @@ export const WDEGNavigation: React.FC<WDEGNavigationProps> = ({
   )
 }
 
-export default WDEGNavigation
+export default BookNavigation

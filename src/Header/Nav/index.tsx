@@ -45,7 +45,7 @@ export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
         <span className="sr-only">Search</span>
         <SearchIcon className={`w-5 ${textClasses}`} />
       </Link>
-      {/* Hide theme selector on mobile since footer has one */}
+      {/*pn Hide theme selector on mobile since footer has one */}
       <div className="hidden sm:block">
         <ThemeSelector />
       </div>

@@ -37,14 +37,27 @@ export const AdminBar: React.FC<{
   const { adminBarProps } = props || {}
   const segments = useSelectedLayoutSegments()
   const [show, setShow] = useState(false)
+  const [shouldLoad, setShouldLoad] = useState(false)
   const collection = (
     collectionLabels[segments?.[1] as keyof typeof collectionLabels] ? segments[1] : 'pages'
   ) as keyof typeof collectionLabels
   const router = useRouter()
 
+  // Only load admin bar if we're likely in admin context or have auth indicators
+  React.useEffect(() => {
+    const hasAdminPath = window.location.pathname.includes('/admin')
+    const hasAuthCookie = document.cookie.includes('payload-token')
+    setShouldLoad(hasAdminPath || hasAuthCookie)
+  }, [])
+
   const onAuthChange = React.useCallback((user: PayloadMeUser) => {
     setShow(Boolean(user?.id))
   }, [])
+
+  // Don't render admin bar if we shouldn't load it
+  if (!shouldLoad) {
+    return null
+  }
 
   return (
     <div

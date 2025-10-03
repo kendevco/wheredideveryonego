@@ -28,6 +28,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
       },
+      // Allow local development domain
+      {
+        protocol: 'http',
+        hostname: 'wheredideveryonego.local',
+      },
     ],
   },
   webpack: (webpackConfig) => {

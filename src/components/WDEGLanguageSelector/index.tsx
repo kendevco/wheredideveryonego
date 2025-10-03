@@ -20,7 +20,12 @@ const languages: Language[] = [
   { code: 'pl', name: 'Polski', flag: '🇵🇱' },
   { code: 'ar', name: 'العربية', flag: '🇸🇦' },
   { code: 'he', name: 'עברית', flag: '🇮🇱' },
-  { code: 'jp', name: '日本語', flag: '🇯🇵' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'ru', name: 'Russian', flag: '🇷🇺' },
+  { code: 'ko', name: 'Korean', flag: '🇰🇷' },
+  { code: 'zh', name: 'Chinese', flag: '🇨🇳' },
+  { code: 'nl', name: 'Dutch', flag: '🇳🇱' },
+  { code: 'sv', name: 'Swedish', flag: '🇸🇪' },
 ]
 
 interface WDEGLanguageSelectorProps {
@@ -55,7 +60,7 @@ export const WDEGLanguageSelector: React.FC<WDEGLanguageSelectorProps> = ({
         {languages.map((language) => (
           <Link
             key={language.code}
-            href={`/wdeg-book?lang=${language.code}`}
+            href={`/book?lang=${language.code}`}
             className={cn(
               'group relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700',
               'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',

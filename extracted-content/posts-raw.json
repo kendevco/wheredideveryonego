@@ -1,0 +1,2193 @@
+{
+  "docs": [
+    {
+      "id": 10,
+      "title": "Time for Some Good News!",
+      "heroImage": {
+        "id": 94,
+        "alt": "WDEG Book - page 024",
+        "caption": null,
+        "updatedAt": "2025-09-04T17:55:19.468Z",
+        "createdAt": "2025-09-04T17:55:19.468Z",
+        "url": "/api/media/file/page_024.png",
+        "thumbnailURL": "/api/media/file/page_024-300x200.png",
+        "filename": "page_024.png",
+        "mimeType": "image/png",
+        "filesize": 2848003,
+        "width": 1536,
+        "height": 1024,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "/api/media/file/page_024-300x200.png",
+            "width": 300,
+            "height": 200,
+            "mimeType": "image/png",
+            "filesize": 139833,
+            "filename": "page_024-300x200.png"
+          },
+          "square": {
+            "url": "/api/media/file/page_024-500x500.png",
+            "width": 500,
+            "height": 500,
+            "mimeType": "image/png",
+            "filesize": 625986,
+            "filename": "page_024-500x500.png"
+          },
+          "small": {
+            "url": "/api/media/file/page_024-600x400.png",
+            "width": 600,
+            "height": 400,
+            "mimeType": "image/png",
+            "filesize": 553926,
+            "filename": "page_024-600x400.png"
+          },
+          "medium": {
+            "url": "/api/media/file/page_024-900x600.png",
+            "width": 900,
+            "height": 600,
+            "mimeType": "image/png",
+            "filesize": 1293972,
+            "filename": "page_024-900x600.png"
+          },
+          "large": {
+            "url": "/api/media/file/page_024-1400x933.png",
+            "width": 1400,
+            "height": 933,
+            "mimeType": "image/png",
+            "filesize": 3241735,
+            "filename": "page_024-1400x933.png"
+          },
+          "xlarge": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          },
+          "og": {
+            "url": "/api/media/file/page_024-1200x630.png",
+            "width": 1200,
+            "height": 630,
+            "mimeType": "image/png",
+            "filesize": 1935038,
+            "filename": "page_024-1200x630.png"
+          }
+        }
+      },
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "type": "block",
+              "fields": {
+                "id": "68b9d1e7b4bca79b487d5f7e",
+                "style": "success",
+                "content": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "Good News: ",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 1,
+                            "version": 1
+                          },
+                          {
+                            "mode": "normal",
+                            "text": "The picture of doom painted here does not have to be your future. God is merciful and fervently desires that none should perish. In Christ, God made a way for broken people to be restored, adopted, and brought near as His own beloved children.",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textStyle": "",
+                        "textFormat": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "textFormat": 1
+                  }
+                },
+                "blockName": "Hope in Christ",
+                "blockType": "banner"
+              },
+              "format": "",
+              "version": 2
+            },
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Time for Some Good News! ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "God's message of grace ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 2,
+                  "version": 1
+                },
+                {
+                  "mode": "normal",
+                  "text": "demonstrates His immense love for us, as He desires to spend eternity with us.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Knowing we would sin and be separated from Him, He had a redemptive plan even before time began. He sent His Son, Jesus Christ, to pay the ultimate price for our sins so we might dwell eternally with Him. This was not a backup plan—it was the expression of His love from the very beginning. He created us to glorify and enjoy Him forever, yet our sin separated us from His presence.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Christ offered the perfect sacrifice, paying a debt He didn't owe—one we could never pay. If we receive this incredible gift and believe in the Son of God, Scripture says we are saved: \"To all who received Him, to those who believed in His name, He gave the right to become children of God.\" (John 1:12-13)",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "block",
+              "fields": {
+                "id": "68bb467cdb1e552ab5c93212",
+                "media": {
+                  "id": 95,
+                  "alt": "WDEG Book - page 025",
+                  "caption": null,
+                  "updatedAt": "2025-09-04T17:55:24.949Z",
+                  "createdAt": "2025-09-04T17:55:24.949Z",
+                  "url": "/api/media/file/page_025.png",
+                  "thumbnailURL": "/api/media/file/page_025-300x200.png",
+                  "filename": "page_025.png",
+                  "mimeType": "image/png",
+                  "filesize": 2371543,
+                  "width": 1536,
+                  "height": 1024,
+                  "focalX": 50,
+                  "focalY": 50,
+                  "sizes": {
+                    "thumbnail": {
+                      "url": "/api/media/file/page_025-300x200.png",
+                      "width": 300,
+                      "height": 200,
+                      "mimeType": "image/png",
+                      "filesize": 139276,
+                      "filename": "page_025-300x200.png"
+                    },
+                    "square": {
+                      "url": "/api/media/file/page_025-500x500.png",
+                      "width": 500,
+                      "height": 500,
+                      "mimeType": "image/png",
+                      "filesize": 605870,
+                      "filename": "page_025-500x500.png"
+                    },
+                    "small": {
+                      "url": "/api/media/file/page_025-600x400.png",
+                      "width": 600,
+                      "height": 400,
+                      "mimeType": "image/png",
+                      "filesize": 545738,
+                      "filename": "page_025-600x400.png"
+                    },
+                    "medium": {
+                      "url": "/api/media/file/page_025-900x600.png",
+                      "width": 900,
+                      "height": 600,
+                      "mimeType": "image/png",
+                      "filesize": 1250872,
+                      "filename": "page_025-900x600.png"
+                    },
+                    "large": {
+                      "url": "/api/media/file/page_025-1400x933.png",
+                      "width": 1400,
+                      "height": 933,
+                      "mimeType": "image/png",
+                      "filesize": 3107425,
+                      "filename": "page_025-1400x933.png"
+                    },
+                    "xlarge": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    },
+                    "og": {
+                      "url": "/api/media/file/page_025-1200x630.png",
+                      "width": 1200,
+                      "height": 630,
+                      "mimeType": "image/png",
+                      "filesize": 1833594,
+                      "filename": "page_025-1200x630.png"
+                    }
+                  }
+                },
+                "blockName": "Media Block Middle",
+                "blockType": "mediaBlock"
+              },
+              "format": "",
+              "version": 2
+            },
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "The Narrow Gate: A Choice That Matters",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Even with such a costly gift offered freely, not everyone will receive it. The invitation is open to all, but the path is not popular—and Scripture makes that painfully clear. Jesus said: \"Enter through the narrow gate. Wide is the gate, and broad is the road that leads to destruction, and many enter through it. But small is the gate, and narrow is the road that leads to life, and only a few find it.\" (Matthew 7:13-14)",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "He did everything necessary by dying for you. Won't you make the right choice today? Time is rapidly running out. Today is the day of salvation—not tomorrow, not someday. Apart from Christ, your future holds nothing worthwhile, for the world and its evil desires are passing away. The birth pains are accelerating, becoming more intense with each passing day.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "block",
+              "fields": {
+                "id": "68b9d1e7b4bca79b487d5f80",
+                "style": "warning",
+                "content": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "\"Here I am! I stand at the door and knock. If anyone hears my voice and opens the door, I will come in and dine with him, and he with Me.\" (Revelation 3:20)",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 1,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textStyle": "",
+                        "textFormat": 1
+                      },
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "He is knocking at your door to save you, not to condemn you. The door only opens from the inside, and He will not force His way in. Don't let the noise of this life drown out the most important invitation you will ever receive. The time to come home is now.",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textStyle": "",
+                        "textFormat": 0
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                },
+                "blockName": "Answer the Call",
+                "blockType": "banner"
+              },
+              "format": "",
+              "version": 2
+            }
+          ],
+          "direction": "ltr"
+        },
+        "media": null
+      },
+      "relatedPosts": [
+        {
+          "id": 8,
+          "title": "Something's Wrong With The World",
+          "categories": [
+            {
+              "id": 9,
+              "title": "End Times",
+              "slug": "end-times",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5a",
+                  "doc": 9,
+                  "url": "/end-times",
+                  "label": "End Times"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.575Z",
+              "createdAt": "2025-09-04T17:52:28.228Z"
+            },
+            {
+              "id": 11,
+              "title": "Biblical Prophecy",
+              "slug": "biblical-prophecy",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5c",
+                  "doc": 11,
+                  "url": "/biblical-prophecy",
+                  "label": "Biblical Prophecy"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.593Z",
+              "createdAt": "2025-09-04T17:52:28.232Z"
+            }
+          ],
+          "meta": {
+            "image": {
+              "id": 80,
+              "alt": "WDEG Book - page 010",
+              "caption": null,
+              "updatedAt": "2025-09-04T17:53:50.104Z",
+              "createdAt": "2025-09-04T17:53:50.104Z",
+              "url": "/api/media/file/page_010.png",
+              "thumbnailURL": "/api/media/file/page_010-300x200.png",
+              "filename": "page_010.png",
+              "mimeType": "image/png",
+              "filesize": 2684514,
+              "width": 1536,
+              "height": 1024,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/page_010-300x200.png",
+                  "width": 300,
+                  "height": 200,
+                  "mimeType": "image/png",
+                  "filesize": 136763,
+                  "filename": "page_010-300x200.png"
+                },
+                "square": {
+                  "url": "/api/media/file/page_010-500x500.png",
+                  "width": 500,
+                  "height": 500,
+                  "mimeType": "image/png",
+                  "filesize": 607943,
+                  "filename": "page_010-500x500.png"
+                },
+                "small": {
+                  "url": "/api/media/file/page_010-600x400.png",
+                  "width": 600,
+                  "height": 400,
+                  "mimeType": "image/png",
+                  "filesize": 537899,
+                  "filename": "page_010-600x400.png"
+                },
+                "medium": {
+                  "url": "/api/media/file/page_010-900x600.png",
+                  "width": 900,
+                  "height": 600,
+                  "mimeType": "image/png",
+                  "filesize": 1248255,
+                  "filename": "page_010-900x600.png"
+                },
+                "large": {
+                  "url": "/api/media/file/page_010-1400x933.png",
+                  "width": 1400,
+                  "height": 933,
+                  "mimeType": "image/png",
+                  "filesize": 3145532,
+                  "filename": "page_010-1400x933.png"
+                },
+                "xlarge": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "og": {
+                  "url": "/api/media/file/page_010-1200x630.png",
+                  "width": 1200,
+                  "height": 630,
+                  "mimeType": "image/png",
+                  "filesize": 1824649,
+                  "filename": "page_010-1200x630.png"
+                }
+              }
+            },
+            "description": "People everywhere can sense it—something just isn't right. The Bible lays out a prophetic blueprint explaining our present chaos and the storm still ahead."
+          },
+          "slug": "something-wrong-with-the-world"
+        },
+        {
+          "id": 9,
+          "title": "Mystery of the Mass Disappearance",
+          "categories": [],
+          "meta": {
+            "image": {
+              "id": 75,
+              "alt": "WDEG Book - page 005",
+              "caption": null,
+              "updatedAt": "2025-09-04T17:53:19.785Z",
+              "createdAt": "2025-09-04T17:53:19.785Z",
+              "url": "/api/media/file/page_005.png",
+              "thumbnailURL": "/api/media/file/page_005-300x300.png",
+              "filename": "page_005.png",
+              "mimeType": "image/png",
+              "filesize": 2064508,
+              "width": 1024,
+              "height": 1024,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/page_005-300x300.png",
+                  "width": 300,
+                  "height": 300,
+                  "mimeType": "image/png",
+                  "filesize": 228293,
+                  "filename": "page_005-300x300.png"
+                },
+                "square": {
+                  "url": "/api/media/file/page_005-500x500.png",
+                  "width": 500,
+                  "height": 500,
+                  "mimeType": "image/png",
+                  "filesize": 635134,
+                  "filename": "page_005-500x500.png"
+                },
+                "small": {
+                  "url": "/api/media/file/page_005-600x600.png",
+                  "width": 600,
+                  "height": 600,
+                  "mimeType": "image/png",
+                  "filesize": 921391,
+                  "filename": "page_005-600x600.png"
+                },
+                "medium": {
+                  "url": "/api/media/file/page_005-900x900.png",
+                  "width": 900,
+                  "height": 900,
+                  "mimeType": "image/png",
+                  "filesize": 2112397,
+                  "filename": "page_005-900x900.png"
+                },
+                "large": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "xlarge": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "og": {
+                  "url": "/api/media/file/page_005-1200x630.png",
+                  "width": 1200,
+                  "height": 630,
+                  "mimeType": "image/png",
+                  "filesize": 1986980,
+                  "filename": "page_005-1200x630.png"
+                }
+              }
+            },
+            "description": "Any day now, millions of people will mysteriously vanish from the Earth at the peak of global chaos. The world will ask in unison: \"Where did everyone go?\""
+          },
+          "slug": "mystery-of-mass-disappearance"
+        }
+      ],
+      "categories": [
+        {
+          "id": 9,
+          "title": "End Times",
+          "slug": "end-times",
+          "slugLock": true,
+          "parent": null,
+          "breadcrumbs": [
+            {
+              "id": "68b9d1dcb4bca79b487d5f5a",
+              "doc": 9,
+              "url": "/end-times",
+              "label": "End Times"
+            }
+          ],
+          "updatedAt": "2025-09-04T17:52:28.575Z",
+          "createdAt": "2025-09-04T17:52:28.228Z"
+        },
+        {
+          "id": 12,
+          "title": "Christian Living",
+          "slug": "christian-living",
+          "slugLock": true,
+          "parent": null,
+          "breadcrumbs": [
+            {
+              "id": "68b9d1dcb4bca79b487d5f5b",
+              "doc": 12,
+              "url": "/christian-living",
+              "label": "Christian Living"
+            }
+          ],
+          "updatedAt": "2025-09-04T17:52:28.582Z",
+          "createdAt": "2025-09-04T17:52:28.235Z"
+        }
+      ],
+      "meta": {
+        "title": "Time for Some Good News!",
+        "image": {
+          "id": 94,
+          "alt": "WDEG Book - page 024",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:55:19.468Z",
+          "createdAt": "2025-09-04T17:55:19.468Z",
+          "url": "/api/media/file/page_024.png",
+          "thumbnailURL": "/api/media/file/page_024-300x200.png",
+          "filename": "page_024.png",
+          "mimeType": "image/png",
+          "filesize": 2848003,
+          "width": 1536,
+          "height": 1024,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/page_024-300x200.png",
+              "width": 300,
+              "height": 200,
+              "mimeType": "image/png",
+              "filesize": 139833,
+              "filename": "page_024-300x200.png"
+            },
+            "square": {
+              "url": "/api/media/file/page_024-500x500.png",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/png",
+              "filesize": 625986,
+              "filename": "page_024-500x500.png"
+            },
+            "small": {
+              "url": "/api/media/file/page_024-600x400.png",
+              "width": 600,
+              "height": 400,
+              "mimeType": "image/png",
+              "filesize": 553926,
+              "filename": "page_024-600x400.png"
+            },
+            "medium": {
+              "url": "/api/media/file/page_024-900x600.png",
+              "width": 900,
+              "height": 600,
+              "mimeType": "image/png",
+              "filesize": 1293972,
+              "filename": "page_024-900x600.png"
+            },
+            "large": {
+              "url": "/api/media/file/page_024-1400x933.png",
+              "width": 1400,
+              "height": 933,
+              "mimeType": "image/png",
+              "filesize": 3241735,
+              "filename": "page_024-1400x933.png"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/page_024-1200x630.png",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/png",
+              "filesize": 1935038,
+              "filename": "page_024-1200x630.png"
+            }
+          }
+        },
+        "description": "Time for Some Good News! God's message of grace demonstrates His immense love for us, as He desires to spend eternity with us. The picture of doom does not have to be your future."
+      },
+      "publishedAt": "2025-09-04T17:52:34.133Z",
+      "authors": [
+        2
+      ],
+      "populatedAuthors": [
+        {
+          "id": 2,
+          "name": "Ronald Courtney"
+        }
+      ],
+      "slug": "time-for-good-news",
+      "slugLock": true,
+      "updatedAt": "2025-09-05T23:28:10.595Z",
+      "createdAt": "2025-09-04T17:52:34.133Z",
+      "_status": "published"
+    },
+    {
+      "id": 9,
+      "title": "Mystery of the Mass Disappearance",
+      "heroImage": {
+        "id": 75,
+        "alt": "WDEG Book - page 005",
+        "caption": null,
+        "updatedAt": "2025-09-04T17:53:19.785Z",
+        "createdAt": "2025-09-04T17:53:19.785Z",
+        "url": "/api/media/file/page_005.png",
+        "thumbnailURL": "/api/media/file/page_005-300x300.png",
+        "filename": "page_005.png",
+        "mimeType": "image/png",
+        "filesize": 2064508,
+        "width": 1024,
+        "height": 1024,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "/api/media/file/page_005-300x300.png",
+            "width": 300,
+            "height": 300,
+            "mimeType": "image/png",
+            "filesize": 228293,
+            "filename": "page_005-300x300.png"
+          },
+          "square": {
+            "url": "/api/media/file/page_005-500x500.png",
+            "width": 500,
+            "height": 500,
+            "mimeType": "image/png",
+            "filesize": 635134,
+            "filename": "page_005-500x500.png"
+          },
+          "small": {
+            "url": "/api/media/file/page_005-600x600.png",
+            "width": 600,
+            "height": 600,
+            "mimeType": "image/png",
+            "filesize": 921391,
+            "filename": "page_005-600x600.png"
+          },
+          "medium": {
+            "url": "/api/media/file/page_005-900x900.png",
+            "width": 900,
+            "height": 900,
+            "mimeType": "image/png",
+            "filesize": 2112397,
+            "filename": "page_005-900x900.png"
+          },
+          "large": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          },
+          "xlarge": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          },
+          "og": {
+            "url": "/api/media/file/page_005-1200x630.png",
+            "width": 1200,
+            "height": 630,
+            "mimeType": "image/png",
+            "filesize": 1986980,
+            "filename": "page_005-1200x630.png"
+          }
+        }
+      },
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Any day now, millions of people will mysteriously vanish from the Earth at the peak of global chaos. The world will ask in unison: \"Where did everyone go?\"",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "block",
+              "fields": {
+                "id": "68b9d1e5b4bca79b487d5f78",
+                "style": "info",
+                "content": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "Scripture says:",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 1,
+                            "version": 1
+                          },
+                          {
+                            "mode": "normal",
+                            "text": " \"For the Lord Himself will descend from heaven with a cry of command, the voice of the archangel, and the sound of the trumpet of God. And the dead in Christ will rise first. Then we who are alive, who are left, will be caught up with them in the clouds to meet the Lord in the air.\" (1 Thessalonians 4:16-17)",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textFormat": 1
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                },
+                "blockName": "Biblical Truth",
+                "blockType": "banner"
+              },
+              "format": "",
+              "version": 2
+            },
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "The Rapture Is Closer Than You Think",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Imagine you are driving to pick up groceries when an old Toyota suddenly veers out of control, crashing into a school bus that was dropping off children. You see the bus driver frantically looking around, searching for the missing kids. He stumbles into the street, only to be struck by an oncoming car. Then it dawns on you—cars are crashing all around.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Within minutes, you see a plane nosedive behind the grocery store, hitting the ground with a deafening explosion, sending fire and debris in every direction. How is this happening, you wonder, your hands shaking uncontrollably? You drive home in a panic, weaving frantically through the wreckage.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "You turn on the radio and hear sheer madness: Entire schools of children—particularly the youngest—are missing and unaccounted for; driverless cars crash into buildings; planes fall out of the sky; trains derail—pandemonium. Loved ones gone without a trace. The broadcasters sound shaken, unsure of what they're reading from the teleprompter. ",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Videos roll in—two friends walking side by side, and in an instant, one is gone. A nanny cam records a room full of preschoolers napping peacefully until, one by one, their blankets collapse as if an unseen force has plucked them away. The same eerie scenes play on every station, in every language, across every country.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "block",
+              "fields": {
+                "id": "68b9d1e5b4bca79b487d5f7a",
+                "style": "success",
+                "content": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "This is our hope—",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 1,
+                            "version": 1
+                          },
+                          {
+                            "mode": "normal",
+                            "text": "the hope of never dying, of being transformed in an instant, and of being rescued from this sin-sick planet before the Great and Terrible Day of the Lord. It is not fear that drives this hope, but love—a longing to be with the One who promised, \"I go to prepare a place for you.\"",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textFormat": 0
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                },
+                "blockName": "The Hope of the Rapture",
+                "blockType": "banner"
+              },
+              "format": "",
+              "version": 2
+            }
+          ],
+          "direction": "ltr"
+        },
+        "media": null
+      },
+      "relatedPosts": [
+        {
+          "id": 8,
+          "title": "Something's Wrong With The World",
+          "categories": [
+            {
+              "id": 9,
+              "title": "End Times",
+              "slug": "end-times",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5a",
+                  "doc": 9,
+                  "url": "/end-times",
+                  "label": "End Times"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.575Z",
+              "createdAt": "2025-09-04T17:52:28.228Z"
+            },
+            {
+              "id": 11,
+              "title": "Biblical Prophecy",
+              "slug": "biblical-prophecy",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5c",
+                  "doc": 11,
+                  "url": "/biblical-prophecy",
+                  "label": "Biblical Prophecy"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.593Z",
+              "createdAt": "2025-09-04T17:52:28.232Z"
+            }
+          ],
+          "meta": {
+            "image": {
+              "id": 80,
+              "alt": "WDEG Book - page 010",
+              "caption": null,
+              "updatedAt": "2025-09-04T17:53:50.104Z",
+              "createdAt": "2025-09-04T17:53:50.104Z",
+              "url": "/api/media/file/page_010.png",
+              "thumbnailURL": "/api/media/file/page_010-300x200.png",
+              "filename": "page_010.png",
+              "mimeType": "image/png",
+              "filesize": 2684514,
+              "width": 1536,
+              "height": 1024,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/page_010-300x200.png",
+                  "width": 300,
+                  "height": 200,
+                  "mimeType": "image/png",
+                  "filesize": 136763,
+                  "filename": "page_010-300x200.png"
+                },
+                "square": {
+                  "url": "/api/media/file/page_010-500x500.png",
+                  "width": 500,
+                  "height": 500,
+                  "mimeType": "image/png",
+                  "filesize": 607943,
+                  "filename": "page_010-500x500.png"
+                },
+                "small": {
+                  "url": "/api/media/file/page_010-600x400.png",
+                  "width": 600,
+                  "height": 400,
+                  "mimeType": "image/png",
+                  "filesize": 537899,
+                  "filename": "page_010-600x400.png"
+                },
+                "medium": {
+                  "url": "/api/media/file/page_010-900x600.png",
+                  "width": 900,
+                  "height": 600,
+                  "mimeType": "image/png",
+                  "filesize": 1248255,
+                  "filename": "page_010-900x600.png"
+                },
+                "large": {
+                  "url": "/api/media/file/page_010-1400x933.png",
+                  "width": 1400,
+                  "height": 933,
+                  "mimeType": "image/png",
+                  "filesize": 3145532,
+                  "filename": "page_010-1400x933.png"
+                },
+                "xlarge": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "og": {
+                  "url": "/api/media/file/page_010-1200x630.png",
+                  "width": 1200,
+                  "height": 630,
+                  "mimeType": "image/png",
+                  "filesize": 1824649,
+                  "filename": "page_010-1200x630.png"
+                }
+              }
+            },
+            "description": "People everywhere can sense it—something just isn't right. The Bible lays out a prophetic blueprint explaining our present chaos and the storm still ahead."
+          },
+          "slug": "something-wrong-with-the-world"
+        },
+        {
+          "id": 10,
+          "title": "Time for Some Good News!",
+          "categories": [
+            {
+              "id": 9,
+              "title": "End Times",
+              "slug": "end-times",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5a",
+                  "doc": 9,
+                  "url": "/end-times",
+                  "label": "End Times"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.575Z",
+              "createdAt": "2025-09-04T17:52:28.228Z"
+            },
+            {
+              "id": 12,
+              "title": "Christian Living",
+              "slug": "christian-living",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5b",
+                  "doc": 12,
+                  "url": "/christian-living",
+                  "label": "Christian Living"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.582Z",
+              "createdAt": "2025-09-04T17:52:28.235Z"
+            }
+          ],
+          "meta": {
+            "image": {
+              "id": 94,
+              "alt": "WDEG Book - page 024",
+              "caption": null,
+              "updatedAt": "2025-09-04T17:55:19.468Z",
+              "createdAt": "2025-09-04T17:55:19.468Z",
+              "url": "/api/media/file/page_024.png",
+              "thumbnailURL": "/api/media/file/page_024-300x200.png",
+              "filename": "page_024.png",
+              "mimeType": "image/png",
+              "filesize": 2848003,
+              "width": 1536,
+              "height": 1024,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/page_024-300x200.png",
+                  "width": 300,
+                  "height": 200,
+                  "mimeType": "image/png",
+                  "filesize": 139833,
+                  "filename": "page_024-300x200.png"
+                },
+                "square": {
+                  "url": "/api/media/file/page_024-500x500.png",
+                  "width": 500,
+                  "height": 500,
+                  "mimeType": "image/png",
+                  "filesize": 625986,
+                  "filename": "page_024-500x500.png"
+                },
+                "small": {
+                  "url": "/api/media/file/page_024-600x400.png",
+                  "width": 600,
+                  "height": 400,
+                  "mimeType": "image/png",
+                  "filesize": 553926,
+                  "filename": "page_024-600x400.png"
+                },
+                "medium": {
+                  "url": "/api/media/file/page_024-900x600.png",
+                  "width": 900,
+                  "height": 600,
+                  "mimeType": "image/png",
+                  "filesize": 1293972,
+                  "filename": "page_024-900x600.png"
+                },
+                "large": {
+                  "url": "/api/media/file/page_024-1400x933.png",
+                  "width": 1400,
+                  "height": 933,
+                  "mimeType": "image/png",
+                  "filesize": 3241735,
+                  "filename": "page_024-1400x933.png"
+                },
+                "xlarge": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "og": {
+                  "url": "/api/media/file/page_024-1200x630.png",
+                  "width": 1200,
+                  "height": 630,
+                  "mimeType": "image/png",
+                  "filesize": 1935038,
+                  "filename": "page_024-1200x630.png"
+                }
+              }
+            },
+            "description": "Time for Some Good News! God's message of grace demonstrates His immense love for us, as He desires to spend eternity with us. The picture of doom does not have to be your future."
+          },
+          "slug": "time-for-good-news"
+        }
+      ],
+      "categories": [],
+      "meta": {
+        "title": "Mystery of the Mass Disappearance",
+        "image": {
+          "id": 75,
+          "alt": "WDEG Book - page 005",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:53:19.785Z",
+          "createdAt": "2025-09-04T17:53:19.785Z",
+          "url": "/api/media/file/page_005.png",
+          "thumbnailURL": "/api/media/file/page_005-300x300.png",
+          "filename": "page_005.png",
+          "mimeType": "image/png",
+          "filesize": 2064508,
+          "width": 1024,
+          "height": 1024,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/page_005-300x300.png",
+              "width": 300,
+              "height": 300,
+              "mimeType": "image/png",
+              "filesize": 228293,
+              "filename": "page_005-300x300.png"
+            },
+            "square": {
+              "url": "/api/media/file/page_005-500x500.png",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/png",
+              "filesize": 635134,
+              "filename": "page_005-500x500.png"
+            },
+            "small": {
+              "url": "/api/media/file/page_005-600x600.png",
+              "width": 600,
+              "height": 600,
+              "mimeType": "image/png",
+              "filesize": 921391,
+              "filename": "page_005-600x600.png"
+            },
+            "medium": {
+              "url": "/api/media/file/page_005-900x900.png",
+              "width": 900,
+              "height": 900,
+              "mimeType": "image/png",
+              "filesize": 2112397,
+              "filename": "page_005-900x900.png"
+            },
+            "large": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/page_005-1200x630.png",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/png",
+              "filesize": 1986980,
+              "filename": "page_005-1200x630.png"
+            }
+          }
+        },
+        "description": "Any day now, millions of people will mysteriously vanish from the Earth at the peak of global chaos. The world will ask in unison: \"Where did everyone go?\""
+      },
+      "publishedAt": "2025-09-04T17:52:33.173Z",
+      "authors": [
+        2
+      ],
+      "populatedAuthors": [
+        {
+          "id": 2,
+          "name": "Ronald Courtney"
+        }
+      ],
+      "slug": "mystery-of-mass-disappearance",
+      "slugLock": true,
+      "updatedAt": "2025-09-05T23:31:41.589Z",
+      "createdAt": "2025-09-04T17:52:33.174Z",
+      "_status": "published"
+    },
+    {
+      "id": 8,
+      "title": "Something's Wrong With The World",
+      "heroImage": {
+        "id": 80,
+        "alt": "WDEG Book - page 010",
+        "caption": null,
+        "updatedAt": "2025-09-04T17:53:50.104Z",
+        "createdAt": "2025-09-04T17:53:50.104Z",
+        "url": "/api/media/file/page_010.png",
+        "thumbnailURL": "/api/media/file/page_010-300x200.png",
+        "filename": "page_010.png",
+        "mimeType": "image/png",
+        "filesize": 2684514,
+        "width": 1536,
+        "height": 1024,
+        "focalX": 50,
+        "focalY": 50,
+        "sizes": {
+          "thumbnail": {
+            "url": "/api/media/file/page_010-300x200.png",
+            "width": 300,
+            "height": 200,
+            "mimeType": "image/png",
+            "filesize": 136763,
+            "filename": "page_010-300x200.png"
+          },
+          "square": {
+            "url": "/api/media/file/page_010-500x500.png",
+            "width": 500,
+            "height": 500,
+            "mimeType": "image/png",
+            "filesize": 607943,
+            "filename": "page_010-500x500.png"
+          },
+          "small": {
+            "url": "/api/media/file/page_010-600x400.png",
+            "width": 600,
+            "height": 400,
+            "mimeType": "image/png",
+            "filesize": 537899,
+            "filename": "page_010-600x400.png"
+          },
+          "medium": {
+            "url": "/api/media/file/page_010-900x600.png",
+            "width": 900,
+            "height": 600,
+            "mimeType": "image/png",
+            "filesize": 1248255,
+            "filename": "page_010-900x600.png"
+          },
+          "large": {
+            "url": "/api/media/file/page_010-1400x933.png",
+            "width": 1400,
+            "height": 933,
+            "mimeType": "image/png",
+            "filesize": 3145532,
+            "filename": "page_010-1400x933.png"
+          },
+          "xlarge": {
+            "url": null,
+            "width": null,
+            "height": null,
+            "mimeType": null,
+            "filesize": null,
+            "filename": null
+          },
+          "og": {
+            "url": "/api/media/file/page_010-1200x630.png",
+            "width": 1200,
+            "height": 630,
+            "mimeType": "image/png",
+            "filesize": 1824649,
+            "filename": "page_010-1200x630.png"
+          }
+        }
+      },
+      "content": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "People everywhere can sense it—something just isn't right. The Bible lays out a prophetic blueprint explaining our present chaos and the storm still ahead.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "block",
+              "fields": {
+                "id": "68b9d1e3b4bca79b487d5f6f",
+                "style": "warning",
+                "content": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "Note:",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 1,
+                            "version": 1
+                          },
+                          {
+                            "mode": "normal",
+                            "text": " This book is meant to be found in that hour of desperation—to point to the only truth that matters. When millions vanish in an instant, books like this will provide answers.",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textFormat": 0
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                },
+                "blockName": "Important Message",
+                "blockType": "banner"
+              },
+              "format": "",
+              "version": 2
+            },
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Don't Ignore the Turmoil Around You",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Everything's changing so fast, and it's been a brutal, nonstop grind. First, the COVID-19 pandemic, then the riots, and now our world is on the verge of being overthrown from within and without—all while the World Economic Forum is implementing its plan for world domination.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Has the world gone crazy? The issues we face today are unprecedented: pipeline sabotage, drought, food and water shortages, fuel crises, moral decay, artificial intelligence disruptions, the dollar's decline, government corruption, concentration camps, geopolitical tensions in Ukraine and Taiwan, child trafficking, abortion, mass shootings, constant surveillance, a boiling crisis in the Middle East, global instability, looming nuclear war, the risk of an electromagnetic pulse (EMP) shutting down everything—the list goes on.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "tag": "h3",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "The Beast System is Already Here",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Technology has paved the way for the Beast System, with Big Data recording everything about you. Where you spend your money, where you go, and everything you communicate electronically is stored for future use. The government is actively pushing for a digital currency, which will eliminate privacy in financial transactions. Eventually, those who do not conform to the state's dictates will have their accounts shut down.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "block",
+              "fields": {
+                "id": "68bb47d14fda51f49d783f57",
+                "media": {
+                  "id": 80,
+                  "alt": "WDEG Book - page 010",
+                  "caption": null,
+                  "updatedAt": "2025-09-04T17:53:50.104Z",
+                  "createdAt": "2025-09-04T17:53:50.104Z",
+                  "url": "/api/media/file/page_010.png",
+                  "thumbnailURL": "/api/media/file/page_010-300x200.png",
+                  "filename": "page_010.png",
+                  "mimeType": "image/png",
+                  "filesize": 2684514,
+                  "width": 1536,
+                  "height": 1024,
+                  "focalX": 50,
+                  "focalY": 50,
+                  "sizes": {
+                    "thumbnail": {
+                      "url": "/api/media/file/page_010-300x200.png",
+                      "width": 300,
+                      "height": 200,
+                      "mimeType": "image/png",
+                      "filesize": 136763,
+                      "filename": "page_010-300x200.png"
+                    },
+                    "square": {
+                      "url": "/api/media/file/page_010-500x500.png",
+                      "width": 500,
+                      "height": 500,
+                      "mimeType": "image/png",
+                      "filesize": 607943,
+                      "filename": "page_010-500x500.png"
+                    },
+                    "small": {
+                      "url": "/api/media/file/page_010-600x400.png",
+                      "width": 600,
+                      "height": 400,
+                      "mimeType": "image/png",
+                      "filesize": 537899,
+                      "filename": "page_010-600x400.png"
+                    },
+                    "medium": {
+                      "url": "/api/media/file/page_010-900x600.png",
+                      "width": 900,
+                      "height": 600,
+                      "mimeType": "image/png",
+                      "filesize": 1248255,
+                      "filename": "page_010-900x600.png"
+                    },
+                    "large": {
+                      "url": "/api/media/file/page_010-1400x933.png",
+                      "width": 1400,
+                      "height": 933,
+                      "mimeType": "image/png",
+                      "filesize": 3145532,
+                      "filename": "page_010-1400x933.png"
+                    },
+                    "xlarge": {
+                      "url": null,
+                      "width": null,
+                      "height": null,
+                      "mimeType": null,
+                      "filesize": null,
+                      "filename": null
+                    },
+                    "og": {
+                      "url": "/api/media/file/page_010-1200x630.png",
+                      "width": 1200,
+                      "height": 630,
+                      "mimeType": "image/png",
+                      "filesize": 1824649,
+                      "filename": "page_010-1200x630.png"
+                    }
+                  }
+                },
+                "blockName": "Page10",
+                "blockType": "mediaBlock"
+              },
+              "format": "",
+              "version": 2
+            },
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "The Rising Discourse About Aliens and UFOs",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "Recently, the U.S. Navy admitted we are not alone, releasing videos of pilots encountering unidentified aerial phenomena performing maneuvers impossible with human technology. Scientists from the Search for Extra-Terrestrial Intelligence (SETI) report repeating radio frequency bursts across the galaxy, which they suggest might be from intelligent sources.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "mode": "normal",
+                  "text": "With increasing chatter about alien encounters, governments are being pushed to declassify what they know about these visitations. It won't be long before world leaders announce: \"The aliens are here!\" This is the unsettling reality we now face—a reality we can't ignore. It sets the stage for what's coming next.",
+                  "type": "text",
+                  "style": "",
+                  "detail": 0,
+                  "format": 0,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "textStyle": "",
+              "textFormat": 0
+            },
+            {
+              "type": "block",
+              "fields": {
+                "id": "68b9d1e3b4bca79b487d5f71",
+                "style": "warning",
+                "content": {
+                  "root": {
+                    "type": "root",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "format": "",
+                        "indent": 0,
+                        "version": 1,
+                        "children": [
+                          {
+                            "mode": "normal",
+                            "text": "The signs are all around us.",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 1,
+                            "version": 1
+                          },
+                          {
+                            "mode": "normal",
+                            "text": " The birth pains are accelerating, becoming more intense with each passing day. This is not a time for casual faith—it is a time to wake up, be alert, and walk in the light. Will you be ready when He comes for His bride?",
+                            "type": "text",
+                            "style": "",
+                            "detail": 0,
+                            "format": 0,
+                            "version": 1
+                          }
+                        ],
+                        "direction": "ltr",
+                        "textStyle": "",
+                        "textFormat": 1
+                      }
+                    ],
+                    "direction": "ltr",
+                    "textFormat": 1
+                  }
+                },
+                "blockName": "Call to Action",
+                "blockType": "banner"
+              },
+              "format": "",
+              "version": 2
+            }
+          ],
+          "direction": "ltr"
+        },
+        "media": null
+      },
+      "relatedPosts": [
+        {
+          "id": 9,
+          "title": "Mystery of the Mass Disappearance",
+          "categories": [],
+          "meta": {
+            "image": {
+              "id": 75,
+              "alt": "WDEG Book - page 005",
+              "caption": null,
+              "updatedAt": "2025-09-04T17:53:19.785Z",
+              "createdAt": "2025-09-04T17:53:19.785Z",
+              "url": "/api/media/file/page_005.png",
+              "thumbnailURL": "/api/media/file/page_005-300x300.png",
+              "filename": "page_005.png",
+              "mimeType": "image/png",
+              "filesize": 2064508,
+              "width": 1024,
+              "height": 1024,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/page_005-300x300.png",
+                  "width": 300,
+                  "height": 300,
+                  "mimeType": "image/png",
+                  "filesize": 228293,
+                  "filename": "page_005-300x300.png"
+                },
+                "square": {
+                  "url": "/api/media/file/page_005-500x500.png",
+                  "width": 500,
+                  "height": 500,
+                  "mimeType": "image/png",
+                  "filesize": 635134,
+                  "filename": "page_005-500x500.png"
+                },
+                "small": {
+                  "url": "/api/media/file/page_005-600x600.png",
+                  "width": 600,
+                  "height": 600,
+                  "mimeType": "image/png",
+                  "filesize": 921391,
+                  "filename": "page_005-600x600.png"
+                },
+                "medium": {
+                  "url": "/api/media/file/page_005-900x900.png",
+                  "width": 900,
+                  "height": 900,
+                  "mimeType": "image/png",
+                  "filesize": 2112397,
+                  "filename": "page_005-900x900.png"
+                },
+                "large": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "xlarge": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "og": {
+                  "url": "/api/media/file/page_005-1200x630.png",
+                  "width": 1200,
+                  "height": 630,
+                  "mimeType": "image/png",
+                  "filesize": 1986980,
+                  "filename": "page_005-1200x630.png"
+                }
+              }
+            },
+            "description": "Any day now, millions of people will mysteriously vanish from the Earth at the peak of global chaos. The world will ask in unison: \"Where did everyone go?\""
+          },
+          "slug": "mystery-of-mass-disappearance"
+        },
+        {
+          "id": 10,
+          "title": "Time for Some Good News!",
+          "categories": [
+            {
+              "id": 9,
+              "title": "End Times",
+              "slug": "end-times",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5a",
+                  "doc": 9,
+                  "url": "/end-times",
+                  "label": "End Times"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.575Z",
+              "createdAt": "2025-09-04T17:52:28.228Z"
+            },
+            {
+              "id": 12,
+              "title": "Christian Living",
+              "slug": "christian-living",
+              "slugLock": true,
+              "parent": null,
+              "breadcrumbs": [
+                {
+                  "id": "68b9d1dcb4bca79b487d5f5b",
+                  "doc": 12,
+                  "url": "/christian-living",
+                  "label": "Christian Living"
+                }
+              ],
+              "updatedAt": "2025-09-04T17:52:28.582Z",
+              "createdAt": "2025-09-04T17:52:28.235Z"
+            }
+          ],
+          "meta": {
+            "image": {
+              "id": 94,
+              "alt": "WDEG Book - page 024",
+              "caption": null,
+              "updatedAt": "2025-09-04T17:55:19.468Z",
+              "createdAt": "2025-09-04T17:55:19.468Z",
+              "url": "/api/media/file/page_024.png",
+              "thumbnailURL": "/api/media/file/page_024-300x200.png",
+              "filename": "page_024.png",
+              "mimeType": "image/png",
+              "filesize": 2848003,
+              "width": 1536,
+              "height": 1024,
+              "focalX": 50,
+              "focalY": 50,
+              "sizes": {
+                "thumbnail": {
+                  "url": "/api/media/file/page_024-300x200.png",
+                  "width": 300,
+                  "height": 200,
+                  "mimeType": "image/png",
+                  "filesize": 139833,
+                  "filename": "page_024-300x200.png"
+                },
+                "square": {
+                  "url": "/api/media/file/page_024-500x500.png",
+                  "width": 500,
+                  "height": 500,
+                  "mimeType": "image/png",
+                  "filesize": 625986,
+                  "filename": "page_024-500x500.png"
+                },
+                "small": {
+                  "url": "/api/media/file/page_024-600x400.png",
+                  "width": 600,
+                  "height": 400,
+                  "mimeType": "image/png",
+                  "filesize": 553926,
+                  "filename": "page_024-600x400.png"
+                },
+                "medium": {
+                  "url": "/api/media/file/page_024-900x600.png",
+                  "width": 900,
+                  "height": 600,
+                  "mimeType": "image/png",
+                  "filesize": 1293972,
+                  "filename": "page_024-900x600.png"
+                },
+                "large": {
+                  "url": "/api/media/file/page_024-1400x933.png",
+                  "width": 1400,
+                  "height": 933,
+                  "mimeType": "image/png",
+                  "filesize": 3241735,
+                  "filename": "page_024-1400x933.png"
+                },
+                "xlarge": {
+                  "url": null,
+                  "width": null,
+                  "height": null,
+                  "mimeType": null,
+                  "filesize": null,
+                  "filename": null
+                },
+                "og": {
+                  "url": "/api/media/file/page_024-1200x630.png",
+                  "width": 1200,
+                  "height": 630,
+                  "mimeType": "image/png",
+                  "filesize": 1935038,
+                  "filename": "page_024-1200x630.png"
+                }
+              }
+            },
+            "description": "Time for Some Good News! God's message of grace demonstrates His immense love for us, as He desires to spend eternity with us. The picture of doom does not have to be your future."
+          },
+          "slug": "time-for-good-news"
+        }
+      ],
+      "categories": [
+        {
+          "id": 9,
+          "title": "End Times",
+          "slug": "end-times",
+          "slugLock": true,
+          "parent": null,
+          "breadcrumbs": [
+            {
+              "id": "68b9d1dcb4bca79b487d5f5a",
+              "doc": 9,
+              "url": "/end-times",
+              "label": "End Times"
+            }
+          ],
+          "updatedAt": "2025-09-04T17:52:28.575Z",
+          "createdAt": "2025-09-04T17:52:28.228Z"
+        },
+        {
+          "id": 11,
+          "title": "Biblical Prophecy",
+          "slug": "biblical-prophecy",
+          "slugLock": true,
+          "parent": null,
+          "breadcrumbs": [
+            {
+              "id": "68b9d1dcb4bca79b487d5f5c",
+              "doc": 11,
+              "url": "/biblical-prophecy",
+              "label": "Biblical Prophecy"
+            }
+          ],
+          "updatedAt": "2025-09-04T17:52:28.593Z",
+          "createdAt": "2025-09-04T17:52:28.232Z"
+        }
+      ],
+      "meta": {
+        "title": "Something's Wrong With The World",
+        "image": {
+          "id": 80,
+          "alt": "WDEG Book - page 010",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:53:50.104Z",
+          "createdAt": "2025-09-04T17:53:50.104Z",
+          "url": "/api/media/file/page_010.png",
+          "thumbnailURL": "/api/media/file/page_010-300x200.png",
+          "filename": "page_010.png",
+          "mimeType": "image/png",
+          "filesize": 2684514,
+          "width": 1536,
+          "height": 1024,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/page_010-300x200.png",
+              "width": 300,
+              "height": 200,
+              "mimeType": "image/png",
+              "filesize": 136763,
+              "filename": "page_010-300x200.png"
+            },
+            "square": {
+              "url": "/api/media/file/page_010-500x500.png",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/png",
+              "filesize": 607943,
+              "filename": "page_010-500x500.png"
+            },
+            "small": {
+              "url": "/api/media/file/page_010-600x400.png",
+              "width": 600,
+              "height": 400,
+              "mimeType": "image/png",
+              "filesize": 537899,
+              "filename": "page_010-600x400.png"
+            },
+            "medium": {
+              "url": "/api/media/file/page_010-900x600.png",
+              "width": 900,
+              "height": 600,
+              "mimeType": "image/png",
+              "filesize": 1248255,
+              "filename": "page_010-900x600.png"
+            },
+            "large": {
+              "url": "/api/media/file/page_010-1400x933.png",
+              "width": 1400,
+              "height": 933,
+              "mimeType": "image/png",
+              "filesize": 3145532,
+              "filename": "page_010-1400x933.png"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/page_010-1200x630.png",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/png",
+              "filesize": 1824649,
+              "filename": "page_010-1200x630.png"
+            }
+          }
+        },
+        "description": "People everywhere can sense it—something just isn't right. The Bible lays out a prophetic blueprint explaining our present chaos and the storm still ahead."
+      },
+      "publishedAt": "2025-09-04T17:52:32.332Z",
+      "authors": [
+        2
+      ],
+      "populatedAuthors": [
+        {
+          "id": 2,
+          "name": "Ronald Courtney"
+        }
+      ],
+      "slug": "something-wrong-with-the-world",
+      "slugLock": true,
+      "updatedAt": "2025-09-05T23:34:04.715Z",
+      "createdAt": "2025-09-04T17:52:32.334Z",
+      "_status": "published"
+    }
+  ],
+  "hasNextPage": false,
+  "hasPrevPage": false,
+  "limit": 100,
+  "nextPage": null,
+  "page": 1,
+  "pagingCounter": 1,
+  "prevPage": null,
+  "totalDocs": 3,
+  "totalPages": 1
+}

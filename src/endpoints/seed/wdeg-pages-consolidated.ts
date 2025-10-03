@@ -256,7 +256,7 @@ export const seedWDEGPages = async ({
 
   // Create the consolidated WDEG book page
   try {
-    const wdegBookPage = await payload.create({
+    const BookViewerPage = await payload.create({
       collection: 'pages',
       data: {
         title: 'Where Did Everyone Go? - Complete Book',

@@ -114,7 +114,7 @@ The book is available in 9 languages:
 6. **Access the platform:**
    - **Website:** http://localhost:3000
    - **Admin Panel:** http://localhost:3000/admin
-   - **WDEG Book:** http://localhost:3000/wdeg-book
+   - **WDEG Book:** http://localhost:3000/book
 
 ### Admin Access
 After seeding, login with:
@@ -130,7 +130,7 @@ After seeding, login with:
 - **Categories** - Content organization and taxonomy
 
 ### Key Components
-- **WDEGNavigation** - Book navigation with next/previous controls
+- **BookNavigation** - Book navigation with next/previous controls
 - **RenderBlocks** - Dynamic content block rendering
 - **AdminBar** - Content management toolbar
 - **SEO Components** - Meta tags and search optimization

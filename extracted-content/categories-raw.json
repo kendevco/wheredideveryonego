@@ -1,0 +1,81 @@
+{
+  "docs": [
+    {
+      "id": 12,
+      "title": "Christian Living",
+      "slug": "christian-living",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68b9d1dcb4bca79b487d5f5b",
+          "doc": 12,
+          "url": "/christian-living",
+          "label": "Christian Living"
+        }
+      ],
+      "updatedAt": "2025-09-04T17:52:28.582Z",
+      "createdAt": "2025-09-04T17:52:28.235Z"
+    },
+    {
+      "id": 10,
+      "title": "Book Reviews",
+      "slug": "book-reviews",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68b9d1dcb4bca79b487d5f59",
+          "doc": 10,
+          "url": "/book-reviews",
+          "label": "Book Reviews"
+        }
+      ],
+      "updatedAt": "2025-09-04T17:52:28.573Z",
+      "createdAt": "2025-09-04T17:52:28.234Z"
+    },
+    {
+      "id": 11,
+      "title": "Biblical Prophecy",
+      "slug": "biblical-prophecy",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68b9d1dcb4bca79b487d5f5c",
+          "doc": 11,
+          "url": "/biblical-prophecy",
+          "label": "Biblical Prophecy"
+        }
+      ],
+      "updatedAt": "2025-09-04T17:52:28.593Z",
+      "createdAt": "2025-09-04T17:52:28.232Z"
+    },
+    {
+      "id": 9,
+      "title": "End Times",
+      "slug": "end-times",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68b9d1dcb4bca79b487d5f5a",
+          "doc": 9,
+          "url": "/end-times",
+          "label": "End Times"
+        }
+      ],
+      "updatedAt": "2025-09-04T17:52:28.575Z",
+      "createdAt": "2025-09-04T17:52:28.228Z"
+    }
+  ],
+  "hasNextPage": false,
+  "hasPrevPage": false,
+  "limit": 100,
+  "nextPage": null,
+  "page": 1,
+  "pagingCounter": 1,
+  "prevPage": null,
+  "totalDocs": 4,
+  "totalPages": 1
+}

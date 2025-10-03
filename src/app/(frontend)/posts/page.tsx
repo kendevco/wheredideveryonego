@@ -40,50 +40,42 @@ export default async function Page() {
   const payload = await getPayload({ config: configPromise })
   const posts = await getCachedPosts()
 
-  // Get the WDEG hero image (same as home page)
+  // Get the WDEG hero image - specifically the wdeg.jpg book cover
   let heroImage = await payload.find({
     collection: 'media',
     where: {
-      alt: {
-        equals: 'Where Did Everyone Go? - Main Hero Background',
+      filename: {
+        equals: 'wdeg.jpg',
       },
     },
     limit: 1,
   })
 
-  // Fallback to filename search if alt text search fails
+  // Fallback to image-hero1.webp if wdeg.jpg not found
   if (!heroImage.docs.length) {
     heroImage = await payload.find({
       collection: 'media',
       where: {
         filename: {
-          equals: 'wdeg.jpg',
+          equals: 'image-hero1.webp',
         },
       },
       limit: 1,
     })
   }
 
-  // Final fallback to any WDEG image
+  // Final fallback - alt text search
   if (!heroImage.docs.length) {
     heroImage = await payload.find({
       collection: 'media',
       where: {
         alt: {
-          contains: 'WDEG',
+          contains: 'Hero',
         },
       },
       limit: 1,
     })
   }
-
-  // Debug logging
-  console.log('Posts page hero image search results:', {
-    found: heroImage.docs.length > 0,
-    imageId: heroImage.docs[0]?.id,
-    imageAlt: heroImage.docs[0]?.alt,
-    imageFilename: heroImage.docs[0]?.filename,
-  })
 
   const hero = {
     type: 'highImpact' as const,

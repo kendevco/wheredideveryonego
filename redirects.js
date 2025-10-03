@@ -12,7 +12,14 @@ const redirects = async () => {
     source: '/:path((?!ie-incompatible.html$).*)', // all pages except the incompatibility page
   }
 
-  const redirects = [internetExplorerRedirect]
+  // Redirect old wdeg-book route to new book route for backward compatibility
+  const BookViewerRedirect = {
+    source: '/wdeg-book/:path*',
+    destination: '/book/:path*',
+    permanent: true,
+  }
+
+  const redirects = [internetExplorerRedirect, BookViewerRedirect]
 
   return redirects
 }

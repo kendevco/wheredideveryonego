@@ -1,0 +1,2638 @@
+{
+  "docs": [
+    {
+      "id": 18,
+      "title": "Terms of Service",
+      "hero": {
+        "type": "lowImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h1",
+                "type": "heading",
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Terms of Service",
+                    "type": "text",
+                    "version": 1
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Please read these terms carefully before using our services.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ]
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "links": [],
+        "media": {
+          "id": 68,
+          "alt": "Straight metallic shapes with a blue gradient",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:52:31.624Z",
+          "createdAt": "2025-09-04T17:52:31.624Z",
+          "url": "/api/media/file/image-hero1.webp",
+          "thumbnailURL": "/api/media/file/image-hero1-300x169.webp",
+          "filename": "image-hero1.webp",
+          "mimeType": "image/webp",
+          "filesize": 49432,
+          "width": 3200,
+          "height": 1800,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/image-hero1-300x169.webp",
+              "width": 300,
+              "height": 169,
+              "mimeType": "image/webp",
+              "filesize": 2544,
+              "filename": "image-hero1-300x169.webp"
+            },
+            "square": {
+              "url": "/api/media/file/image-hero1-500x500.webp",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/webp",
+              "filesize": 4810,
+              "filename": "image-hero1-500x500.webp"
+            },
+            "small": {
+              "url": "/api/media/file/image-hero1-600x338.webp",
+              "width": 600,
+              "height": 338,
+              "mimeType": "image/webp",
+              "filesize": 5750,
+              "filename": "image-hero1-600x338.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/image-hero1-900x506.webp",
+              "width": 900,
+              "height": 506,
+              "mimeType": "image/webp",
+              "filesize": 9402,
+              "filename": "image-hero1-900x506.webp"
+            },
+            "large": {
+              "url": "/api/media/file/image-hero1-1400x788.webp",
+              "width": 1400,
+              "height": 788,
+              "mimeType": "image/webp",
+              "filesize": 16492,
+              "filename": "image-hero1-1400x788.webp"
+            },
+            "xlarge": {
+              "url": "/api/media/file/image-hero1-1920x1080.webp",
+              "width": 1920,
+              "height": 1080,
+              "mimeType": "image/webp",
+              "filesize": 24346,
+              "filename": "image-hero1-1920x1080.webp"
+            },
+            "og": {
+              "url": "/api/media/file/image-hero1-1200x630.webp",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/webp",
+              "filesize": 12846,
+              "filename": "image-hero1-1200x630.webp"
+            }
+          }
+        }
+      },
+      "layout": [
+        {
+          "id": "68b9d293b4bca79b487d5fa0",
+          "blockName": null,
+          "columns": [
+            {
+              "id": "68b9d293b4bca79b487d5f9f",
+              "size": "full",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "These terms of service govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Acceptance of Terms",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "By using our services, you acknowledge that you have read, understood, and agree to be bound by these terms.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Use of Services",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "You may use our services for lawful purposes only and in accordance with these terms.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": null,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            }
+          ],
+          "blockType": "content"
+        }
+      ],
+      "meta": {
+        "title": "Terms of Service | WDEG",
+        "image": {
+          "id": 66,
+          "alt": "Curving abstract shapes with an orange and blue gradient",
+          "caption": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Photo by ",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    },
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "https://unsplash.com/@kirp",
+                        "newTab": true,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 2,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Andrew Kliatskyi",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "mode": "normal",
+                      "text": " on Unsplash.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "updatedAt": "2025-09-04T17:52:31.428Z",
+          "createdAt": "2025-09-04T17:52:31.428Z",
+          "url": "/api/media/file/image-post2.webp",
+          "thumbnailURL": "/api/media/file/image-post2-300x169.webp",
+          "filename": "image-post2.webp",
+          "mimeType": "image/webp",
+          "filesize": 22332,
+          "width": 1920,
+          "height": 1080,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/image-post2-300x169.webp",
+              "width": 300,
+              "height": 169,
+              "mimeType": "image/webp",
+              "filesize": 2248,
+              "filename": "image-post2-300x169.webp"
+            },
+            "square": {
+              "url": "/api/media/file/image-post2-500x500.webp",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/webp",
+              "filesize": 4952,
+              "filename": "image-post2-500x500.webp"
+            },
+            "small": {
+              "url": "/api/media/file/image-post2-600x338.webp",
+              "width": 600,
+              "height": 338,
+              "mimeType": "image/webp",
+              "filesize": 5066,
+              "filename": "image-post2-600x338.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/image-post2-900x506.webp",
+              "width": 900,
+              "height": 506,
+              "mimeType": "image/webp",
+              "filesize": 8036,
+              "filename": "image-post2-900x506.webp"
+            },
+            "large": {
+              "url": "/api/media/file/image-post2-1400x788.webp",
+              "width": 1400,
+              "height": 788,
+              "mimeType": "image/webp",
+              "filesize": 13880,
+              "filename": "image-post2-1400x788.webp"
+            },
+            "xlarge": {
+              "url": "/api/media/file/image-post2-1920x1080.webp",
+              "width": 1920,
+              "height": 1080,
+              "mimeType": "image/webp",
+              "filesize": 22332,
+              "filename": "image-post2-1920x1080.webp"
+            },
+            "og": {
+              "url": "/api/media/file/image-post2-1200x630.webp",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/webp",
+              "filesize": 11010,
+              "filename": "image-post2-1200x630.webp"
+            }
+          }
+        },
+        "description": "Terms of service for using our website and services."
+      },
+      "publishedAt": "2025-09-04T17:55:31.406Z",
+      "slug": "terms-of-service",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68b9d294b4bca79b487d5fa5",
+          "doc": 18,
+          "url": "/terms-of-service",
+          "label": "Terms of Service"
+        }
+      ],
+      "updatedAt": "2025-09-04T17:55:32.906Z",
+      "createdAt": "2025-09-04T17:55:31.753Z",
+      "_status": "published"
+    },
+    {
+      "id": 17,
+      "title": "Privacy Policy",
+      "hero": {
+        "type": "lowImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h1",
+                "type": "heading",
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Privacy Policy",
+                    "type": "text",
+                    "version": 1
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Your privacy is important to us.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ]
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "links": [],
+        "media": {
+          "id": 68,
+          "alt": "Straight metallic shapes with a blue gradient",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:52:31.624Z",
+          "createdAt": "2025-09-04T17:52:31.624Z",
+          "url": "/api/media/file/image-hero1.webp",
+          "thumbnailURL": "/api/media/file/image-hero1-300x169.webp",
+          "filename": "image-hero1.webp",
+          "mimeType": "image/webp",
+          "filesize": 49432,
+          "width": 3200,
+          "height": 1800,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/image-hero1-300x169.webp",
+              "width": 300,
+              "height": 169,
+              "mimeType": "image/webp",
+              "filesize": 2544,
+              "filename": "image-hero1-300x169.webp"
+            },
+            "square": {
+              "url": "/api/media/file/image-hero1-500x500.webp",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/webp",
+              "filesize": 4810,
+              "filename": "image-hero1-500x500.webp"
+            },
+            "small": {
+              "url": "/api/media/file/image-hero1-600x338.webp",
+              "width": 600,
+              "height": 338,
+              "mimeType": "image/webp",
+              "filesize": 5750,
+              "filename": "image-hero1-600x338.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/image-hero1-900x506.webp",
+              "width": 900,
+              "height": 506,
+              "mimeType": "image/webp",
+              "filesize": 9402,
+              "filename": "image-hero1-900x506.webp"
+            },
+            "large": {
+              "url": "/api/media/file/image-hero1-1400x788.webp",
+              "width": 1400,
+              "height": 788,
+              "mimeType": "image/webp",
+              "filesize": 16492,
+              "filename": "image-hero1-1400x788.webp"
+            },
+            "xlarge": {
+              "url": "/api/media/file/image-hero1-1920x1080.webp",
+              "width": 1920,
+              "height": 1080,
+              "mimeType": "image/webp",
+              "filesize": 24346,
+              "filename": "image-hero1-1920x1080.webp"
+            },
+            "og": {
+              "url": "/api/media/file/image-hero1-1200x630.webp",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/webp",
+              "filesize": 12846,
+              "filename": "image-hero1-1200x630.webp"
+            }
+          }
+        }
+      },
+      "layout": [
+        {
+          "id": "68b9d293b4bca79b487d5f9d",
+          "blockName": null,
+          "columns": [
+            {
+              "id": "68b9d293b4bca79b487d5f9c",
+              "size": "full",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "This privacy policy describes how we collect, use, and protect your personal information when you use our website and services.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Information We Collect",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "We collect information you provide directly to us, such as when you contact us or subscribe to our newsletter.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "How We Use Your Information",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "We use the information we collect to provide, maintain, and improve our services and communicate with you.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": null,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            }
+          ],
+          "blockType": "content"
+        }
+      ],
+      "meta": {
+        "title": "Privacy Policy | WDEG",
+        "image": {
+          "id": 66,
+          "alt": "Curving abstract shapes with an orange and blue gradient",
+          "caption": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Photo by ",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    },
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "https://unsplash.com/@kirp",
+                        "newTab": true,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 2,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Andrew Kliatskyi",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "mode": "normal",
+                      "text": " on Unsplash.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "updatedAt": "2025-09-04T17:52:31.428Z",
+          "createdAt": "2025-09-04T17:52:31.428Z",
+          "url": "/api/media/file/image-post2.webp",
+          "thumbnailURL": "/api/media/file/image-post2-300x169.webp",
+          "filename": "image-post2.webp",
+          "mimeType": "image/webp",
+          "filesize": 22332,
+          "width": 1920,
+          "height": 1080,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/image-post2-300x169.webp",
+              "width": 300,
+              "height": 169,
+              "mimeType": "image/webp",
+              "filesize": 2248,
+              "filename": "image-post2-300x169.webp"
+            },
+            "square": {
+              "url": "/api/media/file/image-post2-500x500.webp",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/webp",
+              "filesize": 4952,
+              "filename": "image-post2-500x500.webp"
+            },
+            "small": {
+              "url": "/api/media/file/image-post2-600x338.webp",
+              "width": 600,
+              "height": 338,
+              "mimeType": "image/webp",
+              "filesize": 5066,
+              "filename": "image-post2-600x338.webp"
+            },
+            "medium": {
+              "url": "/api/media/file/image-post2-900x506.webp",
+              "width": 900,
+              "height": 506,
+              "mimeType": "image/webp",
+              "filesize": 8036,
+              "filename": "image-post2-900x506.webp"
+            },
+            "large": {
+              "url": "/api/media/file/image-post2-1400x788.webp",
+              "width": 1400,
+              "height": 788,
+              "mimeType": "image/webp",
+              "filesize": 13880,
+              "filename": "image-post2-1400x788.webp"
+            },
+            "xlarge": {
+              "url": "/api/media/file/image-post2-1920x1080.webp",
+              "width": 1920,
+              "height": 1080,
+              "mimeType": "image/webp",
+              "filesize": 22332,
+              "filename": "image-post2-1920x1080.webp"
+            },
+            "og": {
+              "url": "/api/media/file/image-post2-1200x630.webp",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/webp",
+              "filesize": 11010,
+              "filename": "image-post2-1200x630.webp"
+            }
+          }
+        },
+        "description": "Our privacy policy explains how we collect, use, and protect your personal information."
+      },
+      "publishedAt": "2025-09-04T17:55:31.406Z",
+      "slug": "privacy-policy",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68b9d294b4bca79b487d5fa6",
+          "doc": 17,
+          "url": "/privacy-policy",
+          "label": "Privacy Policy"
+        }
+      ],
+      "updatedAt": "2025-09-04T17:55:32.909Z",
+      "createdAt": "2025-09-04T17:55:31.745Z",
+      "_status": "published"
+    },
+    {
+      "id": 16,
+      "title": "About WDEG",
+      "hero": {
+        "type": "highImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h1",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "About Where Did Everyone Go?",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Understanding Biblical Prophecy and Preparing for the End Times",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "textFormat": 0
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "links": [],
+        "media": {
+          "id": 95,
+          "alt": "WDEG Book - page 025",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:55:24.949Z",
+          "createdAt": "2025-09-04T17:55:24.949Z",
+          "url": "/api/media/file/page_025.png",
+          "thumbnailURL": "/api/media/file/page_025-300x200.png",
+          "filename": "page_025.png",
+          "mimeType": "image/png",
+          "filesize": 2371543,
+          "width": 1536,
+          "height": 1024,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/page_025-300x200.png",
+              "width": 300,
+              "height": 200,
+              "mimeType": "image/png",
+              "filesize": 139276,
+              "filename": "page_025-300x200.png"
+            },
+            "square": {
+              "url": "/api/media/file/page_025-500x500.png",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/png",
+              "filesize": 605870,
+              "filename": "page_025-500x500.png"
+            },
+            "small": {
+              "url": "/api/media/file/page_025-600x400.png",
+              "width": 600,
+              "height": 400,
+              "mimeType": "image/png",
+              "filesize": 545738,
+              "filename": "page_025-600x400.png"
+            },
+            "medium": {
+              "url": "/api/media/file/page_025-900x600.png",
+              "width": 900,
+              "height": 600,
+              "mimeType": "image/png",
+              "filesize": 1250872,
+              "filename": "page_025-900x600.png"
+            },
+            "large": {
+              "url": "/api/media/file/page_025-1400x933.png",
+              "width": 1400,
+              "height": 933,
+              "mimeType": "image/png",
+              "filesize": 3107425,
+              "filename": "page_025-1400x933.png"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/page_025-1200x630.png",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/png",
+              "filesize": 1833594,
+              "filename": "page_025-1200x630.png"
+            }
+          }
+        }
+      },
+      "layout": [
+        {
+          "id": "68b9d293b4bca79b487d5f9a",
+          "blockName": "About WDEG",
+          "columns": [
+            {
+              "id": "68b9d293b4bca79b487d5f99",
+              "size": "full",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "format": "",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "About Where Did Everyone Go?",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "\"Where Did Everyone Go?\" is a biblical guide designed to help people understand the Rapture and end times prophecy. This book serves as a beacon of hope and truth for those seeking answers about biblical prophecy and God's plan for the last days.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "format": "",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Our Mission",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "To provide clear, biblical answers about the Rapture and end times events. We believe that understanding God's prophetic timeline brings hope, comfort, and urgency to live for Christ. Our mission is to help believers prepare their hearts and share the Gospel before the Lord's return.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "textFormat": 0
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "format": "",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "What You'll Find",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "This comprehensive resource covers: The timing of the Rapture, The 14 events of the Rapture, Signs of the times and birth pains, The Great Tribulation period, God's prophetic timeline, The Bride of Christ and the Wedding, How to receive salvation through Jesus Christ, and Living with hope and purpose in the last days.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "textFormat": 0
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "format": "",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "About the Author",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "This book was written with a heart for souls and a deep love for God's Word. The author's desire is to see people come to know Jesus Christ as their personal Savior and to help believers understand the blessed hope of the Rapture.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": null,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            }
+          ],
+          "blockType": "content"
+        },
+        {
+          "id": "68bb623805a67a44fcaed4dd",
+          "title": "Choose Your Language",
+          "subtitle": "Experience \"Where Did Everyone Go?\" in your preferred language",
+          "displayStyle": "grid",
+          "showFlags": true,
+          "blockName": null,
+          "enabledLanguages": [
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it",
+            "pt",
+            "pl",
+            "ar",
+            "he",
+            "jp"
+          ],
+          "blockType": "languageSelector"
+        }
+      ],
+      "meta": {
+        "title": "About | WDEG",
+        "image": {
+          "id": 96,
+          "alt": "WDEG Book - page 026",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:55:31.226Z",
+          "createdAt": "2025-09-04T17:55:31.226Z",
+          "url": "/api/media/file/page_026.png",
+          "thumbnailURL": "/api/media/file/page_026-300x200.png",
+          "filename": "page_026.png",
+          "mimeType": "image/png",
+          "filesize": 2885560,
+          "width": 1536,
+          "height": 1024,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/page_026-300x200.png",
+              "width": 300,
+              "height": 200,
+              "mimeType": "image/png",
+              "filesize": 147991,
+              "filename": "page_026-300x200.png"
+            },
+            "square": {
+              "url": "/api/media/file/page_026-500x500.png",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/png",
+              "filesize": 641824,
+              "filename": "page_026-500x500.png"
+            },
+            "small": {
+              "url": "/api/media/file/page_026-600x400.png",
+              "width": 600,
+              "height": 400,
+              "mimeType": "image/png",
+              "filesize": 582516,
+              "filename": "page_026-600x400.png"
+            },
+            "medium": {
+              "url": "/api/media/file/page_026-900x600.png",
+              "width": 900,
+              "height": 600,
+              "mimeType": "image/png",
+              "filesize": 1343477,
+              "filename": "page_026-900x600.png"
+            },
+            "large": {
+              "url": "/api/media/file/page_026-1400x933.png",
+              "width": 1400,
+              "height": 933,
+              "mimeType": "image/png",
+              "filesize": 3341868,
+              "filename": "page_026-1400x933.png"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/page_026-1200x630.png",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/png",
+              "filesize": 1934239,
+              "filename": "page_026-1200x630.png"
+            }
+          }
+        },
+        "description": "Learn about \"Where Did Everyone Go?\" - a biblical guide to understanding the Rapture and end times prophecy."
+      },
+      "publishedAt": "2025-09-04T17:55:31.405Z",
+      "slug": "about",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68bb659f21e1870004831cc9",
+          "doc": 16,
+          "url": "/about",
+          "label": "About WDEG"
+        }
+      ],
+      "updatedAt": "2025-09-05T22:35:11.558Z",
+      "createdAt": "2025-09-04T17:55:31.741Z",
+      "_status": "published"
+    },
+    {
+      "id": 15,
+      "title": "Community | WDEG",
+      "hero": {
+        "type": "highImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h1",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Join the WDEG Community",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Connect with believers seeking to understand biblical prophecy and prepare for the end times.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "textFormat": 0
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "links": [],
+        "media": {
+          "id": 96,
+          "alt": "WDEG Book - page 026",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:55:31.226Z",
+          "createdAt": "2025-09-04T17:55:31.226Z",
+          "url": "/api/media/file/page_026.png",
+          "thumbnailURL": "/api/media/file/page_026-300x200.png",
+          "filename": "page_026.png",
+          "mimeType": "image/png",
+          "filesize": 2885560,
+          "width": 1536,
+          "height": 1024,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/page_026-300x200.png",
+              "width": 300,
+              "height": 200,
+              "mimeType": "image/png",
+              "filesize": 147991,
+              "filename": "page_026-300x200.png"
+            },
+            "square": {
+              "url": "/api/media/file/page_026-500x500.png",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/png",
+              "filesize": 641824,
+              "filename": "page_026-500x500.png"
+            },
+            "small": {
+              "url": "/api/media/file/page_026-600x400.png",
+              "width": 600,
+              "height": 400,
+              "mimeType": "image/png",
+              "filesize": 582516,
+              "filename": "page_026-600x400.png"
+            },
+            "medium": {
+              "url": "/api/media/file/page_026-900x600.png",
+              "width": 900,
+              "height": 600,
+              "mimeType": "image/png",
+              "filesize": 1343477,
+              "filename": "page_026-900x600.png"
+            },
+            "large": {
+              "url": "/api/media/file/page_026-1400x933.png",
+              "width": 1400,
+              "height": 933,
+              "mimeType": "image/png",
+              "filesize": 3341868,
+              "filename": "page_026-1400x933.png"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/page_026-1200x630.png",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/png",
+              "filesize": 1934239,
+              "filename": "page_026-1200x630.png"
+            }
+          }
+        }
+      },
+      "layout": [
+        {
+          "id": "68b9d293b4bca79b487d5f97",
+          "blockName": "Community Features",
+          "columns": [
+            {
+              "id": "68b9d293b4bca79b487d5f96",
+              "size": "full",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "The WDEG community brings together believers from all walks of life who are seeking to understand biblical prophecy and prepare their hearts for the Lord's return. Our platform provides a safe space for fellowship, study, and spiritual growth.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Community Features",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "• Bible Study Groups - Join online and local groups studying end times prophecy and biblical truth\n• Prayer Circles - Connect with fellow believers for prayer and spiritual support\n• Testimony Sharing - Share how God is working in your life and preparing your heart\n• Prophecy Discussions - Engage in thoughtful conversations about current events and biblical prophecy\n• Resource Library - Access recommended books, sermons, and study materials\n• Event Notifications - Stay informed about conferences, revivals, and community gatherings",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Growing in Faith Together",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Whether you're a new believer seeking to understand God's plan or a mature Christian looking to deepen your knowledge of prophecy, our community welcomes you. We believe in supporting one another as we watch and wait for our Lord's return.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Connect With Us",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Have questions about biblical prophecy or want to connect with other believers in your area? We'd love to hear from you. Contact us through our contact page or join one of our online fellowship groups.",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": null,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            }
+          ],
+          "blockType": "content"
+        },
+        {
+          "id": "68bb62c749014a5941f8096c",
+          "title": "Choose Your Language",
+          "subtitle": "Experience \"Where Did Everyone Go?\" in your preferred language",
+          "displayStyle": "grid",
+          "showFlags": true,
+          "blockName": "Language Selector",
+          "enabledLanguages": [
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it",
+            "pt",
+            "pl",
+            "ar",
+            "he",
+            "jp"
+          ],
+          "blockType": "languageSelector"
+        }
+      ],
+      "meta": {
+        "title": "Community | WDEG",
+        "image": {
+          "id": 69,
+          "alt": "Where Did Everyone Go? - Main Hero Background",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:52:44.664Z",
+          "createdAt": "2025-09-04T17:52:44.664Z",
+          "url": "/api/media/file/wdeg.jpg",
+          "thumbnailURL": "/api/media/file/wdeg-300x188.jpg",
+          "filename": "wdeg.jpg",
+          "mimeType": "image/jpeg",
+          "filesize": 1256632,
+          "width": 1900,
+          "height": 1188,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/wdeg-300x188.jpg",
+              "width": 300,
+              "height": 188,
+              "mimeType": "image/jpeg",
+              "filesize": 8717,
+              "filename": "wdeg-300x188.jpg"
+            },
+            "square": {
+              "url": "/api/media/file/wdeg-500x500.jpg",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/jpeg",
+              "filesize": 39231,
+              "filename": "wdeg-500x500.jpg"
+            },
+            "small": {
+              "url": "/api/media/file/wdeg-600x375.jpg",
+              "width": 600,
+              "height": 375,
+              "mimeType": "image/jpeg",
+              "filesize": 31652,
+              "filename": "wdeg-600x375.jpg"
+            },
+            "medium": {
+              "url": "/api/media/file/wdeg-900x563.jpg",
+              "width": 900,
+              "height": 563,
+              "mimeType": "image/jpeg",
+              "filesize": 77899,
+              "filename": "wdeg-900x563.jpg"
+            },
+            "large": {
+              "url": "/api/media/file/wdeg-1400x875.jpg",
+              "width": 1400,
+              "height": 875,
+              "mimeType": "image/jpeg",
+              "filesize": 200926,
+              "filename": "wdeg-1400x875.jpg"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/wdeg-1200x630.jpg",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/jpeg",
+              "filesize": 120075,
+              "filename": "wdeg-1200x630.jpg"
+            }
+          }
+        },
+        "description": "Join the WDEG community of believers studying biblical prophecy, preparing for the end times, and growing in faith together."
+      },
+      "publishedAt": "2025-09-04T17:55:31.405Z",
+      "slug": "community",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68bb6310a06b4600046b9592",
+          "doc": 15,
+          "url": "/community",
+          "label": "Community | WDEG"
+        }
+      ],
+      "updatedAt": "2025-09-05T22:24:16.961Z",
+      "createdAt": "2025-09-04T17:55:31.738Z",
+      "_status": "published"
+    },
+    {
+      "id": 14,
+      "title": "Contact",
+      "hero": {
+        "type": "highImpact",
+        "richText": null,
+        "links": [],
+        "media": {
+          "id": 90,
+          "alt": "WDEG Book - page 020",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:54:54.832Z",
+          "createdAt": "2025-09-04T17:54:54.832Z",
+          "url": "/api/media/file/page_020.png",
+          "thumbnailURL": "/api/media/file/page_020-300x200.png",
+          "filename": "page_020.png",
+          "mimeType": "image/png",
+          "filesize": 2744249,
+          "width": 1536,
+          "height": 1024,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/page_020-300x200.png",
+              "width": 300,
+              "height": 200,
+              "mimeType": "image/png",
+              "filesize": 153728,
+              "filename": "page_020-300x200.png"
+            },
+            "square": {
+              "url": "/api/media/file/page_020-500x500.png",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/png",
+              "filesize": 641531,
+              "filename": "page_020-500x500.png"
+            },
+            "small": {
+              "url": "/api/media/file/page_020-600x400.png",
+              "width": 600,
+              "height": 400,
+              "mimeType": "image/png",
+              "filesize": 593712,
+              "filename": "page_020-600x400.png"
+            },
+            "medium": {
+              "url": "/api/media/file/page_020-900x600.png",
+              "width": 900,
+              "height": 600,
+              "mimeType": "image/png",
+              "filesize": 1358130,
+              "filename": "page_020-900x600.png"
+            },
+            "large": {
+              "url": "/api/media/file/page_020-1400x933.png",
+              "width": 1400,
+              "height": 933,
+              "mimeType": "image/png",
+              "filesize": 3386260,
+              "filename": "page_020-1400x933.png"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/page_020-1200x630.png",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/png",
+              "filesize": 1978752,
+              "filename": "page_020-1200x630.png"
+            }
+          }
+        }
+      },
+      "layout": [
+        {
+          "id": "68b9d293b4bca79b487d5f94",
+          "form": {
+            "id": 3,
+            "title": "Contact Form",
+            "fields": [
+              {
+                "id": "68b9d1eab4bca79b487d5f81",
+                "name": "full-name",
+                "label": "Full Name",
+                "width": 100,
+                "defaultValue": null,
+                "required": true,
+                "blockName": "full-name",
+                "blockType": "text"
+              },
+              {
+                "id": "68b9d1eab4bca79b487d5f82",
+                "name": "email",
+                "label": "Email",
+                "width": 100,
+                "required": true,
+                "blockName": "email",
+                "blockType": "email"
+              },
+              {
+                "id": "68b9d1eab4bca79b487d5f83",
+                "name": "phone",
+                "label": "Phone",
+                "width": 100,
+                "defaultValue": null,
+                "required": false,
+                "blockName": "phone",
+                "blockType": "number"
+              },
+              {
+                "id": "68b9d1eab4bca79b487d5f84",
+                "name": "message",
+                "label": "Message",
+                "width": 100,
+                "defaultValue": null,
+                "required": true,
+                "blockName": "message",
+                "blockType": "textarea"
+              }
+            ],
+            "submitButtonLabel": "Submit",
+            "confirmationType": "message",
+            "confirmationMessage": {
+              "root": {
+                "type": "root",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "tag": "h2",
+                    "type": "heading",
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "mode": "normal",
+                        "text": "The contact form has been submitted successfully.",
+                        "type": "text",
+                        "style": "",
+                        "detail": 0,
+                        "format": 0,
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                ],
+                "direction": "ltr"
+              }
+            },
+            "redirect": {
+              "url": null
+            },
+            "updatedAt": "2025-09-04T18:01:33.149Z",
+            "createdAt": "2023-01-12T21:47:41.374Z",
+            "emails": []
+          },
+          "enableIntro": true,
+          "introContent": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "We welcome your feedback:",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "Contact",
+          "blockType": "formBlock"
+        },
+        {
+          "id": "68bb629b49014a5941f8096b",
+          "title": "Choose Your Language",
+          "subtitle": "Experience \"Where Did Everyone Go?\" in your preferred language",
+          "displayStyle": "grid",
+          "showFlags": true,
+          "blockName": "Language Selector",
+          "enabledLanguages": [
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it",
+            "pt",
+            "pl",
+            "ar",
+            "he",
+            "jp"
+          ],
+          "blockType": "languageSelector"
+        }
+      ],
+      "meta": {
+        "title": null,
+        "image": null,
+        "description": null
+      },
+      "publishedAt": "2025-09-04T17:58:51.686Z",
+      "slug": "contact",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68bb62ba1480520004df6c00",
+          "doc": 14,
+          "url": "/contact",
+          "label": "Contact"
+        }
+      ],
+      "updatedAt": "2025-09-05T22:22:50.897Z",
+      "createdAt": "2025-09-04T17:55:31.735Z",
+      "_status": "published"
+    },
+    {
+      "id": 13,
+      "title": "Home",
+      "hero": {
+        "type": "highImpact",
+        "richText": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h1",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Where Did Everyone Go?",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "A biblical guide to understanding the Rapture and end times prophecy. When millions vanish in an instant, this book will provide the answers people desperately need.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr",
+                "textFormat": 0
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "links": [
+          {
+            "id": "68b9d293b4bca79b487d5f86",
+            "link": {
+              "type": "custom",
+              "newTab": null,
+              "url": "/wdeg-book",
+              "label": "Read the Book",
+              "appearance": "default"
+            }
+          },
+          {
+            "id": "68b9d293b4bca79b487d5f87",
+            "link": {
+              "type": "custom",
+              "newTab": null,
+              "url": "/community",
+              "label": "Join Community",
+              "appearance": "outline"
+            }
+          }
+        ],
+        "media": {
+          "id": 69,
+          "alt": "Where Did Everyone Go? - Main Hero Background",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:52:44.664Z",
+          "createdAt": "2025-09-04T17:52:44.664Z",
+          "url": "/api/media/file/wdeg.jpg",
+          "thumbnailURL": "/api/media/file/wdeg-300x188.jpg",
+          "filename": "wdeg.jpg",
+          "mimeType": "image/jpeg",
+          "filesize": 1256632,
+          "width": 1900,
+          "height": 1188,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/wdeg-300x188.jpg",
+              "width": 300,
+              "height": 188,
+              "mimeType": "image/jpeg",
+              "filesize": 8717,
+              "filename": "wdeg-300x188.jpg"
+            },
+            "square": {
+              "url": "/api/media/file/wdeg-500x500.jpg",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/jpeg",
+              "filesize": 39231,
+              "filename": "wdeg-500x500.jpg"
+            },
+            "small": {
+              "url": "/api/media/file/wdeg-600x375.jpg",
+              "width": 600,
+              "height": 375,
+              "mimeType": "image/jpeg",
+              "filesize": 31652,
+              "filename": "wdeg-600x375.jpg"
+            },
+            "medium": {
+              "url": "/api/media/file/wdeg-900x563.jpg",
+              "width": 900,
+              "height": 563,
+              "mimeType": "image/jpeg",
+              "filesize": 77899,
+              "filename": "wdeg-900x563.jpg"
+            },
+            "large": {
+              "url": "/api/media/file/wdeg-1400x875.jpg",
+              "width": 1400,
+              "height": 875,
+              "mimeType": "image/jpeg",
+              "filesize": 200926,
+              "filename": "wdeg-1400x875.jpg"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/wdeg-1200x630.jpg",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/jpeg",
+              "filesize": 120075,
+              "filename": "wdeg-1200x630.jpg"
+            }
+          }
+        }
+      },
+      "layout": [
+        {
+          "id": "68b9d293b4bca79b487d5f8e",
+          "blockName": "Content Block",
+          "columns": [
+            {
+              "id": "68b9d293b4bca79b487d5f88",
+              "size": "full",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "type": "heading",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Key Topics Covered",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": null,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            },
+            {
+              "id": "68b9d293b4bca79b487d5f89",
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "type": "heading",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "The Rapture Explained",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Understand the timing and events of the Rapture through clear biblical teaching. Learn about the ",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        },
+                        {
+                          "type": "link",
+                          "fields": {
+                            "url": "/wdeg-book/page-005",
+                            "newTab": false,
+                            "linkType": "custom"
+                          },
+                          "format": "",
+                          "indent": 0,
+                          "version": 2,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "14 events of the Rapture",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        },
+                        {
+                          "mode": "normal",
+                          "text": " and God's prophetic timeline.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": false,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            },
+            {
+              "id": "68b9d293b4bca79b487d5f8a",
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "type": "heading",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Signs of the Times",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Recognize the biblical signs pointing to the nearness of Christ's return. Understand current events through the lens of biblical prophecy.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": false,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            },
+            {
+              "id": "68b9d293b4bca79b487d5f8b",
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "type": "heading",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Salvation & Hope",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Discover how to receive eternal life through Jesus Christ and live with hope and purpose while awaiting His return.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": false,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            },
+            {
+              "id": "68b9d293b4bca79b487d5f8c",
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "type": "heading",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Biblical Foundation",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Every teaching is grounded in Scripture with clear biblical references. This book provides solid ",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        },
+                        {
+                          "type": "link",
+                          "fields": {
+                            "url": "/wdeg-book",
+                            "newTab": false,
+                            "linkType": "custom"
+                          },
+                          "format": "",
+                          "indent": 0,
+                          "version": 2,
+                          "children": [
+                            {
+                              "mode": "normal",
+                              "text": "biblical truth",
+                              "type": "text",
+                              "style": "",
+                              "detail": 0,
+                              "format": 0,
+                              "version": 1
+                            }
+                          ],
+                          "direction": "ltr"
+                        },
+                        {
+                          "mode": "normal",
+                          "text": " you can trust.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": false,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            },
+            {
+              "id": "68b9d293b4bca79b487d5f8d",
+              "size": "oneThird",
+              "richText": {
+                "root": {
+                  "type": "root",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "tag": "h3",
+                      "type": "heading",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Community Support",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "type": "paragraph",
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "Join a community of believers studying prophecy together. Share insights, ask questions, and grow in faith.",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr",
+                      "textFormat": 0
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              },
+              "enableLink": false,
+              "link": {
+                "type": "reference",
+                "newTab": null,
+                "url": null,
+                "label": null,
+                "appearance": "default"
+              }
+            }
+          ],
+          "blockType": "content"
+        },
+        {
+          "id": "68bb627949014a5941f8096a",
+          "title": "Choose Your Language",
+          "subtitle": "Experience \"Where Did Everyone Go?\" in your preferred language",
+          "displayStyle": "grid",
+          "showFlags": true,
+          "blockName": null,
+          "enabledLanguages": [
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it",
+            "pt",
+            "pl",
+            "ar",
+            "he",
+            "jp"
+          ],
+          "blockType": "languageSelector"
+        },
+        {
+          "id": "68b9d293b4bca79b487d5f8f",
+          "media": {
+            "id": 75,
+            "alt": "WDEG Book - page 005",
+            "caption": null,
+            "updatedAt": "2025-09-04T17:53:19.785Z",
+            "createdAt": "2025-09-04T17:53:19.785Z",
+            "url": "/api/media/file/page_005.png",
+            "thumbnailURL": "/api/media/file/page_005-300x300.png",
+            "filename": "page_005.png",
+            "mimeType": "image/png",
+            "filesize": 2064508,
+            "width": 1024,
+            "height": 1024,
+            "focalX": 50,
+            "focalY": 50,
+            "sizes": {
+              "thumbnail": {
+                "url": "/api/media/file/page_005-300x300.png",
+                "width": 300,
+                "height": 300,
+                "mimeType": "image/png",
+                "filesize": 228293,
+                "filename": "page_005-300x300.png"
+              },
+              "square": {
+                "url": "/api/media/file/page_005-500x500.png",
+                "width": 500,
+                "height": 500,
+                "mimeType": "image/png",
+                "filesize": 635134,
+                "filename": "page_005-500x500.png"
+              },
+              "small": {
+                "url": "/api/media/file/page_005-600x600.png",
+                "width": 600,
+                "height": 600,
+                "mimeType": "image/png",
+                "filesize": 921391,
+                "filename": "page_005-600x600.png"
+              },
+              "medium": {
+                "url": "/api/media/file/page_005-900x900.png",
+                "width": 900,
+                "height": 900,
+                "mimeType": "image/png",
+                "filesize": 2112397,
+                "filename": "page_005-900x900.png"
+              },
+              "large": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              },
+              "xlarge": {
+                "url": null,
+                "width": null,
+                "height": null,
+                "mimeType": null,
+                "filesize": null,
+                "filename": null
+              },
+              "og": {
+                "url": "/api/media/file/page_005-1200x630.png",
+                "width": 1200,
+                "height": 630,
+                "mimeType": "image/png",
+                "filesize": 1986980,
+                "filename": "page_005-1200x630.png"
+              }
+            }
+          },
+          "blockName": "Media Block",
+          "blockType": "mediaBlock"
+        },
+        {
+          "id": "68b9d293b4bca79b487d5f90",
+          "introContent": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Recent Articles",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Explore our latest articles on biblical prophecy, end times events, and Christian living. These articles complement the book content and provide additional insights into God's prophetic timeline.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "populateBy": "collection",
+          "relationTo": "posts",
+          "limit": 10,
+          "blockName": "Archive Block",
+          "blockType": "archive",
+          "categories": [],
+          "selectedDocs": []
+        },
+        {
+          "id": "68b9d293b4bca79b487d5f92",
+          "richText": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h3",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Ready to Understand God's Plan?",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "mode": "normal",
+                      "text": "Dive deeper into biblical prophecy with our comprehensive ",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    },
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/posts",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 2,
+                      "children": [
+                        {
+                          "mode": "normal",
+                          "text": "article collection",
+                          "type": "text",
+                          "style": "",
+                          "detail": 0,
+                          "format": 0,
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "mode": "normal",
+                      "text": " and discover what the Bible says about the end times.",
+                      "type": "text",
+                      "style": "",
+                      "detail": 0,
+                      "format": 0,
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "textFormat": 0
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "CTA",
+          "links": [
+            {
+              "id": "68b9d293b4bca79b487d5f91",
+              "link": {
+                "type": "custom",
+                "newTab": null,
+                "url": "/posts",
+                "label": "Read All Articles",
+                "appearance": "default"
+              }
+            }
+          ],
+          "blockType": "cta"
+        }
+      ],
+      "meta": {
+        "title": "WDEG - Where Did Everyone Go?",
+        "image": {
+          "id": 69,
+          "alt": "Where Did Everyone Go? - Main Hero Background",
+          "caption": null,
+          "updatedAt": "2025-09-04T17:52:44.664Z",
+          "createdAt": "2025-09-04T17:52:44.664Z",
+          "url": "/api/media/file/wdeg.jpg",
+          "thumbnailURL": "/api/media/file/wdeg-300x188.jpg",
+          "filename": "wdeg.jpg",
+          "mimeType": "image/jpeg",
+          "filesize": 1256632,
+          "width": 1900,
+          "height": 1188,
+          "focalX": 50,
+          "focalY": 50,
+          "sizes": {
+            "thumbnail": {
+              "url": "/api/media/file/wdeg-300x188.jpg",
+              "width": 300,
+              "height": 188,
+              "mimeType": "image/jpeg",
+              "filesize": 8717,
+              "filename": "wdeg-300x188.jpg"
+            },
+            "square": {
+              "url": "/api/media/file/wdeg-500x500.jpg",
+              "width": 500,
+              "height": 500,
+              "mimeType": "image/jpeg",
+              "filesize": 39231,
+              "filename": "wdeg-500x500.jpg"
+            },
+            "small": {
+              "url": "/api/media/file/wdeg-600x375.jpg",
+              "width": 600,
+              "height": 375,
+              "mimeType": "image/jpeg",
+              "filesize": 31652,
+              "filename": "wdeg-600x375.jpg"
+            },
+            "medium": {
+              "url": "/api/media/file/wdeg-900x563.jpg",
+              "width": 900,
+              "height": 563,
+              "mimeType": "image/jpeg",
+              "filesize": 77899,
+              "filename": "wdeg-900x563.jpg"
+            },
+            "large": {
+              "url": "/api/media/file/wdeg-1400x875.jpg",
+              "width": 1400,
+              "height": 875,
+              "mimeType": "image/jpeg",
+              "filesize": 200926,
+              "filename": "wdeg-1400x875.jpg"
+            },
+            "xlarge": {
+              "url": null,
+              "width": null,
+              "height": null,
+              "mimeType": null,
+              "filesize": null,
+              "filename": null
+            },
+            "og": {
+              "url": "/api/media/file/wdeg-1200x630.jpg",
+              "width": 1200,
+              "height": 630,
+              "mimeType": "image/jpeg",
+              "filesize": 120075,
+              "filename": "wdeg-1200x630.jpg"
+            }
+          }
+        },
+        "description": "Where Did Everyone Go? - A biblical guide to understanding the Rapture and end times prophecy. Discover God's plan for the last days."
+      },
+      "publishedAt": "2025-09-05T22:21:46.404Z",
+      "slug": "home",
+      "slugLock": true,
+      "parent": null,
+      "breadcrumbs": [
+        {
+          "id": "68bb73b313a74b0004d7e9b2",
+          "doc": 13,
+          "url": "/home",
+          "label": "Home"
+        }
+      ],
+      "updatedAt": "2025-09-05T23:35:15.586Z",
+      "createdAt": "2025-09-04T17:55:31.471Z",
+      "_status": "published"
+    }
+  ],
+  "hasNextPage": false,
+  "hasPrevPage": false,
+  "limit": 100,
+  "nextPage": null,
+  "page": 1,
+  "pagingCounter": 1,
+  "prevPage": null,
+  "totalDocs": 6,
+  "totalPages": 1
+}

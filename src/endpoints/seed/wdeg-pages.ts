@@ -335,10 +335,10 @@ export const seedWDEGPages = async ({
               ],
             },
             {
-              blockType: 'wdegNavigation' as const,
+              blockType: 'BookNavigation' as const,
               currentPage: 1,
               totalPages: 26,
-              baseUrl: '/wdeg-book',
+              baseUrl: '/book',
             },
           ],
           meta: {
@@ -453,10 +453,10 @@ export const seedWDEGPages = async ({
               ],
             },
             {
-              blockType: 'wdegNavigation' as const,
+              blockType: 'BookNavigation' as const,
               currentPage: pageInfo.pageNumber,
               totalPages: 26,
-              baseUrl: '/wdeg-book',
+              baseUrl: '/book',
             },
           ],
           meta: {

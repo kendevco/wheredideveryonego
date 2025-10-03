@@ -8,8 +8,8 @@ import { ContentBlock } from '@/blocks/Content/Component'
 import { FormBlock } from '@/blocks/Form/Component'
 import { LanguageSelectorBlock } from '@/blocks/LanguageSelector/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component'
-import { WDEGNavigationBlock } from '@/blocks/WDEGNavigation/Component'
-import { WDEGBookBlock } from '@/blocks/WDEGBook/Component'
+import { BookNavigationBlock } from '@/blocks/BookNavigation/Component'
+import { BookViewerBlock } from '@/blocks/BookViewer/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -18,8 +18,11 @@ const blockComponents = {
   formBlock: FormBlock,
   languageSelector: LanguageSelectorBlock,
   mediaBlock: MediaBlock,
-  wdegNavigation: WDEGNavigationBlock,
-  wdegBook: WDEGBookBlock,
+  BookNavigation: BookNavigationBlock,
+  BookViewer: BookViewerBlock,
+  // Legacy support for old block names
+  wdegNavigation: BookNavigationBlock,
+  wdegBook: BookViewerBlock,
 }
 
 export const RenderBlocks: React.FC<{
