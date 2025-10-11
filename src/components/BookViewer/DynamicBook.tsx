@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { ChevronLeft, ChevronRight, Globe, ChevronUp, ChevronDown } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Globe, ChevronUp, ChevronDown, Printer } from 'lucide-react'
 import { WDEGHero } from '@/heros/WDEGHero'
 import Image from 'next/image'
 
@@ -95,6 +95,24 @@ export function DynamicBookViewer({ initialLanguage, className }: BookViewerProp
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Close language selector when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (showLanguageSelector && !target.closest('.language-selector-container')) {
+        setShowLanguageSelector(false)
+      }
+    }
+
+    if (showLanguageSelector) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showLanguageSelector])
+
   // Load chapters for current language
   const loadChapters = async (language: string) => {
     console.log('🔍 DynamicBook - Loading chapters for language:', language)
@@ -139,6 +157,19 @@ export function DynamicBookViewer({ initialLanguage, className }: BookViewerProp
     setShowLanguageSelector(false)
   }
 
+  const handlePrint = () => {
+    // If in single chapter view, switch to complete book view first
+    if (viewMode === 'single') {
+      setViewMode('all')
+      // Give it a moment to render all chapters before printing
+      setTimeout(() => {
+        window.print()
+      }, 500)
+    } else {
+      window.print()
+    }
+  }
+
   const formatChapterContent = (content: string) => {
     return content.split('\n').map((line, index) => {
       const trimmed = line.trim()
@@ -175,6 +206,186 @@ export function DynamicBookViewer({ initialLanguage, className }: BookViewerProp
 
   return (
     <>
+      {/* Print-specific styles */}
+      <style jsx global>{`
+        @media print {
+          /* Page setup with margins for headers/footers */
+          @page {
+            margin: 2cm 1.5cm;
+            size: letter;
+
+            @top-center {
+              content: 'Where Did Everyone Go?';
+              font-size: 9pt;
+              font-style: italic;
+              color: #666;
+            }
+
+            @bottom-center {
+              content: counter(page);
+              font-size: 9pt;
+            }
+          }
+
+          /* Hide navigation and UI elements */
+          .print-hide,
+          button,
+          nav,
+          header,
+          footer,
+          .sticky,
+          [class*='fixed'],
+          [class*='z-50'],
+          [class*='z-30'] {
+            display: none !important;
+          }
+
+          /* Optimize page layout for printing */
+          html,
+          body {
+            background: white !important;
+            color: black !important;
+            width: 100%;
+            height: 100%;
+          }
+
+          /* Remove all card styling for cleaner print */
+          [class*='card'],
+          [class*='Card'] {
+            border: none !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            padding: 0.5em 0 !important;
+            margin: 0 0 1em 0 !important;
+          }
+
+          /* Ensure content displays properly */
+          .prose {
+            max-width: 100% !important;
+          }
+
+          /* Compact spacing for print */
+          [class*='mx-auto'] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+
+          /* Chapter spacing - avoid page breaks inside chapters when possible */
+          [id^='chapter-'] {
+            page-break-after: auto;
+            break-after: auto;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            margin-top: 1em !important;
+            padding-top: 0 !important;
+          }
+
+          /* If chapter is long, allow breaks inside */
+          @supports (break-inside: avoid) {
+            [id^='chapter-'] {
+              break-inside: auto;
+            }
+          }
+
+          /* Add small visual separator between chapters */
+          [id^='chapter-']:not(:first-child)::before {
+            content: '';
+            display: block;
+            width: 30%;
+            height: 1px;
+            background: #ccc;
+            margin: 1.5em auto 1em auto;
+          }
+
+          /* Prevent orphaned headings */
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            page-break-after: avoid;
+            break-after: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            color: black !important;
+            margin-top: 0.5em !important;
+          }
+
+          /* Keep paragraphs together when possible */
+          p {
+            orphans: 3;
+            widows: 3;
+            color: black !important;
+            page-break-inside: avoid;
+            break-inside: auto;
+          }
+
+          /* Reduce image sizes for more compact printing */
+          img {
+            max-width: 50% !important;
+            max-height: 150px !important;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            page-break-before: avoid;
+            break-before: avoid;
+            margin: 0.5em auto !important;
+            display: block !important;
+          }
+
+          /* Hide image containers' decorative elements */
+          [class*='relative'] > [class*='absolute'] {
+            display: none !important;
+          }
+
+          /* Image wrapper should not force breaks */
+          [class*='relative']:has(img) {
+            page-break-inside: avoid;
+            break-inside: avoid;
+            margin: 0.5em 0 !important;
+            padding: 0 !important;
+          }
+
+          /* Remove all shadows, borders, and backgrounds */
+          * {
+            box-shadow: none !important;
+            text-shadow: none !important;
+            background-image: none !important;
+          }
+
+          /* Ensure readable text */
+          body,
+          p,
+          span,
+          div {
+            font-size: 10.5pt !important;
+            line-height: 1.5 !important;
+          }
+
+          h3 {
+            font-size: 13pt !important;
+            font-weight: bold !important;
+            margin-bottom: 0.5em !important;
+          }
+
+          /* Better spacing between elements */
+          br {
+            display: none;
+          }
+
+          /* Compact chapter headers */
+          [class*='CardHeader'] {
+            margin-bottom: 0.5em !important;
+            padding: 0 !important;
+          }
+
+          /* Ensure smooth content flow */
+          [class*='space-y'] {
+            display: block !important;
+          }
+        }
+      `}</style>
+
       <WDEGHero viewMode={viewMode} currentChapter={currentChapter} totalChapters={totalChapters} />
 
       {/* Controls positioned right after hero for immediate visibility */}
@@ -200,36 +411,50 @@ export function DynamicBookViewer({ initialLanguage, className }: BookViewerProp
               <Badge variant="secondary">{totalChapters} chapters</Badge>
             </div>
 
-            {/* Language Selector */}
-            <div className="relative">
+            {/* Language Selector & Print Button */}
+            <div className="flex items-center gap-2">
+              <div className="relative language-selector-container">
+                <Button
+                  variant="outline"
+                  onClick={() => setShowLanguageSelector(!showLanguageSelector)}
+                  className="flex items-center gap-2"
+                  size="sm"
+                >
+                  <Globe className="h-4 w-4" />
+                  <span className="text-lg">{currentLang?.flag}</span>
+                  <span>{currentLang?.name}</span>
+                </Button>
+
+                {showLanguageSelector && (
+                  <div className="absolute left-0 sm:left-auto sm:right-0 top-12 z-50 bg-background border border-border rounded-lg shadow-lg p-2 min-w-[200px] max-h-[400px] overflow-y-auto">
+                    {AVAILABLE_LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => handleLanguageChange(lang.code)}
+                        className={`w-full text-left px-3 py-2 rounded hover:bg-accent flex items-center gap-2 ${
+                          currentLanguage === lang.code
+                            ? 'bg-accent text-accent-foreground'
+                            : 'text-foreground'
+                        }`}
+                      >
+                        <span className="text-xl">{lang.flag}</span>
+                        <span>{lang.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <Button
                 variant="outline"
-                onClick={() => setShowLanguageSelector(!showLanguageSelector)}
+                onClick={handlePrint}
                 className="flex items-center gap-2"
                 size="sm"
+                title="Print complete book in current language"
               >
-                <Globe className="h-4 w-4" />
-                {currentLang?.flag} {currentLang?.name}
+                <Printer className="h-4 w-4" />
+                <span className="hidden sm:inline">Print</span>
               </Button>
-
-              {showLanguageSelector && (
-                <div className="absolute right-0 top-12 z-50 bg-background border border-border rounded-lg shadow-lg p-2 min-w-[200px]">
-                  {AVAILABLE_LANGUAGES.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageChange(lang.code)}
-                      className={`w-full text-left px-3 py-2 rounded hover:bg-accent flex items-center gap-2 ${
-                        currentLanguage === lang.code
-                          ? 'bg-accent text-accent-foreground'
-                          : 'text-foreground'
-                      }`}
-                    >
-                      <span>{lang.flag}</span>
-                      <span>{lang.name}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
         </div>
